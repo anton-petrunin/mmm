@@ -1,0 +1,23 @@
+*eps-converted-to.pdf
+*~
+*.aux
+*.log
+*.pdf
+*.ps
+*.bbl
+*.dvi
+*.out
+*.backup
+*.synctex.gz
+*.zip
+*.toc
+*.idx
+*.ilg
+*.ind
+*.gz
+*.tar
+*.kilepr
+!/book.kilepr
+*.bts
+*.blg
+*conflicted copy*
