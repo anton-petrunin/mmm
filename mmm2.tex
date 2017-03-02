@@ -135,30 +135,30 @@
 
 \section{Introduction}
 \subsection{Motivation and application}
-There are two structural questions in the theory of Alexandrov spaces formulated at the beginning of the theory in
-\cite{BGP}, \cite{P2}  which are seemingly out of reach by purely geometric methods:  Is the boundary of an Alexandrov space
-an Alexandrov space?   Are there  ``many'' infinite geodesics on any Alexandrov space without boundary?
+Let us formulate two structural questions in the theory of Alexandrov spaces formulated at the beginning of the theory (see \cite{BGP} and \cite{P2}) which are seemingly out of reach by purely geometric methods:  
+\begin{itemize}
+\item Is the boundary of an Alexandrov space an Alexandrov space?
+\item Are there  ``many'' infinite geodesics on any Alexandrov space without boundary?
+\end{itemize}
+   
+In this paper we address the latter question, and obtain an affirmative answer in several cases.  
+We also develop an analytic tool which has a formal similarity with  classical integral geometry 
+and might to be interesting in its own right beyond the realm of Alexandrov geometry.
 
-In this paper we address the latter question, provide an analytic tool for its solution and obtain  an affirmative answer  in several cases.  In particular, we
-prove the existence of such  infinite geodesics in the most classical examples of non-smooth Alexandrov spaces:
+In particular, we prove the existence of such  infinite geodesics in the most classical examples of non-smooth Alexandrov spaces:
 
 \begin{thm} \label{thmfirst}
- Let $X$ be the boundary of a convex body in $\mathbb R^{n+1}$.
- Then almost any direction in the tangent bundle $TX$ of $X$
- is the starting direction of a unique  infinite geodesic on $X$.
- The geodesic flow defined on a subset  of full  measure in $TX$    preserves the Liouville measure.
- \end{thm}
+Let $X$ be the boundary of a convex body in $\mathbb R^{n+1}$.
+Then almost any direction in the tangent bundle $TX$ of $X$
+is the starting direction of a unique  infinite geodesic on $X$.
+The geodesic flow defined on a subset  of full  measure in $TX$ preserves the Liouville measure.
+\end{thm}
 
-
-The existence of a single infinite geodesic seems to be unknown even for $n=2$.
-%We refer to a later subsection for a discussion, generalization and connections with quasi-geodesics defined in \cite{PP}.
-The analytic tool developed for the proof has a formal similarity with  classical integral geometry and seems to be interesting in its own right beyond the realm of Alexandrov geometry.
+It is not known if the same statement holds for Alexandrov spaces without boundary and dimension at least 3.
 
  \subsection{The geodesic flow and mm-boundary}
-In a smooth manifold with boundary the geodesic flow is not defined for all times and the amount
-of geodesics dying at the boundary in a given time interval depends on the size  of this boundary.   We grasp the size of the boundary by  estimating the
-average volumes of small balls
-and their deviations from the corresponding  volumes in the Euclidean space.
+In a smooth manifold with boundary the geodesic flow is not defined for all times and the amount of geodesics dying at the boundary in a given time interval depends on the size  of this boundary.   
+In the following definition we grasp the size of the boundary by estimating the average volumes of small balls and their deviations from the corresponding  volumes in the Euclidean space.
 
 Let $(X,d)$ be a locally compact separable metric space. Let $\mu$ be   a  Radon  measure on $X$ and assume that closed bounded subsets
 of $X$ have finite $\mu$-measure.
@@ -167,20 +167,21 @@ denote by $B_r (x)$ the open metric ball of radius $r$ around  $x$. Define the l
 \begin{equation}
  b_r(x):=\mu (B_r (x)) \; .
  \end{equation}
-For a fixed integer $n$ (the "dimension" of $X$)
+For a fixed integer $n$ (the ``dimension'' of $X$)
  we define a signed measure $v_r$ on $X$, absolutely continuous with respect to $\mu$,   as
 \begin{equation} \label{eq:first}
  v_r=v^n_r = (\omega _n - \frac {b_r} {r^n} )\cdot \mu \, ,
 \end{equation}
-where $\omega _n$ is the volume of the $n$-dimensional unit
- Euclidean ball.  A signed measure, here and below, is an element of the dual space $\mathcal M(X)$ of the space of compactly supported continuous functions $C_c (X)$.
+where $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.  
+
+A \emph{signed measure}, here and below, defined as an element of the space $\mathcal M(X)$ dual to the space of compactly supported continuous functions $C_c (X)$.
 We will always consider $\mathcal M(X)$ with the topology of weak convergence.
+
 In all examples and applications below,  $n$  is the Hausdorff dimension of $X$ and $\mu$ is the $n$-dimensional Hausdorff measure $\mathcal H^n =\mathcal H^n _X$ on $X$.
 
 
- The curve $r\to  v_r=v_r ^n$ in the space $\mathcal M(X)$  controls in a very rough integral sense the deviation of $X$ from $\R^n$.
- In some important cases, the Taylor coefficients of $v_r$ at $0$ can be interpreted as
- integral curvatures, in analogy with integral geometry. The following  example is well known.
+The map $\mathbb{R}_+\to\mathcal M(X)$ defined as $r\mapsto  v_r=v_r ^n$ controls in a very rough integral sense the deviation of $X$ from $\R^n$.
+The Taylor coefficients of $v_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with integral geometry. The following  example is well known.
 
 
 
@@ -203,20 +204,21 @@ $c_n \cdot \mathcal H^{n-1} _{\partial X}$, for some constant $c_n >0$.
 \end{ex}
 
 %Here and below we consider the space of signed measures $\mathcal M (X)$ with the topology of weak convergence.
-The previous example  suggests  to view the first Taylor coefficient of $v_r$   as the "boundary" of the metric-measure space $(X,\mu,d)$,
+The previous example  suggests  to view the first Taylor coefficient of $v_r$   as the ``boundary'' of the metric-measure space $(X,\mu,d)$,
  which we make more precise by the following central definition of this paper.
 % In the next definition, we say that a family of measures on a locally compact space $X$
 %  is locally bounded if for any compact subspace $K$ of $X$, the restrictions of the family to $K$ are bounded.
 
-  \begin{defn}
-  Let $(X,d,\mu)$ be a metric measure space as above and let  $v_r$ be as in \eqref{eq:first}. If the  family of positive measures $\{|| v_r ||  /r ;  0<r\leq  1 \} $   has an upper bound
-	in $\mathcal M( X)$ we say that $X$ has   locally finite mm-boundary.
-  If the measures $v_r /r$  converge for $r\to 0$ to a measure $\nu$, we call $\nu$ the mm-boundary of $X$.  If $\nu =0$ we say that $X$ has trivial mm-boundary.
-  \end{defn}
+\begin{defn}
+Let $(X,d,\mu)$ be a metric measure space as above and let  $v_r$ be as in \eqref{eq:first}. If the  family of positive measures 
+\[\{\,\| v_r \|  /r \,;\,  0<r\leq  1 \,\}\]   
+has an upper bound in $\mathcal M( X)$ we say that $X$ has   locally finite mm-boundary.
+If the measures $v_r /r$  converge for $r\to 0$ to a measure $\nu$, we call $\nu$ the mm-boundary of $X$.  If $\nu =0$ we say that $X$ has trivial mm-boundary.
+\end{defn}
 
 
 We refer to Subsection \ref{subsec:example}  below for a discussion of  examples and questions, and
- state now our central  result connecting  these measure-theoretic boundaries to the existence question of infinite geodesics in Alexandrov spaces:
+ state now our central  result connecting  mm-boundaries to the existence question of infinite geodesics in Alexandrov spaces:
 
  \begin{thm} \label{thmmain}
  Let $X$ be an Alexandrov space. If $X$ has trivial mm-boundary, then  almost each direction of the tangent
@@ -228,7 +230,7 @@ The next theorem shows that, similarly to \exref{mainex},  the topological bound
 
 \begin{thm} \label{alexandrovthm}
 Let $X^n$ be an Alexandrov space. Then $X$ has locally finite mm-boundary.
-If $\nu$ denotes the Radon measure  $\limsup _{r\to 0} ||v_r /r||$ then the following holds true.
+If $\nu$ denotes the Radon measure  $\limsup _{r\to 0} \|v_r /r\|$ then the following holds true.
 \begin{enumerate}
 \item\label{full-measure-zero-nu}There is a Borel set $A_0$ of full $\mathcal H^n$ measure in $X$
 with $\nu (A_0)=0$.
@@ -248,21 +250,25 @@ Let $X^n$ be a convex hypersurface in $\R^{n+1}$  or let $X$ be a two-dimensiona
 \end{thm}
 
 
-In combination with \tref{thmmain} this proves \tref{thmfirst}. The two-dimensional case will follow from a much stronger result discussed in the next subsection.
-
+In combination with \tref{thmmain} this proves \tref{thmfirst}. 
+The two-dimensional 
+will follow from a much stronger result discussed in the next subsection.
+An other proof can be build on an analog of \tref{thmfirst} for the hyperbolic space
+since the Alexandrov embedding theorem, any two-dimensional Alexandrov space without boundary
+is locally isometric to a convex surface in hyperbolic space.
 
 
 
 \subsection{mm-curvature}
 Motivated by Example \ref{smoothscal} one can naively hope that the second Taylor coefficient at $0$ of the
-curve $v_r $ in $\mathcal M(X)$ describes the scalar curvature of the space.
+map $v_r\colon r\mapsto \mathcal M(X)$ describes the scalar curvature of the space.
 %This again has  natural analogy with the classical integral geometry.
 
 
 
 \begin{defn}
  Let $X,v_r$ be as above. If the family $v_r /r^2, r\leq 1$ is locally bounded we say that $X$ has locally finite  scalar curvature.
- % For any compact subspace $K$ of $X$, we call $\limsup _{r\to 0} ||v_r /r|| _K$ the bound of the scalar curvature  in $K$.
+ % For any compact subspace $K$ of $X$, we call $\limsup _{r\to 0} \|v_r /r\| _K$ the bound of the scalar curvature  in $K$.
   If the measures $v_r /r^2$ locally converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
 \end{defn}
 
@@ -279,9 +285,10 @@ Thus, the following result proves \tref{hypersurface} in the $2$-dimensional cas
 \end{thm}
 
 
-This finiteness result holds true in the greater generality of surfaces  with bounded integral curvature in the sense of Alexandrov-Zallgaler-Reshetnyak \cite{Reshetnyak-GeomIV}, see Section \ref{sec:surface} below. On the other hand, the mm-curvature
-in \tref{intsurface} does not need to coincide with the "curvature measure" in the sense of \cite{Reshetnyak-GeomIV}.  Even in the case
-of a flat cone the mm-curvature (concentrated at the vertex) does not coincide with the defect at the vertex of the cone.  In particular, this shows that the mm-curvature in $2$-dimensional Alexandrov spaces are not stable under Gromov-Hausdroff convergence.
+This finiteness result holds true in the greater generality of surfaces  with bounded integral curvature in the sense of Alexandrov--Zallgaler--Reshetnyak \cite{Reshetnyak-GeomIV}, see Section \ref{sec:surface} below. 
+
+Note however that the mm-curvature
+in \tref{intsurface} does not need to coincide with the ``curvature measure'' as it defined in \cite{Reshetnyak-GeomIV}.  Even in the case of a flat cone the mm-curvature (concentrated at the vertex) does not coincide with the defect at the vertex of the cone.  In particular, this shows that the mm-curvature in $2$-dimensional Alexandrov spaces are not stable under Gromov--Hausdroff convergence.
 
 
 \begin{rem}
@@ -292,31 +299,38 @@ lead to some control of the geometric notions of mm-boundary and mm-curvature di
 
 
 
-\subsection{Analogy with the Killing-Lipschitz curvatures and the proof of \tref{thmmain}}
+\subsection{Analogy with the Killing--Lipschitz curvatures and the proof of \tref{thmmain}}
 For a compact convex body or compact smooth submanifold $M$ in $\R^n$ one classically considers
 the  volumes of distance tubes $U_r(M)$ around $M$ setting $w(r)=\mathcal H^n (U_r(M))$.
 It turns out that $w(r)$ is a polynomial, at least for small $r$, and  the coefficients of
-$w$, called the   Killing-Lipschitz curvatures of $M$, are given by  integrals over some intrinsically defined curvature
+$w$, called the   Killing--Lipschitz curvatures of $M$, are given by  integrals over some intrinsically defined curvature
  terms.  Moreover, these coefficients can be localized and considered as measures on $M$.
 
 To make the formal similarity with our approach  to mm-boundary and mm-curvature more transparent, we observe that
 (at least for a smooth $n$-dimensional manifold $M$ and up to a factor) the number   $\int _M \mu (B_r(x)) d\mu (x)$  can be interpreted as the $\mathcal H^{2n}$-measures
 of the distance tubes $U_r(\Delta )$ around the diagonal $\Delta $ in the direct product $M\times M$.
 
-
 The natural interpretation of the tangent bundle of $M$ as the normal  bundle of the diagonal $\Delta$ in $M\times M$ serves us as the connection between
 the measure theoretical properties of the tubes around $M$ and the dynamical properties of the geodesic flow.
-We clarify this abstract statements by explaining the main idea of  our  proof of \tref{thmmain} in the (trivial and weel-known) case of a smooth Riemannian manifold $X=M$. Thus, we just sketch a new proof,  of the fact   that the geodesic flow $\phi$ of a smooth Riemannian manifold $M$ preserves the Liouville measure $\mathcal M$ on $TM$, and claim that this proof is stable and rough enough to be transferred to the singular situation,
+We clarify this abstract statements by explaining the main idea of  our  proof of \tref{thmmain} in the (trivial and well-known) case of a smooth Riemannian manifold $X=M$. 
+Thus, we just sketch a new proof,  of the fact   that the geodesic flow $\phi$ of a smooth Riemannian manifold $M$ preserves the Liouville measure $\mathcal M$ on $TM$.
+This proof is stable and rough enough to be transferred to the singular situation,
 % but
 %The idea can be fastest explained  in the case where $X$ is a smooth Riemannian manifold $M$,
-%where it provides a metric-measure  proof of the most classical  statement that the geodesic flow $\phi_t:TM\to TM$ preserves the Liouville  measure $\mathcal M$ on $TM$. It suffices to consider the case $t=1$
+%where it provides a metric-measure  proof of the most classical  statement that the geodesic flow $\phi_t\:TM\to TM$ preserves the Liouville  measure $\mathcal M$ on $TM$. It suffices to consider the case $t=1$
 %and to prove the statement on arbitrary small neighborhoods of the $0$-section.
 %For any natural $n>0$, we can write $\phi _t =\phi _{\frac t n} ^n$, thus it is sufficient  to understand this measure preservance for small $t$, or even infinitesimally.
 
-Define the map $E:TM\to M\times M$  by $E(v)=(\pi (v), \pi (\phi _1 (v))$, where $\pi:TM\to M$ is the footpoint projection.  By construction, $E(-\phi_1(v))= J(E(v))$, where
-$J$ is the canonical involution of $X\times X$ which switches the coordinates. Since $J$ preserves $\mathcal H^{2n}$ on $M\times M$ and $v\to -v$ preserves the Liouville measure,
-the statement about the measure preservance of $\phi$ hinges upon the smallness of measure-distortion of the map $E :(TM,\mathcal M) \to (M\times M, \mathcal H^{2n})$ on neighborhoods of the $0$-section.
-In the present case of Riemannian manifold this measure preservance is expressed in  the fact that the differential of $E$ is the identity (after suitable identifications).
+Recall that $\phi_t\: TM\to TM$ denoted the geodesic flow for time $t$.
+Denote by $\pi\: TM\to M$ the tangent bundle; it takes a tangent vector and returns its base point.
+Define the map $E\:TM\to M\times M$  by 
+\[E(v)=(\pi(v), \pi (\phi _1 (v)).\]  
+By construction, $E(-\phi_1(v))= J(E(v))$, 
+where $J$ is the involution of $M\times M$ which switches the coordinates. 
+Since $J$ preserves $\mathcal H^{2n}$ on $M\times M$ and $v\to -v$ preserves the Liouville measure $\mathcal M$ on $TM$,
+the statement about the measure preservance of $\phi$ hinges upon the smallness of measure-distortion of the map $E \:(TM,\mathcal M) \to (M\times M, \mathcal H^{2n})$ on neighborhoods of the $0$-section.
+In the present case of Riemannian manifold,
+this measure preservance is expressed in  the fact that the differential of $E$ is the identity (after suitable identifications).
 In the general case of Alexandrov spaces, we similarly observe that the ``infinitesimal'' deviation via the canonical map $E$ of the measure preserving involution $J$ to the want-to-be measure preserving map $\phi _1$
 is expressed precisely as the triviality of  mm-boundary.
 
@@ -334,30 +348,29 @@ is expressed precisely as the triviality of  mm-boundary.
 
 
 \subsection{Relations with quasi-geodesics}
-In Alexandrov spaces  many geodesics cannot be extended as local geodesics beyond some point.
-This sudden death  of geodesics  causes  serious technical difficulties. To circumvent this problem,
-G. Perelman and the third named author introduced in \cite{PP} the notion of a quasi-geodesic and proved
-that any direction is the starting direction of an infinite quasi-geodesic. For most application the
-existence of quasi-geodesics is sufficient.
-%The quasi-geodesics are in many
-%senses as good as geodesics, and even better in the sense of their stability.
- But quasi-geodesics can branch, are not uniquely defined  and have several other disadvantages.
-One of the origins of the present paper was an
-attempt to better understand the quasi-geodesics.
+In Alexandrov spaces  some geodesics cannot be extended as local geodesics beyond some point.
+This sudden ``death''  of geodesics  causes  serious technical difficulties. 
+To deal with this problem  so called \emph{quasi-geodesics} (certain generalized geodesic) 
+were introduced
+and it was proved
+that any direction is the starting direction of an infinite quasi-geodesic;
+see \cite{PP} and the references there in.
+
+For most application the existence of quasi-geodesics is sufficient.
+The quasi-geodesics are in many senses as good as geodesics, and even better in the sense of their stability.
+However, the quasi-geodesic in the given direction are not uniquely defined, they can branch.
+One of the origins of the present paper was an attempt to prove Liouville's theorem for the ``quasi-geodesic flow''.
 
 Unlike local geodesics, quasi-geodesics are defined by a global metric condition. Therefore they enjoy much better stability properties
 and can often be found by limiting arguments.
-We note that while many Alexandrov space appear naturally  as limits of smooth Riemannian manifolds, the properties of the geodesic flow, mm-boundaries and mm-curvature are extremely unstable under
-convergence.  For instance, there is  no chance to deduce our main results about convex hypersurfaces approximating them by smooth or polyhedral ones.
-
-
-
+We note that while many Alexandrov space appear naturally  as limits of smooth Riemannian manifolds, the properties of the geodesic flow, mm-boundaries and mm-curvature are unstable under
+convergence.  
+For instance, there is  no chance to deduce our main results about convex hypersurfaces approximating them by smooth or polyhedral ones.
 
 
 
 \subsection{Examples and questions} \label{subsec:example}
- While mm-boundary and mm-curvature are very easy to define,
-their estimates are quite involved even in  quite  simple situations.
+The estimates for mm-boundary and mm-curvature are quite involved even in  quite  simple situations.
 We start with some open questions, which hopefully will be addressed elsewhere.
 
 
@@ -397,14 +410,13 @@ that does not have finite mm-boundary?
 
 
 
-Now we collect a few  hopefully instructive examples, indicating relations with curvature measures in integral geometry.  The examples  will not be needed in the sequel and we do not provide straightforward but a bit tedious computations.
+Now we collect a few instructive examples, indicating relations with curvature measures in integral geometry.  The examples  will not be needed in the sequel and we do not present the computations;
+they are straightforward but tedious.
 
-
-
- \begin{ex}
- Let $X$ be a Riemannian manifold with a Lipschitz continuous metric.
- Then $X$ has  trivial mm-boundary.
- \end{ex}
+\begin{ex}
+Let $X$ be a Riemannian manifold with a Lipschitz continuous metric.
+Then $X$ has  trivial mm-boundary.
+\end{ex}
 
 
  \begin{ex}
@@ -429,9 +441,10 @@ Now we collect a few  hopefully instructive examples, indicating relations with 
  \begin{ex}
  Let $X$ be a finite $n$-dimensional simplicial complex with an intrinsic metric $d$.
  Assume that the restriction of $d$ to each simplex is given by a (sufficiently) smooth Riemannian metric.
- Then $X$ has a finite boundary $\mu$, concentrated on  the $(n-1)$-skeletton $X^{n-1}$.  Moreover, the restriction of $\mu $ to
+ Then $X$ has a finite boundary $\mu$, concentrated on  the $(n-1)$-skeletton $X^{n-1}$.  
+ Moreover, the restriction of $\mu $ to
  $X^{n-1}$ is given by $\mu= c_n \cdot f \cdot \mathcal H ^{n-1}$.
- Here $f$ is the locally constant function $f(p)=(2-m)m$, where $m$ is the number of top-dimensional simplices
+ Here $f$ is the locally constant function $f(p)=(2-m)\cdot m$, where $m$ is the number of top-dimensional simplices
  adjacent to a point $p\in X^{n-1}$.
  \end{ex}
 
@@ -457,16 +470,16 @@ The distance between points $x,y$ in a metric space $X$ will be denoted by $d(x,
 By $B_r(x)$ we will denote the open metric ball of radius $r$ around a point $x$ in a metric space $X$.
 
 
-A geodesic $\gamma$ in a metric space $X$ is  a map $\gamma :I\to X$ defined on an interval $I \subset \R$ such that for some number $\lambda \geq 0$ one has
+A geodesic $\gamma$ in a metric space $X$ is  a map $\gamma \:I\to X$ defined on an interval $I \subset \R$ such that for some number $\lambda \geq 0$ one has
 $d(\gamma (t),\gamma (s)) =\lambda \cdot |t-s|$ for all $t,s\in I$. In particular, we allow $\gamma$ to have any constant velocity $\lambda \geq 0$. On the other hand, geodesics
 as defined here will always be globally ``minimizing geodesics'' in the usual notations of Riemannian geometry.
-A local geodesic is a curve $\gamma: I\to X$ such that its restriction to a small neighborhood of any point in $I$ is  a geodesic. Note that a local geodesic is a curve of constant velocity.
+A local geodesic is a curve $\gamma\: I\to X$ such that its restriction to a small neighborhood of any point in $I$ is  a geodesic. Note that a local geodesic is a curve of constant velocity.
 
 \subsection{Metric measure spaces}
 Let $X$ be a locally compact separable metric space. A Radon measure on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
 Any Radon measure is canonically contained in the dual space $\mathcal M(X)$ of the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
 All elements in $\mathcal M(X)$ are called signed Radon measures. For any signed Radon measure $\mu$ there exist unique Radon measures $\mu ^{\pm}$ such that $\mu =\mu ^+- \mu ^-$.
-In such a situation we will denote by $||\mu||$ the Radon measure $\mu ^+ +\mu ^-$.
+In such a situation we will denote by $\|\mu\|$ the Radon measure $\mu ^+ +\mu ^-$.
 
 
 For a Radon measure $\mu$ on $X$, the $n$-dimensional density of $\mu$ at a point $x$ is defined by  $\limsup _{r\to 0} \frac {\mu (B_r(x))} {\omega _n r^n}$.
@@ -495,7 +508,7 @@ of the cone $T_xX$ is denoted by $0=0_x$. Elements of $T_xX$ are called tangent 
 Any two geodesics in $X$ with initial starting vectors coincide. Hence,
 for any $v\in T_xX$ there exists at most one geodesic $\gamma _v$  starting in $x$ in the direction of $v$ and defined on a maximal possible interval $I =[0,t]$ with $t\in [0, \infty )$ 
 or $I=[0.,\infty)$.  Let $D_x$ denote the set of all vectors $v\in T_xX$ for which $\gamma _v(1)$ is defined.
-We set $\gamma _v (1)=\exp_x (v)$. The map $\exp_x :D_x \cap B_r(0) \to B_r(x)$ is surjective for any $r>0$ (here $B_r(0)$ on the left side is the distance ball around the origin $0_x$ in $T_xX$). Moreover, for a constant $C\geq 0$ depending on $\kappa$ and all $r< \frac 1 C$ the map $\exp_x :D_x \cap B_r(0) \to B_r(x)$ is  $(1+ C \cdot  r^2)$-Lipschitz continuous.
+We set $\gamma _v (1)=\exp_x (v)$. The map $\exp_x \:D_x \cap B_r(0) \to B_r(x)$ is surjective for any $r>0$ (here $B_r(0)$ on the left side is the distance ball around the origin $0_x$ in $T_xX$). Moreover, for a constant $C\geq 0$ depending on $\kappa$ and all $r< \frac 1 C$ the map $\exp_x \:D_x \cap B_r(0) \to B_r(x)$ is  $(1+ C \cdot  r^2)$-Lipschitz continuous.
 
 
 By the theorem of Bishop-Gromov, the volume $b_r (x)=\mathcal H^n (B_r(x))$ is bounded from above by the corresponding volume in the
@@ -516,12 +529,12 @@ The topological boundary $\partial X$ of $X$ can be defined as the closure of th
 It is easy to get an estimate of $v_r$  on parts which are Lipschitz manifolds and where one can control the biLipschitz constants.
 Let $\mu =\mathcal H^n$ be a Radon measure on the metric space $X$.
 Let $U\subset X$ and $V\subset \R^n$ be open and assume that there is an $(1+\delta)$-biLipschitz map
-$f:U \to V$.  Assume $\delta  \leq \delta _n$, where $\delta_n$ is a sufficiently small constant depending on $n$.
+$f\:U \to V$.  Assume $\delta  \leq \delta _n$, where $\delta_n$ is a sufficiently small constant depending on $n$.
  Let $A\subset U$ be given with
 $B_{2r} (A) \subset U$ and $B_{2r} (f(A)) \subset V$.  Then for all $x\in A$ we have
 $$(1+\delta)  ^{-2n} \leq \frac {b_r(x)} {\omega _n r^n} \leq (1+\delta ) ^{2n} \; .$$
 Therefore,
-$$||v_r || (A) \leq  4 n \cdot \omega _n \cdot  \delta \cdot \mathcal H^n (A)  \; .$$
+$$\|v_r \| (A) \leq  4 n \cdot \omega _n \cdot  \delta \cdot \mathcal H^n (A)  \; .$$
 \begin{rem} For Alexandrov  spaces the opposite seem to hold (but I am not quite sure):
 If the volume of  a ball $B_r (x)$ satisfies $\omega _n r^n -\mathcal H^n (B_r (x)) \leq \delta r ^n$, then
 the ball $B_{\frac r 4} (x)$ is  $(1+C_n \delta )$-biLipschitz  to a Euclidean ball.
@@ -534,7 +547,7 @@ the ball $B_{\frac r 4} (x)$ is  $(1+C_n \delta )$-biLipschitz  to a Euclidean b
 \section{Liouville measure and geodesics}
 \subsection{Tangent bundle and Liouville measure}
 Let $X^n$ be an $n$-dimensional Alexandrov space. Consider the tangent bundle of $X$
-  as the  disjoint union $TX=\cup T_x X$ of the tangent spaces at different points. Denote by $\pi:TX\to X$ the canonical footpoint projection.
+  as the  disjoint union $TX=\cup T_x X$ of the tangent spaces at different points. Denote by $\pi\:TX\to X$ the canonical footpoint projection.
 	For any subset $K\subset X$ denote by $TK$ the preimage $\pi^{-1} (K)= \cup _{x\in K} T_xX$. For $r>0$ denote by $T^r K$ the set of all vectors in $TK$
 	of norm smaller than $r$.
 % Let $X_{reg}\subset X$ be the set of all regular points and $TX_{reg} =\pi^{-1} (X_{reg}) \subset TX$.
@@ -551,7 +564,7 @@ for $\mathcal H^n$ almost all $x\in X$ the intersection $(A\setminus A') \cap T_
 
 
  For any $\lambda >0$ the multiplication with $\lambda$  on all $T_xX$ sends $\mathcal M $ to $\lambda ^n \cdot \mathcal M$.
- Consider the canonical involution $I:TX_{reg}\to TX_{reg}$, defined by $I(v)=-v$.
+ Consider the canonical involution $I\:TX_{reg}\to TX_{reg}$, defined by $I(v)=-v$.
 This involution preserves $\mathcal M$, since it preserves the Lebesgue measure in each tangent space.
 %We extend $I$ to an arbitrary Borel map outside of $TX_{reg}$ (for instance, $I(v)=v$ for all $v\notin TX_{reg}$).
 
@@ -560,10 +573,10 @@ This involution preserves $\mathcal M$, since it preserves the Lebesgue measure 
    In order to define the geodesic flow $\phi$ on a maximal subset $О$ of $TX \times \R $  we proceed as follows.
  For any  $v\in  T_xX$ we set $\phi (v,0)=v$.
  If no geodesic starts in the direction of $v$,
- the value $\phi (v,t)$ will not be defined for $t\neq 0$. If such a geodesic $\gamma_v$ exists, then $\gamma_v$   can be uniquely extended to a  local geodesic $\gamma_v :[0,a)\to X$  defined on a maximal possible interval, since  geodesics do not branch in $X$.  For $t\geq a$
- the value $\phi (v,t)$ will not be defined. For $0<t<a$ we set $\phi (v,t)$ to be $\gamma _v ^+ (t) \in T_{\gamma _v(t)} X$, the starting direction of $\gamma_v:[t,a) \to X$ at $\gamma_v (t)$.
+ the value $\phi (v,t)$ will not be defined for $t\neq 0$. If such a geodesic $\gamma_v$ exists, then $\gamma_v$   can be uniquely extended to a  local geodesic $\gamma_v \:[0,a)\to X$  defined on a maximal possible interval, since  geodesics do not branch in $X$.  For $t\geq a$
+ the value $\phi (v,t)$ will not be defined. For $0<t<a$ we set $\phi (v,t)$ to be $\gamma _v ^+ (t) \in T_{\gamma _v(t)} X$, the starting direction of $\gamma_v\:[t,a) \to X$ at $\gamma_v (t)$.
 
- Whenever, the geodesic $\gamma _v:[0,a)\to X$ extends to an (again uniquely defined maximal)  local geodesic   $\gamma_v:(b,a) \to X$ for some $b<0$
+ Whenever, the geodesic $\gamma _v\:[0,a)\to X$ extends to an (again uniquely defined maximal)  local geodesic   $\gamma_v\:(b,a) \to X$ for some $b<0$
  then we define $\phi (v,t)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
 
 
@@ -604,7 +617,7 @@ We continue to use the above notations.
  is invariant under multiplications by any $\lambda >0$  and it is invariant under the geodesic flow $\phi$. Moreover, $\mathcal G\cap TX_{reg}$ is invariant under the involution $I$.
   \begin{defn}
  We say that the Alexandrov space $X$ has the Liouville property if  $TX\setminus \mathcal G$ has zero Liouville measure  and if
-for any $t\in \R$ the geodesic flow $\phi _t :\mathcal G\to \mathcal G$ preserves the Liouville measure.
+for any $t\in \R$ the geodesic flow $\phi _t \:\mathcal G\to \mathcal G$ preserves the Liouville measure.
  \end{defn}
 
  %  For a subset $K\subset X$ and a number $r<0$ we use the notation $T^ r K$
@@ -669,7 +682,7 @@ subsets $A_m\subset T^{r_m} K$ provided by \lref{infini} above.
 Let $Y$ be the closed tubular neighborhood  of radius $1$ around $K$.
 Let again $D\subset TX$ be the set of all vector at which the exponential map is defined.
   For $r>0$, denote  by $N^r$ the intersection of $D$ with $T^r Y$ and consider the "total exponential map"
-$E:N^r \to X\times X$ given by $E(v)= (\pi (v), \pi (\exp (v)))$.  By the property of the pointwise exponential map
+$E\:N^r \to X\times X$ given by $E(v)= (\pi (v), \pi (\exp (v)))$.  By the property of the pointwise exponential map
 \begin{equation} \label{eq:image}
 E(N^r) =U^r \; .
 \end{equation}
@@ -698,7 +711,7 @@ Finally, for any measurable subset $S\subset N^r \cap TK$  we claim  that
 |\mathcal H^{2n} (E(S)) - \mathcal M (\phi _1 (S))|  <  2 \delta r^{n+1} \; .
 \end{equation}
 Indeed, $\phi _1 (S)$ is contained in $T^rY$. The involution  $I(v)=-v$ is $\mathcal M$-preserving on $TX_{reg}$.  And the involution
- $J:X\times X\to X\times X$ given by $J(x,y)=(y,x)$ preserves $\mathcal H^{2n}$. 
+ $J\:X\times X\to X\times X$ given by $J(x,y)=(y,x)$ preserves $\mathcal H^{2n}$. 
  Since $-\phi _1 (v) \in N^r$ for all $v\in S$ for which $-\phi _1 (v)$ is defined, 
 it suffices to verify that $E^{-1} (J (E(S)) $   coincides with $-\phi _1 (S)$ up to a set of $\mathcal M$-measure zero, as we deduce from \eqref{eq:almostiso}.
 But this follows from \eqref{eq:symm}. \footnote{Here a better wording  is needed} 
@@ -753,7 +766,7 @@ Since $\delta$ is arbitrary small, this provides a  contradiction  and  finishes
 %$K(B_{Lr} (x)) \leq \delta  r^{n-l}$ implies $|\vol (B_r (x) ) - b_n r^n| \leq L \cdot K ( B_{Lr} (x)) \cdot r^l$.
 
 %Then there is some number $\bar L$, such that for all small $r$ and all $A\subset X$ we have
-%$||v_r (A)|| \leq \bar L \cdot (K(B_{2Lr} (A)) +C) \cdot r^l$.
+%$\|v_r (A)\| \leq \bar L \cdot (K(B_{2Lr} (A)) +C) \cdot r^l$.
 %\end{prop}
 
 
@@ -886,7 +899,7 @@ This proves that $h$ is arbitrary small and thus $0$.
 
 %\begin{defn}
 %A $DC$-submanifold $N$ of a smooth submanifold $M$ is a subset that can be locally around each point represented as a graph
-%$N=(x,f(x))$ for a $DC$-map $f:\R ^m \to \R ^n$.
+%$N=(x,f(x))$ for a $DC$-map $f\:\R ^m \to \R ^n$.
 %\end{defn}
 
 %Main examples are $C^{1,1}$ submanifolds and convex hypersurfaces in Riemannian manifolds.
@@ -905,25 +918,25 @@ This proves that $h$ is arbitrary small and thus $0$.
 
 \begin{prop}\label{prop-smooth}
 Let $U\subset \R^n$ be an open subset with a smooth Riemannian
-metric $g$. Let $g_0$ denote the flat background metric and assume $||g_x-g_0|| \leq \epsilon$ for some fixed small
+metric $g$. Let $g_0$ denote the flat background metric and assume $\|g_x-g_0\| \leq \epsilon$ for some fixed small
 $\epsilon$.   Let $O\subset U$ be given, such that $B_{2r} (O)$ is compact in $U$.
-Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} ( O)} ||g'||$.
+Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} ( O)} \|g'\|$.
 \end{prop}
 
 
 
  \begin{proof}
- We are going to prove a slightly more precise estimate, showing what parts of $||g'||$ are essential in the estimate.
+ We are going to prove a slightly more precise estimate, showing what parts of $\|g'\|$ are essential in the estimate.
 
 
- Set $K_v (x) = D_x g(v,v) (v)$.  If $|||v||_0 -1| \leq 100\epsilon$  then
+ Set $K_v (x) = D_x g(v,v) (v)$.  If $\||v\|_0 -1| \leq 100\epsilon$  then
 
- $\lim _{t\to 0} \frac {|||v||_{x+tv} - ||v|| _x|} t \leq |K_v (x)|$.
+ $\lim _{t\to 0} \frac {\||v\|_{x+tv} - \|v\| _x|} t \leq |K_v (x)|$.
 
  We set $K(x)= \Sigma |K_{v_i}(x)|$, where $v_i$ runs through a set of $n^3$ unit vectors in general position.
  Then $K_v(x) \leq K (x)$, for all unit vectors $v$.
 
- Set $B^x = \{ y | ||y-x|| _{g_x} \leq r \}$ and $B_x = B_r (x)$.  Let $\vol ^x$ be the constant
+ Set $B^x = \{ y | \|y-x\| _{g_x} \leq r \}$ and $B_x = B_r (x)$.  Let $\vol ^x$ be the constant
  volume form coresponding to the constant flat metric $g_x$.
    Set $C_x = B^x \setminus B_x$.
 
@@ -931,7 +944,7 @@ Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} 
   the volume of $C_x$ and the difference between $\vol ^x$ and $\vol$.
 
  For a vector $v$ of norm close to $1$ and $x\in O$ we set
- $l_v ^x = L ([x,x+rv]) - r \cdot || v|| _x$.
+ $l_v ^x = L ([x,x+rv]) - r \cdot \| v\| _x$.
 
  \begin{lem}
  $|l_v ^x| \leq \int _0 ^r  \int _0 ^t | K_v (x+sv)| ds dt$.
@@ -939,7 +952,7 @@ Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} 
 
 
  \begin{proof}
- $|||v||_{x+tv} -||v|| _x| \leq \int _0 ^t  |K_v (x+sv)| ds$. The result follows by integration.
+ $\||v\|_{x+tv} -\|v\| _x| \leq \int _0 ^t  |K_v (x+sv)| ds$. The result follows by integration.
   \end{proof}
 
 
@@ -957,19 +970,19 @@ Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} 
 
     \begin{lem}
     For a non-negative function $u\in L^1$ we have the inequality
-    $\int _O \int _{S^{n-1}} \int _0^r u(x+sv) ds dv dx \leq C \cdot r \cdot ||u|| _{L^1}$.
+    $\int _O \int _{S^{n-1}} \int _0^r u(x+sv) ds dv dx \leq C \cdot r \cdot \|u\| _{L^1}$.
     \end{lem}
 
 
      \begin{proof}
      The left hand side is equal to
 
-     $C_1 \int _O \int B_r (x) \frac {u(y)}  {||x-y|| ^{n-1}} dx dy = C \int _O \int _O \frac {u(y) \xi _{B_r (x)}}
-     {||x-y|| ^{n-1}} dx dy \leq C_2 r  \int _O (u(y))$
+     $C_1 \int _O \int B_r (x) \frac {u(y)}  {\|x-y\| ^{n-1}} dx dy = C \int _O \int _O \frac {u(y) \xi _{B_r (x)}}
+     {\|x-y\| ^{n-1}} dx dy \leq C_2 r  \int _O (u(y))$
      \end{proof}
 
 
-      Thus we obtain $\int _O (vol _x (C_x)) \leq C \cdot r^{n+1} ||K|| _{L^1}$.
+      Thus we obtain $\int _O (vol _x (C_x)) \leq C \cdot r^{n+1} \|K\| _{L^1}$.
 
 
       It remains to estimate $\vol ^x - \vol$. We have
@@ -978,12 +991,12 @@ Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} 
       \int _{S^{n-1}} \int _0 ^r  t^{n-1} | \vol _{x+tv} - \vol _x| dt dv \leq  \\
        \int _{ S^{n-1}} (\int _0 ^r t^{n-1} (\int _0 ^t  |D_{x+sv} \vol (v)| ds) dt) dv$.
 
-      Now the derivative $D_x \vol (v)$ can be estimated form above by $\epsilon ||D_xg (v)|| + | D_x s (v)|$,
+      Now the derivative $D_x \vol (v)$ can be estimated form above by $\epsilon \|D_xg (v)\| + | D_x s (v)|$,
       where we let $s(x)$ be the trace of $g(x)$ with respect to the background metric $g_0$.
 
       Integrating over $O$ and applying the above lemma two more times we obtain
       $v_r (O) \leq q_1 +q_2 +q_3$, where
-      $q_1 = C r ||K|| _{L^1}$, $q_2 = \epsilon C || Dg|| _{L^1} $ and $q_3 = C ||Ds||$.
+      $q_1 = C r \|K\| _{L^1}$, $q_2 = \epsilon C \| Dg\| _{L^1} $ and $q_3 = C \|Ds\|$.
 
       This implies the claim.
     \end{proof}
@@ -993,7 +1006,7 @@ Then for any $A\subset O$ we have $v_r (A) \leq c_n \cdot r \cdot \int _{B_{2r} 
 Estimating  $v_r (A)$ from below seems to be more difficult. In the same way as in the proof of Proposition~\ref{prop-smooth} one  can obtain an estimate for $|\vol _x -\vol |$.
 Using the geodesics instead of affine intervals, one obtains the estimate on the set $P$ of all
 vectors $v$ with $\exp (v) \in B_x \setminus B^x, x=p(v)$, namely the Liouville measure of  $P$ is
-at most $C\cdot r^{n+1} \cdot \int ||g'||$.  However, we  do not see, how to obtain the right volume estimate out of it. We do not need a lower estimate  in the general case in this paper because in our applications $v_r$ is nonnegative due to Bishop-Gromov volume comparison. {\color{red} do we need to go into this?}
+at most $C\cdot r^{n+1} \cdot \int \|g'\|$.  However, we  do not see, how to obtain the right volume estimate out of it. We do not need a lower estimate  in the general case in this paper because in our applications $v_r$ is nonnegative due to Bishop-Gromov volume comparison. {\color{red} do we need to go into this?}
 \end{rem}
 
 \subsection{DC- functions and DC-maps}
@@ -1031,7 +1044,7 @@ Any other locally bounded metric $\tilde g$ on $R$ induces on $R$ another distan
  \item $g^k$ converges to $g$ pointwise on $R$,
  \item  The distance functions $d_n$ satisfy $\sup |d_k (x,y)- d(x,y)| \to 0$, where the supremum is taken
  over all $x,y \in U$ with $ d(x,y) \leq r$.
- \item For all $n$, we have $\int _U  ||(g^k_{ij} )'|| \leq 2||(g _{ij})'||(  B_r (U))$.
+ \item For all $n$, we have $\int _U  \|(g^k_{ij} )'\| \leq 2\|(g _{ij})'\|(  B_r (U))$.
  \end{enumerate}
 \end{lem}
 
@@ -1052,13 +1065,13 @@ Apply the standard mollifier construction for the coordiantes $g_{ij}$.
  Let $M,U$ be  as in the last lemma. If $U$ is regular  then we have the following inequality for some
  universal constant $C$:
 
- $v_r (U) \leq C \cdot r \cdot (\Sigma _{i,j} ||g_{ij} '|| (B_{2r} (U))$.
+ $v_r (U) \leq C \cdot r \cdot (\Sigma _{i,j} \|g_{ij} '\| (B_{2r} (U))$.
 \end{cor}
 
 
 \begin{defn}
 Let $(M,R,g)$ be a regular $BV^0$ Riemannian manifold. For any  subset
-$A$ in $M$ we define $\mu (A)$ to be the infimum $\Sigma ||g '|| (U_i)$   over all finite open coverings $A\subset  \cup U_i$
+$A$ in $M$ we define $\mu (A)$ to be the infimum $\Sigma \|g '\| (U_i)$   over all finite open coverings $A\subset  \cup U_i$
 by regular charts $U_i$.
 \end{defn}
 
@@ -1149,7 +1162,7 @@ Then one can talk about $DC^1$-functions on $X$, i.e. $DC$ functions which are c
 In local coordinates given by $F$ these correspond to $DC^1$ (respectively $BV^0$) functions on $U=F(B_r(p))\subset \R^n$.
 Partial derivatives of $DC^1$ functions are $BV^0$.
 
-Any $BV^0$ function $u$ satisfies $||du||(A)=0$ for any $A\subset X\setminus S$ which is $\mathcal H_{n-1}$  $\sigma$-finite. If $u$ is $BV^0$ and $v$ is continuous outside a $\mathcal H_{n-1}$  $\sigma$-finite then
+Any $BV^0$ function $u$ satisfies $\|du\|(A)=0$ for any $A\subset X\setminus S$ which is $\mathcal H_{n-1}$  $\sigma$-finite. If $u$ is $BV^0$ and $v$ is continuous outside a $\mathcal H_{n-1}$  $\sigma$-finite then
 $v\cdot\frac{\partial u}{\partial x_i}$ is still a signed Radon measure.
 
 Using $DC^1$ structure, the metric on $X$ induces a $BV^0$ Riemannian metric on $U$ \cite{Per-DC}. This metric can be computed as follows.
@@ -1180,7 +1193,7 @@ where %$\bar h_s$ are of the form as above,that is $h_s(x)=|xq_s|-|pq_s|$, with 
 
 In particular, it follows that $g$ is $BV^0$ and
 \begin{equation}\label{g'-bounded}
-\int_U||g'||<\infty
+\int_U\|g'\|<\infty
 \end{equation}
 %(in fact, it's uniformly bounded by $C(n,r,k,A,\delta)$).
 
@@ -1201,9 +1214,9 @@ Applying this lemma to the above situation we obtain the following sharpened ver
 
  If  $p\in X$ is
    $(A,\delta)$-strained, then  in the above $DC_1$-coordinates
-the metric tensor $g$ satisfies $||g'|| (B_{10}(p)) \leq \varkappa( k,\delta,A| n)$ where\\ $\varkappa(k,\delta,A| n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
+the metric tensor $g$ satisfies $\|g'\| (B_{10}(p)) \leq \varkappa( k,\delta,A| n)$ where\\ $\varkappa(k,\delta,A| n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
  %If $A$ goes to $\infty$,  $\delta $
-% and the lower curvature bound go to $0$, then $||g'|| (B_{10} (x))$ goes to $0$, independently of $x$ and $X$.
+% and the lower curvature bound go to $0$, then $\|g'\| (B_{10} (x))$ goes to $0$, independently of $x$ and $X$.
  \end{lem}
 
 
@@ -1246,15 +1259,15 @@ Our next goal will be to estimate $\mu$.
 
 % \begin{lem}\label{lem-per-dc}
  %There is a constant $A\gg 1$, such that if $\curv X^n\ge k$, a point $x\in X$  is $(A,\delta)$-strained, then  in the distance
- %coordinates the metric tensor $g$ satisfies $||g'|| (B_{10}(x)) \leq \kappa(k,\delta,A|n)$ where $\varkappa(k,\delta,A|n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
+ %coordinates the metric tensor $g$ satisfies $\|g'\| (B_{10}(x)) \leq \kappa(k,\delta,A|n)$ where $\varkappa(k,\delta,A|n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
  %If $A$ goes to $\infty$,  $\delta $
-% and the lower curvature bound go to $0$, then $||g'|| (B_{10} (x))$ goes to $0$, independently of $x$ and $X$.
+% and the lower curvature bound go to $0$, then $\|g'\| (B_{10} (x))$ goes to $0$, independently of $x$ and $X$.
  %\end{lem}
 
 By rescaling Lemma~\ref{lem-per-dc-1} gives
 
  \begin{cor}  \label{ballmeasure}
- If a point $x\in X$ is $(Ar,\delta )$-strained, then $||g'|| (B_{10r} (x) ) \leq \varkappa(k,\delta,A)  \cdot r^{n-1}$ where $\varkappa(k,\delta,A|n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
+ If a point $x\in X$ is $(Ar,\delta )$-strained, then $\|g'\| (B_{10r} (x) ) \leq \varkappa(k,\delta,A)  \cdot r^{n-1}$ where $\varkappa(k,\delta,A|n)\to 0$ as $k\to 0, \delta\to 0,A\to\infty$.
  \end{cor}
 
 
