@@ -1,4 +1,3 @@
-
 %amslatex file
 %\documentclass[amssymb,12pt,amscd,leqno]{amsart}
 \documentclass[12pt,leqno,intlimits]{amsart}
@@ -595,58 +594,67 @@ the ball $B_{\frac r 4} (x)$ is  $(1+C_n\cdot  \delta )$-bi-Lipschitz  to a Eucl
 
 \section{Liouville measure and geodesics} \label{sec:Liou}
 \subsection{Tangent bundle and Liouville measure} \label{subsec:tb}
-Let $X^n$ be an $n$-dimensional Alexandrov space. Consider the tangent bundle of $X$
-  as the  disjoint union $TX=\cup T_x X$ of the tangent spaces at different points. Denote by $\pi\:TX\to X$ the canonical footpoint projection, $\pi (T_xX) =\{x\}$.
-	For any subset $K\subset X$ denote by $TK$ the preimage $\pi^{-1} (K)= \cup _{x\in K} T_xX$. For $r>0$, denote by $T^r K$ the set of all vectors in $TK$
-	of norm smaller than $r$.
+Let $X$ be an $n$-dimensional Alexandrov space. 
+Denote by $TX$ the  disjoint union of the tangent spaces at different points,
+\[TX=\bigsqcup_{x\in X} T_x X.\]
+Let $\pi\:TX\to X$ be the canonical footpoint projection, so $\pi (T_xX)=\{x\}$ for any $x\in X$.
+
+For a subset $K\subset X$, denote by $TK$ the inverse image $\pi^{-1} (K)= \cup _{x\in K} T_xX$. 
+Given $r>0$, denote by $T^{< r} K$ the set of all vectors in $TK$ of norm smaller than $r$.
 % Let $X_{reg}\subset X$ be the set of all regular points and $TX_{reg} =\pi^{-1} (X_{reg}) \subset TX$.
  The   differentiable and Riemannian structure on the set of regular points discussed in \cite{Otsu}, cf. Section \ref{sec:Alex} below,  provide  $TX_{reg}$ with a canonical structure of a Euclidean vector bundle over $X_{reg}$. In this topology, for any sequence of geodesics $\gamma _i$ in $X_{reg}$ converging to a geodesic $\gamma$ the starting directions of $\gamma _i$ converge to the starting direction of $\gamma$.
 
- On the Euclidean vector bundle $TX_{reg}$ over $X_{reg}$ we have a canonical measure, which locally coincides with the product measure of $\mathcal H^n _X$ and the Lebesgue measures on the fibers. More precisely,
- it is the unique Borel measure $\mathcal M$ on $TX_{reg}$ such that for any  Borel set $A\subset TX_{reg}$
- $$\mathcal M(A)= \int _X (\mathcal H^n(A \cap T_x X)) \; d\mathcal H^n (x) \; .$$
+The tangent spaces at the points of $X_{reg}$ are Euclidean.
+Therefore $TX_{reg}$ cares a canonical measure, which locally coincides with the product measure of $\mathcal H^n _X$ and the Lebesgue measures on the fibers. 
+More precisely, it is the unique Borel measure $\mathcal M$ on $TX_{reg}$ such that for any  Borel set $A\subset TX_{reg}$
+$$\mathcal M(A)= \int _X (\mathcal H^n(A \cap T_x X))\cdot d\mathcal H^n (x).$$
  We extend $\mathcal M$ to a measure on $TX$ by setting $\mathcal M(TX\setminus TX_{reg})$ to be $0$.
 By definition, a subset $A\subset TX$ is $\mathcal M$-measurable if and only if there exists  a Borel subset $A'\subset A\cap TX_{reg}$ such that
 for $\mathcal H^n$-almost all $x\in X$ the intersection $(A\setminus A') \cap T_xX$ has $\mathcal H^n$-measure zero in $T_xX$.
 
-
-
-
- For any $\lambda >0$ the multiplication with $\lambda$  on all $T_xX$ sends $\mathcal M $ to $\lambda ^n \cdot \mathcal M$.
- Consider the canonical involution $I\:TX_{reg}\to TX_{reg}$, defined by $I(v)=-v$.
+Note that for any $\lambda >0$ the multiplication with $\lambda$  on all $T_xX$ sends $\mathcal M $ to $\lambda ^n \cdot \mathcal M$.
+Also, the canonical involution $I\:TX_{reg}\to TX_{reg}$, defined by $I(v)=-v$.
 This involution preserves $\mathcal M$, since it preserves the Lebesgue measure in each tangent space.
 %We extend $I$ to an arbitrary Borel map outside of $TX_{reg}$ (for instance, $I(v)=v$ for all $v\notin TX_{reg}$).
 
 
 \subsection{Geodesic flow}
-   In order to define the geodesic flow $\phi$ on a maximal subset   $\mathcal F$ of $TX \times \R $  we proceed as follows.
- For any  $v\in  T_xX$ we set $\phi (v,0)=v$.
- If no geodesic starts in the direction of $v$,
- the value $\phi (v,t)$ will not be defined for $t\neq 0$. If such a geodesic $\gamma_v$ exists, then $\gamma_v$   can be uniquely extended to a  local geodesic $\gamma_v \:[0,a)\to X$  defined on a maximal possible interval, since  geodesics do not branch in $X$.  For $t\geq a$
- the value $\phi (v,t)$ will not be defined. For $0<t<a$ we set $\phi (v,t)$ to be $\gamma _v ^+ (t) \in T_{\gamma _v(t)} X$, the starting direction of $\gamma_v\:[t,a) \to X$ at $\gamma_v (t)$.
+In order to define the geodesic flow $\phi$ on a maximal subset   $\mathcal F$ of $TX \times \R $  we proceed as follows.
+For any  $v\in  T_xX$ we set $\phi_0(v)=v$.
+If no geodesic starts in the direction of $v$, the value $\phi_t(v)$ will not be defined for $t\neq 0$. If such a geodesic $\gamma_v$ exists, then $\gamma_v$   can be uniquely extended to a  local geodesic $\gamma_v \:[0,a)\to X$  defined on a maximal possible interval, since  geodesics do not branch in $X$.  For $t\geq a$
+ the value $\phi_t(v)$ will not be defined. For $0<t<a$ we set $\phi_t(v)$ to be $\gamma _v ^+ (t) \in T_{\gamma _v(t)} X$, the starting direction of $\gamma_v\:[t,a) \to X$ at $\gamma_v (t)$.
 
- Whenever, the geodesic $\gamma _v\:[0,a)\to X$ extends to an (again uniquely defined, maximal)  local geodesic   $\gamma_v\:(b,a) \to X$ for some $b<0$
- then we define $\phi (v,t)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
+Whenever, the geodesic $\gamma _v\:[0,a)\to X$ extends to an (again uniquely defined, maximal)  local geodesic   $\gamma_v\:(b,a) \to X$ for some $b<0$ then we define $\phi_t(v)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
 
 
-For $\lambda >0$ and $v\in  T_x X$ we have  $\phi (\lambda v,t) :=\lambda \cdot \phi (v,\lambda t)$, whenever the right hand side is defined. Moreover,
- $\phi _t ( \phi _s (v))= \phi _{t+s} (v)$ whenever the left hand side is defined for $t,s\in \R$.
-The partial flow $\phi$ preserves the norm of tangent vectors.  Due to \cite{Petparallel},  $TX_{reg}$ is invariant under this partial flow.
-%On $TX_{reg}$ we have
-%$I\circ \phi_t = \phi _{-t} \circ I$, whenever both sides are defined.
+Note that for $\lambda >0$ and $v\in  T_x X$ we have 
+\[\phi_t(\lambda\cdot  v) =\lambda \cdot \phi_{\lambda\cdot t}(v),\] 
+whenever the right hand side is defined. 
+Moreover, 
+\[\phi _t ( \phi _s (v))= \phi _{t+s} (v)\] 
+whenever the left hand side is defined for $t,s\in \R$.
+The partial flow $\phi$ preserves the norm of tangent vectors. 
+Since any geodesic with regular endpoints consist only of regular points (see  \cite{Petparallel})
+the set  $TX_{reg}$ is invariant under this partial flow.
 
+By construction, the domain of geodesic flow includes the domain of the definition of the exponential map.
+More precisely, consider the set  
+\[D=\bigcup_{x\in X} D_x\subset TX;\] 
+that is, the set of all vectors $v\in TX$ for which $\exp _{\pi(v)} (v)$ is defined.
 
-
-By construction, the geodesic flow is defined "at least on the domain of the definition of the exponential map".
-More precisely, let $D=\cup _{x\in X} D_x$ be the set of all vectors $v\in TX$ for which $\exp _{\pi(v)} (v)$ is defined.
-Then $D$ is invariant under multiplication with any $0\leq \lambda \leq 1$.  Moreover, for all $v\in D$ and all $\lambda <1$
+Note that $\lambda\cdot D\subset D$ for any $0\leq \lambda \leq 1$.  
+Moreover, for all $v\in D$ and all $\lambda <1$
 the geodesic flow $\phi_1 (\lambda v)$ is defined and $\pi (\phi_1 (\lambda v))=  \exp _{\pi (v)} (\lambda v)$.
-From this we deduce the following.
- For $\mathcal M$-almost all $v\in D$, we have $v\in D\cap TX_{reg}$, $\phi _1(v)$ is defined  and contained in $TX_{reg}$. Moreover,
- $w=-\phi_1 (v)$ is contained in $D$  and
+
+It follows that for $\mathcal M$-almost all $v\in D$ we have the following
+\begin{itemize}
+\item $v\in TX_{reg}$,
+\item $\phi _1(v)$ is defined,
+\item $w=-\phi_1 (v)\in D$ and
 \begin{equation} \label{eq:symm}
-(\pi (w), \exp (w))=(\exp (v), \pi (v)) \in X\times X\; .
+(\pi (w), \exp (w))=(\exp (v), \pi (v)) \in X\times X.
 \end{equation}
+\end{itemize}
 
 
 \subsection{Measurability questions} \label{subsec:measur} 
@@ -672,22 +680,25 @@ The above argument shows that these intersections are always Borel subsets.
 
 
 \subsection{Liouville property}
-We continue to use the above notations.
- Denote by $\mathcal G$ the set of all vectors $v\in TX $ such that $\phi (v,t)$ is defined for all $t\in \R$. By definition, $\mathcal G$ contains the $0$-section, it
- is invariant under multiplications by any $\lambda >0$  and it is invariant under the geodesic flow $\phi$. Moreover, $\mathcal G\cap TX_{reg}$ is invariant under the involution $I$.
-  \begin{defn}
+Denote by $\mathcal G$ the set of all vectors $v\in TX $ such that $\phi (v,t)$ is defined for all $t\in \R$. 
+By definition, $\mathcal G$ contains the $0$-section.
+Note that $\lambda\cdot \mathcal G=\mathcal G$ for any $\lambda >0$ 
+and $\mathcal G$ is invariant under the geodesic flow $\phi$. 
+Moreover, $\mathcal G\cap TX_{reg}$ is invariant under the involution $I$.
+
+\begin{defn}
  We say that an Alexandrov space $X$ has the \emph{Liouville property} if  $TX\setminus \mathcal G$ has zero Liouville measure  and if
 for any $t\in \R$ the geodesic flow $\phi _t \:\mathcal G\to \mathcal G$ preserves the Liouville measure.
- \end{defn}
+\end{defn}
 
- %  For a subset $K\subset X$ and a number $r<0$ we use the notation $T^ r K$
+ %  For a subset $K\subset X$ and a number $r<0$ we use the notation $T^{< r} K$
 %to denote the set of all vectors in $\pi^{-1} (K)=\cup _{x\in K} T_xX$ of norm $< r$.
 The Liouville property can be checked infinitesimally as follows.
 
 \begin{lem} \label{infini}
 An Alexandrov space $X$ does not have the Liouville property if and only if there is a compact subset $K\subset X$, a positive number
 $\epsilon$ and a sequence of positive numbers  $r_m \to 0$  with the following property.
- For every  $m$, there exists a Borel subset $A_m\subset T^{r_ m} K$ such that
+ For every  $m$, there exists a Borel subset $A_m\subset T^{<r_m} K$ such that
  \begin{equation} \label{eq:m}
 \epsilon \cdot r_m^{n +1} \leq \mathcal M (A_m) -\mathcal M (\phi _1 (A_m)) \;.
 \end{equation}
@@ -697,20 +708,32 @@ $\phi _1(v)$ is defined.
 
 
 \begin{proof}
-If at least one $r_m$ with the above property exists, then $X$  does not have the Liouville property by the very definition.
+If at least one $r_m$ with the above property exists, then $X$  does not have the Liouville property by the definition.
 
-Assume on the other hand, that $X$ does not have the Liouville property. Then,  by homogeneity of the geodesic flow,  $\phi _1$ is not defined almost everywhere on $TX$ or it does not preserve the measure $\mathcal M$. Thus, we find a compact subset $K_1\subset X_{reg}$ and (by homogeneity) a Borel subset $A\subset T^1 K_1$ such that either $\phi_1$ is not defined on almost all of $A$ or $\mathcal M (A) > \mathcal M(\phi (A))$.  Replacing $A$
+Assume on the other hand, that $X$ does not have the Liouville property. Then,  by homogeneity of the geodesic flow,  $\phi _1$ is not defined almost everywhere on $TX$ or it does not preserve the measure $\mathcal M$. Thus, we find a compact subset $K_1\subset X_{reg}$ and (by homogeneity) a Borel subset $A\subset T^{<1} K_1$ such that either $\phi_1$ is not defined on almost all of $A$ or $\mathcal M (A) > \mathcal M(\phi_t (A))$.  
+Replacing $A$
 if needed by a smaller  subset, we find in both cases some $\epsilon >0$, such that   $$\epsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)) \; .$$
-Since $\phi_1 (A)=2\cdot \phi _2 \Big (\frac 1 2 \cdot A \Big)=2\cdot \Big(\phi _1 \circ \phi_1 \Big (\frac 1 2 A \Big ) \Big )$,
-we obtain
-$$\Big(\frac 1 2 \Big )^n \cdot \epsilon \leq  \mathcal M \big(\frac 1 2 A \big) - \mathcal M \big( \phi_1 (\frac 1 2 A ) \big) + \mathcal M \big(\phi_1 (\frac 1 2 A )\big)-
- - \mathcal M\big (\phi_1 \big (\phi _1 (\frac 1 2 A )\big) \big) \; .$$
-Therefore,  either for $A_{\frac 1 2} := \frac 1 2  \cdot A$ or for $A_{\frac 1 2} := \phi_1 (\frac 1 2 \cdot A)$ we infer
-$$\epsilon \cdot \Big(\frac 1 2 \Big )^{n+1}  < \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big) \; .$$
-Note that $A_{\frac 1 2}$ constructed above is contained in $T^{\frac 1 2} K_{\frac 1 2}$, where $K _{\frac 1 2}$ is the closed tubular neighborhood  of
+Since 
+\begin{align*}
+\phi_1 (A)&=2\cdot \phi _2 (\tfrac 1 2 \cdot A )=
+\\
+&=2\cdot(\phi _1 \circ \phi_1 (\tfrac 1 2 \cdot A ) ),
+\end{align*}
+we get
+\begin{align*}
+(\tfrac 1 2)^n \cdot \epsilon &\leq  \mathcal M \big(\tfrac 1 2\cdot  A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot  A ) \big) + 
+\\
+&\quad+\mathcal M \big(\phi_1 (\tfrac 1 2\cdot  A )\big)
+ - \mathcal M\big (\phi_1 \big (\phi _1 (\tfrac 1 2\cdot  A )\big) \big).
+\end{align*}
+Therefore,  taking $A_{\frac 1 2} := \frac 1 2  \cdot A$ or for $A_{\frac 1 2} := \phi_1 (\frac 1 2 \cdot A)$ we get
+$$(\tfrac 1 2 )^{n+1} \cdot \epsilon  \le \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big).$$
+Note that $A_{\frac 1 2}$ constructed above is contained in $T^{<\frac 1 2} K_{\frac 1 2}$, where $K _{\frac 1 2}$ is the closed tubular neighborhood  of
 radius $\frac 1 2$ around $K$.
 
-Iterating the above procedure we obtain  for $r_m =\frac 1 {2^m}$   a subset $A_{r_m} \subset T^{r_m} K_m$  such that $K_m$ is the closed tubular neighborhood around $K_{m-1}$ of radius $r_m$ and such that \eqref{eq:m} holds true.  The claim follows now since all $K_m$ are contained in the closed tubular neighborhood of radius $1$ around $K_1$ and this set is compact, by completeness of $X$.
+Iterating the above procedure we obtain  for $r_m =\frac 1 {2^m}$   a subset $A_{r_m} \subset T^{<r_m} K_m$  such that $K_m$ is the closed tubular neighborhood around $K_{m-1}$ of radius $r_m$ and such that \eqref{eq:m} holds true.  
+
+The claim follows now since all $K_m$ are contained in the closed tubular neighborhood of radius $1$ around $K_1$ and this set is compact, by completeness of $X$.
 \end{proof}
 
 
@@ -719,33 +742,33 @@ The completeness of the Alexandrov space $X$ is used in the proof of \tref{thmma
 \end{rem}
 
 \subsection{Relation with the mm-boundary}
-Before proceeding to the proof of  \tref{thmmain}, we interpret the signed measures $v_r$ from \eqref{eq:first} in suitable geometric terms.
+Before proceeding to the proof of  \tref{thmmain}, we interpret the signed measures $v_r$ from \eqref{eq:first} in suitable terms.
 Let $K\subset X$ be   any measurable  subset $K\subset X$ and let $r>0$ be arbitrary.
 Since $\mathcal H^n (X\setminus X_{reg} )=0$, we have
-$$\mathcal M (T^r K) =\int _K \omega _n \cdot r^n  =\omega _n \cdot r^n \cdot \mathcal H^n (K) \; .$$
+$$\mathcal M (T^{<r} K) =\int _K \omega _n \cdot r^n  =\omega _n \cdot r^n \cdot \mathcal H^n (K) \; .$$
 Denote now by $U^r(K)$ the set of all pairs $(x,y)\in X\times X$ with $x\in K$ and $d(x,y)<r$.
-By Fubini's theorem the set $U^r(K)$ is $\mathcal H^n \otimes \mathcal H^n =\mathcal H^{2n}$ measurable and we have
-$$\mathcal H^{2n} (U^r (K))= \int _K b_r (x) \;  d\mathcal H^n (x) \;. $$
+By Fubini's theorem the set $U^r(K)$ is $\mathcal H^n \otimes \mathcal H^n =\mathcal H^{2\cdot n}$ measurable and we have
+$$\mathcal H^{2\cdot n} (U^r (K))= \int _K b_r (x)\cdot   d\mathcal H^n (x). $$
 Taking both equations  together we see that the measure $v_r$ expresses exactly the difference between both measures. More precisely,
 \begin{equation} \label{eq:compare}
-v_r (K) = \frac 1 {r^n} \Big(\mathcal M (T^r K)- \mathcal H^{2n} (U^r (K)) \Big)\;.
+v_r (K) = \tfrac 1 {r^n} \cdot \Big(\mathcal M (T^{<r} K)- \mathcal H^{2\cdot n} (U^r (K)) \Big)\;.
 \end{equation}
 
+The following statement is a reformulation of \tref{thmmain}.
 
-
-Now we can prove the following result,  reformulating \tref{thmmain}.
 \begin{thm} \label{reform}
 If the Alexandrov space $X$ has trivial mm-boundary then  it has the Liouville property.
 \end{thm}
 
 \begin{proof}
 Assume that $X$ does not have the Liouville property and consider the compact subset $K \subset X$, the positive numbers $\epsilon, r_m$ and the Borel
-subsets $A_m\subset T^{r_m} K$ provided by \lref{infini} above.
+subsets $A_m\subset T^{<r_m} K$ provided by \lref{infini} above.
 
 Let $Y$ be the closed tubular neighborhood  of radius $1$ around $K$.
 Let again $D\subset TX$ be the set of all vectors at which the exponential map is defined.
   For $r>0$, denote  by $N^r$ the intersection of $D$ with $T^r Y$ and consider the "total exponential map"
-$E\:N^r \to X\times X$ given by $E(v)= (\pi (v), \pi (\exp (v)))$.   Let $U^r =U^r(Y)$ be as above the set of all
+$E\:N^r \to X\times X$ given by $E(v)= (\pi (v), \pi (\exp (v)))$.   
+Let $U^r =U^r(Y)$ be as above the set of all
   pairs $(y,x) \in X\times X$ with $y\in Y$ and $d(x,y)<r$. Then
 \begin{equation} \label{eq:image}
 E(N^r) =U^r \; .
@@ -759,11 +782,11 @@ $\mathcal H^{2n} =\mathcal H^n \otimes \mathcal H^n $ on $X\times X$ we obtain f
 \mathcal H^{2n} (E(S)) \leq (1+4nC r^2) \cdot \mathcal M(S)\; .
 \end{equation}
 Due to \eqref{eq:compare}, the triviality of the mm-boundary of $X$ implies
-$$\lim _{r\to 0} \frac 1 {r^{n+1} } |\mathcal M(T^r Y) -\mathcal H^{2n} (U^r)| =0 \;.$$
+$$\lim _{r\to 0} \frac 1 {r^{n+1} } |\mathcal M(T^{<r} Y) -\mathcal H^{2n} (U^r)| =0 \;.$$
 	Together with  \eqref{eq:contract} this implies that for every  $\delta >0$, there exists some $s>0$ with the following property. For all $0<r<s$
 	we have
 	\begin{equation}  \label{eq:almostall}
-	\mathcal M (T^r Y)- \mathcal M (N^r) < \delta r^{n+1} \; ,
+	\mathcal M (T^{<r} Y)- \mathcal M (N^r) < \delta r^{n+1} \; ,
 	\end{equation}
 	and  for all measurable subsets $S\subset N^r$ we have
 	\begin{equation}  \label{eq:almostiso}
@@ -786,7 +809,7 @@ The involution  $I(v)=-v$ is $\mathcal M$-preserving on $TX_{reg}$.  And the inv
   This finishes the proof of \eqref{eq:finally}.
 
 
-Coming back to our subsets $A_m\subset T^{r_m} K$ we have
+Coming back to our subsets $A_m\subset T^{<r_m} K$ we have
  $$\epsilon \cdot r_m^ {n+1} \leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m)) \leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap N^r)) \,.$$
 Setting  $S_m=A_m\cap N^{r_m}$ we estimate the right hand side from above by
 $$|\mathcal M (A_m) -  \mathcal M(S_m)|
@@ -892,7 +915,7 @@ the canonical folding $f:Z\to X$.   From this we see that if $Z$ has the Liouvil
 Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see that the above assumptions are fulfilled whenever the complement $X\setminus \partial X$ has trivial mm-boundary. 
 Indeed, in this case the mm-boundary of $Z$ must be concentrated on $\partial X$, hence it must be trivial by \tref{alexandrovthm},(3).
 
-Using that a limit of quasi-geodesics is a quasi-geodesic it is not difficult to conclude that the partial geodesic flow $\phi:\mathcal F\cap TX_{reg} \to TX_{reg}$ defined above is continuous on the whole domain of definition, slightly strengthening Subsection \ref{subsec:measur}.
+Using that a limit of quasi-geodesics is a quasi-geodesic it is not difficult to conclude that the partial geodesic flow $:\mathcal F\cap TX_{reg} \to TX_{reg}$ defined above is continuous on the whole domain of definition, slightly strengthening Subsection \ref{subsec:measur}.
 
 
 
