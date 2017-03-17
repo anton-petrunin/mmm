@@ -1057,12 +1057,14 @@ $\delta \cdot C\cdot \omega_n \cdot 2^{n+1} < \epsilon $.
 derivatives of the metric.  We do not know how to prove a similar estimate from below, see  Problem \ref{qe:BV}. However, for the applications
 to Alexandrov spaces discussed in the next section, the  estimate from below is a consequence of the theorem of Bishop-Gromov.
 
-For a smooth Riemannian metric $g$ defined on an open subset $U\subset \R^n$ we denote by $|g'|:U\to [0,\infty)$ the sum of the absolute values of the first partial  derivatives $|\frac d {d\,x_k} g_{ij}|$ of the coordinates  of $g$.
+For a smooth Riemannian metric $g$ defined on an open subset $U\subset \R^n$ we denote by $|g'|:U\to [0,\infty)$ the sum $\Sigma_{i,j,k}|\frac \partial {\partial \,x_k} g_{ij}|$.
+
+%of the absolute values of the first partial  derivatives $|\frac \partial {\partial \,x_k} g_{ij}|$ of the coordinates  of $g$.
 
 \begin{prop}\label{prop-smooth}
-There exists a constant $C=C(n)$ with the following property.
+There exists a constant $C=C(n)>1$ with the following property.
 Let $U\subset \R^n$ be an open subset with a smooth Riemannian
-metric $g$ which is $(1+\frac 1 C)$-biLipschitz to  the background Euclidean metric.
+metric $g$ which is $(1+\frac 1 C)$-biLipschitz to  the background Euclidean metric $g_0=g(0)$.
 %t $g_0$ denote the flat background metric and assume $\|g_x-g_0\| \leq \epsilon$ for some fixed small
 %$\epsilon$.
   Let $A\subset U$ be a Borel subset, such that $B_{2r} (A)$ is relatively compact in $U$.
@@ -1075,18 +1077,24 @@ Then  $v_r (A) \leq C \cdot r \cdot \int _{B_{2r} ( A)} |g' |$.
  %We are going to prove a slightly more precise estimate, showing what parts of $\|g'\|$ are essential in the estimate.
 %
 %
- Set $K_v (x) = D_x g(v,v) (v)$.  If $\||v\|_0 -1| \leq 100\epsilon$  then
+Throughout the proof we will denote by $C_i$ various (explicit) constants which depend only on $n$.
+Let us first set $C_0=100$ and let $\eps=\frac 1 C_0$. 
 
- $\lim _{t\to 0} \frac {\||v\|_{x+tv} - \|v\| _x|} t \leq |K_v (x)|$.
 
- We set $K(x)= \Sigma |K_{v_i}(x)|$, where $v_i$ runs through a set of $n^3$ unit vectors in general position.
- Then $K_v(x) \leq K (x)$, for all unit vectors $v$.
+Suppose $(1-\eps)g_0\le g\le (1+\eps)g_0$.  Then for any $x$ and $v$ with $||v||_x=1$ we it holds that  If $\||v\|_0 -1| \leq \eps$.
+ Set $K_v (x) = D_x g(v,v) (v)$.   If $\||v\|_0 -1| \leq \eps$  then
+$|D_x||v||_x(v)|\le |K_v (x)| $.
+
+ %$\lim _{t\to 0} \frac {\||v\|_{x+tv} - \|v\| _x|} t \leq |K_v (x)|$.
+
+ Set $K(x)= \Sigma |K_{v_i}(x)|$, where $v_i$ runs through a set of $n^3$ unit vectors in general position.
+ Then $K_v(x) \leq K (x)$, for all unit (with respect to   $g_x$ for any $x$ ) vectors $v$.
 
  Set $B^x = \{ y | \|y-x\| _{g_x} \leq r \}$ and $B_x = B_r (x)$.  Let $\vol ^x$ be the constant
  volume form coresponding to the constant flat metric $g_x$.
    Set $C_x = B^x \setminus B_x$.
 
-   The volume of $B^x$ with respect to $\vol ^x$ is equal to $b_n r^n$. Thus we only need to estimate
+   The volume of $B^x$ with respect to $\vol ^x$ is equal to $\omega_n r^n$. Thus we only need to estimate
   the volume of $C_x$ and the difference between $\vol ^x$ and $\vol$.
 
  For a vector $v$ of norm close to $1$ and $x\in O$ we set
@@ -1116,19 +1124,25 @@ Then  $v_r (A) \leq C \cdot r \cdot \int _{B_{2r} ( A)} |g' |$.
 
     \begin{lem}
     For a non-negative function $u\in L^1$ we have the inequality
-    $\int _O \int _{S^{n-1}} \int _0^r u(x+sv) ds dv dx \leq C \cdot r \cdot \|u\| _{L^1}$.
+    $\int _O \int _{S^{n-1}} \int _0^r u(x+sv) ds dv dx \leq C_3 \cdot r \cdot \|u\| _{L^1}$.
     \end{lem}
 
 
      \begin{proof}
      The left hand side is equal to
 
-     $C_1 \int _O \int B_r (x) \frac {u(y)}  {\|x-y\| ^{n-1}} dx dy = C \int _O \int _O \frac {u(y) \xi _{B_r (x)}}
-     {\|x-y\| ^{n-1}} dx dy \leq C_2 r  \int _O (u(y))$
+     \[
+     C_1 \int _O \int_{B^0_r (x)} \frac {u(y)}  {\|x-y\| ^{n-1}} dy dx = C_1 \int _O \int _O \frac {u(y) \xi _{B^0_r (x)}(y)}
+     {\|x-y\| ^{n-1}} dx dy 
+     \]
+     \[
+    \le C_1 \int _O u(y)\left(\int _{B_r^0(y)}  \frac {1}
+     {\|x-y\| ^{n-1}} dx\right)dy = C_2 r  \int _O u(y)dy
+     \]
      \end{proof}
 
 
-      Thus we obtain $\int _O (vol _x (C_x)) \leq C \cdot r^{n+1} \|K\| _{L^1}$.
+      Thus we obtain $\int _O (vol _x (C_x)) \leq C_3 \cdot r^{n+1} \|K\| _{L^1}$.
 
 
       It remains to estimate $\vol ^x - \vol$. We have
@@ -1137,12 +1151,12 @@ Then  $v_r (A) \leq C \cdot r \cdot \int _{B_{2r} ( A)} |g' |$.
       \int _{S^{n-1}} \int _0 ^r  t^{n-1} | \vol _{x+tv} - \vol _x| dt dv \leq  \\
        \int _{ S^{n-1}} (\int _0 ^r t^{n-1} (\int _0 ^t  |D_{x+sv} \vol (v)| ds) dt) dv$.
 
-      Now the derivative $D_x \vol (v)$ can be estimated form above by $\epsilon \|D_xg (v)\| + | D_x s (v)|$,
+      Now the derivative $D_x \vol (v)$ can be estimated form above by $(1+2n\eps)(\eps \|D_xg (v)\| + | D_x s (v)|)$,
       where we let $s(x)$ be the trace of $g(x)$ with respect to the background metric $g_0$.
 
       Integrating over $O$ and applying the above lemma two more times we obtain
       $v_r (O) \leq q_1 +q_2 +q_3$, where
-      $q_1 = C r \|K\| _{L^1}$, $q_2 = \epsilon C \| Dg\| _{L^1} $ and $q_3 = C \|Ds\|$.
+      $q_1 = C_4 r \|K\| _{L^1}$, $q_2 = \epsilon C_4 \| Dg\| _{L^1} $ and $q_3 = C_4 \|Ds\|$.
 
       This implies the claim.
     \end{proof}
