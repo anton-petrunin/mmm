@@ -7,6 +7,7 @@
 
 \numberwithin{equation}{section}
 
+
 \newtheorem{thm}{THEOREM}[section]
 \newtheorem{thmmain}[thm]{\tref{thm-main}}%[section]
 \renewcommand{\thethmmain}{}
@@ -52,9 +53,6 @@
 \newcommand{\Rg}{\mathrm{Rg}}
 \newcommand{\Fix}{\mathrm{Fix}}
 \newcommand{\R}{\mathbb{R}}
-
-\def\X{{X^\varepsilon}}
-\def\di{{\bold div}\,}
 
 \def\RR{\mathbb R}
 \def\co{\colon\thinspace}
@@ -207,7 +205,8 @@ We refer to Subsection \ref{subsec:example} and Section \ref{sec:final} for a di
 state now our central result connecting mm-boundaries to the existence of infinite geodesics in Alexandrov spaces:
 
 \begin{thm} \label{thmmain}
-Let $X$ be an Alexandrov space. If $X$ has trivial mm-boundary, then almost each direction of the tangent
+Let $X$ be an Alexandrov space.
+If $X$ has vanishing mm-boundary, then almost each direction of the tangent
 bundle $TX$ is the starting direction of an infinite geodesic. 
 Moreover, the geodesic flow preserves the Liouville measure on $TX$.
 \end{thm}
@@ -218,7 +217,8 @@ In different settings, geodesic flow on singular spaces have been investigated i
 The next theorem shows that, similarly to \exref{mainex}, the topological boundary is closely related to the mm-boundary in Alexandrov spaces.
 
 \begin{thm} \label{alexandrovthm}
-Let $X^n$ be an $n$-dimensional Alexandrov space. Then $X$ has locally finite mm-boundary.
+Let $X^n$ be an $n$-dimensional Alexandrov space.
+Then $X$ has locally finite mm-boundary.
 If $ \nu= \lim \frac{v_{s_j}}{s_j}$, for a sequence $s_j \to 0 $, then $\nu$ is a Radon measure and
 the following holds true.
 \begin{enumerate}
@@ -229,12 +229,13 @@ for a positive constant $c$ depending only on $n$.
 \end{enumerate}
 \end{thm}
 
-We believe that an Alexandrov space with empty topological boundary $\partial X$ has a trivial mm-boundary,
+We believe that an Alexandrov space with empty topological boundary $\partial X$ has vanishing mm-boundary,
 which would solve the question about the existence of infinite geodesics.
 This conjecture will be proved in two partial cases.
 
 \begin{thm} \label{hypersurface}
-Let $X^n$ be a convex hypersurface in $\R^{n+1}$ or let $X$ be a two-dimensional Alexandrov space without boundary. Then $X$ has trivial mm-boundary.
+Let $X^n$ be a convex hypersurface in $\R^{n+1}$ or let $X$ be a two-dimensional Alexandrov space without boundary. 
+Then $X$ has vanishing  mm-boundary.
 \end{thm}
 
 In combination with \tref{thmmain} this proves \tref{thmfirst}.
@@ -254,7 +255,7 @@ If the measures $v_r /r^2$ converge to a measure $\nu$, we call $\nu$ the mm-cur
 \end{defn}
 
 %If, in the definition above, the measures $v_r /r^2$ locally converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
-Clearly, local finiteness of mm-curvature as defined above implies that the mm-boundary is trivial.
+Clearly, local finiteness of mm-curvature as defined above implies that the mm-boundary vanishes.
 Thus, the following result proves \tref{hypersurface} in the $2$-dimensional case.
 
 \begin{thm} \label{intsurface}
@@ -334,7 +335,7 @@ Then $\lim _{r\to 0} v_r =0$. Moreover, $\mathcal H^n$ is the only measure with 
 
 \begin{ex}
 Let $X$ be a Riemannian manifold with a Lipschitz continuous metric.
-Then $X$ has trivial mm-boundary.
+Then $X$ has vanishing  mm-boundary.
 \end{ex}
 
 \begin{ex}
@@ -352,7 +353,7 @@ $f(\alpha)$ is a non-zero function the form $f(\alpha)= O(\alpha ^3)$.
 \begin{ex} \label{ex:secondlast}
 Let $X$ be a finite $n$-dimensional simplicial complex with an intrinsic metric $d$.
 Assume that the restriction of $d$ to each simplex is given by a smooth Riemannian metric.
-Then $X$ has a finite boundary $\nu$, concentrated on the $(n-1)$-skeleton $X^{n-1}$.
+Then $X$ has a finite mm-boundary $\nu$ with the support on the $(n-1)$-skeleton $X^{n-1}$.
 \end{ex}
 
 \begin{ex} \label{ex:last}
@@ -642,7 +643,7 @@ v_r (K) = \frac 1 {\omega_n \cdot r^n} \Big(\mathcal M (T^r K)- \mathcal H^{2\cd
 The following statement is a reformulating of \tref{thmmain}.
 
 \begin{thm} \label{reform}
-If an Alexandrov space $X$ has trivial mm-boundary then it has the Liouville property.
+If an Alexandrov space $X$ has vanishing  mm-boundary then it has the Liouville property.
 \end{thm}
 
 \begin{proof}
@@ -670,7 +671,7 @@ $\mathcal H^{2\cdot n} =\mathcal H^n \otimes \mathcal H^n $ on $X\times X$ we ob
 \begin{equation} \label{eq:contract}
 \mathcal H^{2\cdot n} (E(S)) \leq (1+4{\cdot} n{\cdot} C{\cdot}  r^2) \cdot \mathcal M(S).
 \end{equation}
-Due to \eqref{eq:compare}, the triviality of the mm-boundary of $X$ implies
+Due to \eqref{eq:compare}, the vanishing  of the mm-boundary of $X$ implies
 $$\lim _{r\to 0} \frac 1 {r^{n+1} } |\mathcal M(T^{r} Y) -\mathcal H^{2\cdot n} (U^r)| =0.$$
 Thus, up to terms of higher order, the map $E$ does not increase the measure of subsets, but the total mass of the image
 coincide with the total mass of the target.
@@ -817,7 +818,7 @@ the folding $f\:Z\to X$.
 From this we deduce that if $Z$ has the Liouville property, then $\mathcal M_1$-almost each direction $v\in \Sigma X$ is the starting direction of a unique infinite quasi-geodesic in $X$.
 Moreover, in this case, the corresponding quasi-geodesic flow preserves $\mathcal M_1$.
 
-Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see that the above assumptions are fulfilled whenever the complement $X\setminus\partial X$ has trivial mm-boundary. Indeed, in this case the mm-boundary of $Z$ must be concentrated on $\partial X \subset Z$, hence it must be trivial by \tref{alexandrovthm},(3).
+Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see that the above assumptions are fulfilled whenever the complement $X\setminus\partial X$ has vanishing  mm-boundary. Indeed, in this case the mm-boundary of $Z$ must be concentrated on $\partial X \subset Z$, hence it must be trivial by \tref{alexandrovthm},(3).
 
 \section{Surfaces with bounded integral curvature in the sense of Alexandrov} \label{sec:surface}
 \subsection{Preparations} We assume here some familiarity with the theory of surfaces with bounded integral curvature; see also \cite{AZ} and
@@ -840,11 +841,13 @@ the curvature measure $\hat \Omega$ of $\hat X$ satisfies $|\hat \Omega | (\hat 
 \cite{Bonk-Lang} provides us an $L$-bi-Lipschitz map $f\:\hat X\to \R^2$ with $L\leq 1+\frac {3\delta} {2\pi -3\delta}$.
 For sufficiently small $\delta$, we would only need to apply \eqref{eq:bilip} to finish the proof of the lemma.
 
-It remains to prove the existence of $\hat X$. We take some $r>t>s$ and consider the compact metric ball $\bar B_t (x) \subset B_r (x)$. We may assume that the boundary $S_t=S_t (x)$ of
+It remains to prove the existence of $\hat X$. We take some $r>t>s$ and consider the compact metric ball $\bar B_t (x) \subset B_r (x)$.
+We may assume that the boundary $S_t=S_t (x)$ of
 $\bar B_t (x)$ does not contain singular points of $X$. Due to \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$. Since $U$ is homeomorphic to a plane this implies that $\bar B_t (x)$ is homeomorphic to a closed disk $\bar D^2$ in $\R^2$.
 
 We find a polygonal Jordan curve $\Gamma$ in $B_t(x)$ approximating $S_t$ such that the negative part of the geodesic curvature of $\Gamma$ is smaller than $2\delta$. Consider the closed Jordan domain $Y$ bounded by $\Gamma$, which can be assumed to contain $B_s(x)$.
-Now we glue to $Y$ along any edge of $\Gamma$ a flat half-strip. The boundary of the arising polyhedral surface consists of pairs of rays
+Now we glue to $Y$ along any edge of $\Gamma$ a flat half-strip.
+The boundary of the arising polyhedral surface consists of pairs of rays
 $\gamma _i ^{\pm}$ emanating from the vertices $V_1,..,V_k$ of $\Gamma$. The rays $\gamma _i^{\pm}$ enclose an angle equal to $2\pi- \alpha _i$, where $\pi-\alpha _i$ is the angle of $\Gamma$ at $V_i$ measured in $Y$. In order to finish the construction of $\hat X$ we glue a flat sector of
 angle $\alpha _i$ between $\gamma _i ^{\pm}$, if $\alpha _i >0$ and we glue $\gamma _i^{\pm}$ together if $\alpha _i \leq 0$.
 Since $Y$ was a polyhedral disc, the arising space $\hat X$ is a complete polyhedral plane.
@@ -974,7 +977,8 @@ This finishes the proof of \eqref{eq:vitya}, of the claim and of Lemma.
 
 \subsection{The proof} Now we can provide the proof of
 \begin{thm} \label{thmconv}
-Let $X=X^n$ be a convex hypersurface in $\R^{n+1}$. Then it has trivial mm-boundary.
+Let $X=X^n$ be a convex hypersurface in $\R^{n+1}$.
+Then it has vanishing  mm-boundary.
 
 \end{thm}
 Together with \tref{intsurface} this finishes the proof of \tref{hypersurface}. In combination with \tref{thmmain} it also finishes the proof of \tref{thmfirst}.
@@ -1334,7 +1338,8 @@ The aim of this subsection is the proof of a controlled covering result; see als
 %Let us denote by $\alpha_m$ the volume of unit ball in the $m$-dimensional Euclidean space.
 
 \begin{prop}\label{prop:covering}
-Let $X^n$ be an $n$-dimensional Alexandrov space without boundary. For every compact $W\subset X$, every $\alpha >n-2$ there exists
+Let $X^n$ be an $n$-dimensional Alexandrov space without boundary.
+For every compact $W\subset X$, every $\alpha >n-2$ there exists
 a positive number $ q =q(W,\alpha ) >0$ with the following property. For every $x\in W$ and every $s<1 $
 there exists a countable collection of good balls $B_m=B_{r_m}(x_m) \subset X$
 such that
@@ -1405,7 +1410,8 @@ by construction, $\sum _{B_j\in \mathcal F} r_j^{\alpha} = \lim _{l\to \infty} g
 Now we can provide the
 \begin{proof}[Proof of Theorem~\ref{alexandrovthm}]
 Let $X$ be a fixed $n$-dimensional Alexandrov space. By the inequality of Bishop--Gromov, the deviations measures $v_r$ are uniformly bounded from below
-by a quadratic term in $r$. Thus in order to control the mm-boundary we only need to bound $v_r$ from above on balls in $X$.
+by a quadratic term in $r$.
+Thus in order to control the mm-boundary we only need to bound $v_r$ from above on balls in $X$.
 
 Let the constants $A,C$ be chosen as above, so that \pref{ballmeasure} can be applied.
 
@@ -1423,7 +1429,8 @@ Summing up and using $r_m^{n-1} < r_m ^{\alpha}$ we obtain
 v_r (K) \leq \sum_m v_r (B_m \cap K) \leq (2\cdot C\cdot A+2\cdot \omega _n) \cdot q\cdot r \cdot s^{\alpha}  .
 \end{equation}
 
-This proves that $X$ has locally finite mm-boundary. As already mentioned and used above, any signed Radon measure $\nu$ obtained as a limit of a sequence $v_{r_j} /r_j$ for some $r_j\to 0$ must be non-negative, hence a Radon measure. We fix such $\nu$.
+This proves that $X$ has locally finite mm-boundary.
+As already mentioned and used above, any signed Radon measure $\nu$ obtained as a limit of a sequence $v_{r_j} /r_j$ for some $r_j\to 0$ must be non-negative, hence a Radon measure. We fix such $\nu$.
 
 Inequality \eqref{eq:density} implies that $\nu$ has finite $\alpha$-dimensional density at every point of $X$, in particular, $\nu$ vanishes on subsets of Hausdorff dimension $\leq n-2$.
 Thus $\nu (X \setminus X_{\delta } )=0$.
@@ -1474,9 +1481,8 @@ Construct a compact manifold with a continuous Riemannian metric
 that does not have finite mm-boundary.
 \end{quest}
 
-The following problem is motivated by our approach to \tref{alexandrovthm} in Sections \ref{sec-BV-estimate}, \ref{sec:Alex}.
-%We have reduced the question of triviality of mm-boundary in Alexandrov spaces to a question
-%about the existence of good coordinates for almost Riemannian spaces.
+The following problem is motivated by our approach to \tref{alexandrovthm} in Sections \ref{sec-BV-estimate}, \ref{sec:Alex}. 
+
 
 \begin{quest} \label{qe:min}
 Let $X$ be an almost Riemannian space. Can the minimal metric derivative measure be non-zero?
@@ -1509,7 +1515,7 @@ Let $X$ be a convex hypersurface sufficiently close to a flat hyperplane. Can we
 \end{quest}
 
 Some natural generalizations of our \tref{thmconv} are possible. Probably, slightly refined arguments can be used to
-prove that any DC-submanifold of a Euclidean space has trivial mm-boundary. Using the embedding theorem of Nash, this would also provide an easy generalization of \tref{thmconv} and \tref{thmfirst} to convex hypersurfaces of smooth Riemannian manifolds.
+prove that any DC-submanifold of a Euclidean space has vanishing mm-boundary. Using the embedding theorem of Nash, this would also provide an easy generalization of \tref{thmconv} and \tref{thmfirst} to convex hypersurfaces of smooth Riemannian manifolds.
 
 \subsection{Alexandrov geometry and beyond}
 As the next generalization of \tref{thmfirst}, one should study the case of smoothable Alexandrov spaces.
@@ -1518,7 +1524,7 @@ As the next generalization of \tref{thmfirst}, one should study the case of smoo
 Does the mm-boundary vanish in smoothable Alexandrov spaces? Are there relations to scalar curvature measures defined in \cite{LP}?
 \end{quest}
 
-Due to the observation after Problem \ref{qe:min}, the triviality of mm-boundary would follow from the existence of slightly smoother coordinates than the ones provided by Perelman's DC-structure.
+Due to the observation after Problem \ref{qe:min}, the vanishing of mm-boundary would follow from the existence of slightly smoother coordinates than the ones provided by Perelman's DC-structure.
 \begin{quest}
 Let $X$ be an Alexandrov space. Can one introduce coordinates on a neighborhood of the set of regular points, such that the metric is locally given by a Riemannian tensor of class $W^{1,1}$?
 \end{quest}
@@ -1561,7 +1567,8 @@ Finally, it seems reasonable to expect some generalizations to spaces with Ricci
 Can one control the mm-boundary of noncollapsed limits of Riemannian manifolds with Ricci curvature bounded below? Can one expect something like a geodesic flow in this setting?
 \end{quest}
 
-From the work of Cheeger and Naber \cite{Ch-Na-codim4} it should follow that on any non-collapsed limit of manifolds with both-sided Ricci curvature bounds, the mm-curvature is locally finite and mm-boundary is zero. Vanishing of the mm-boundary should then imply that the geodesic flow is defined almost everywhere and preserves the Liouville measure by the same argument as in the proof of Theorem~\ref{thmmain}.
+From the work of Cheeger and Naber \cite{Ch-Na-codim4} it should follow that on any non-collapsed limit of manifolds with both-sided Ricci curvature bounds, the mm-curvature is locally finite and mm-boundary is zero.
+Vanishing of the mm-boundary should then imply that the geodesic flow is defined almost everywhere and preserves the Liouville measure by the same argument as in the proof of Theorem~\ref{thmmain}.
 \bibliographystyle{alpha}
 %\bibliography{mmm}
 %\end{document}
