@@ -154,7 +154,7 @@ b_r(x):=\mu (B_r (x)).
 
 We define the \emph{deviation measure} $v_r$ of $X$ as a signed Radon measure $v_r$ on $X$, absolutely continuous with respect to $\mu$, given by
 \begin{equation} \label{eq:first}
-v_r = (1 - \frac {b_r} { \omega _n r^n} )\cdot \mu \, .
+v_r = (1 - \frac {b_r} { \omega _n{\cdot}r^n} )\cdot \mu \, .
 \end{equation}
 Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
 
@@ -515,7 +515,7 @@ then we define $\phi _t(v)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
 The set of all pairs $(v,t)\in TX\times\R$ such that $\phi_t(v)$ will be defined is denoted by $\mathcal F$.
 
 For $\lambda >0$, for $t,s\in \R$ and $v\in T_x X$ we have
-$$\phi _t(\lambda \cdot v) :=\lambda \cdot \phi _{\lambda \cdot t} (v)
+$$\phi _t(\lambda \cdot v) =\lambda \cdot \phi _{\lambda \cdot t} (v)
 \quad\text{and}\quad 
 \phi _{t+s} (v) =\phi _t ( \phi _s (v)),$$
 whenever the right hand side is defined.
@@ -692,17 +692,15 @@ Thеrefore, $E$ is measure preserving up to terms of higher order.
 More precisely, combining the last two inequalities we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
 we have
 \begin{equation} \label{eq:almostall}
-\mathcal M (T^r Y)- \mathcal M (D^r) < \delta r^{n+1}
-\quad\text{and}\quad
-|\mathcal H^{2\cdot n} (E(S)) - \mathcal M (S)| < \delta r^{n+1}.
+\begin{aligned}
+ \mathcal M (T^r Y)- \mathcal M (D^r) &< \delta{\cdot}r^{n+1},
+\\
+|\mathcal H^{2\cdot n} (E(S)) - \mathcal M (S)| &< \delta{\cdot}r^{n+1}.
+\end{aligned}
 \end{equation}
-% and for all measurable subsets $S\subset D^r$ we have
-% \begin{equation} \label{eq:almostiso}
-% |\mathcal H^{2\cdot n} (E(S)) - \mathcal M (S)| < \delta r^{n+1}.
-%\end{equation}
 For any measurable subset $S\subset D^r \cap TK$ we now claim
 \begin{equation} \label{eq:finally}
-|\mathcal H^{2\cdot n} (E(S)) - \mathcal M (\phi _1 (S))| < 2 \delta r^{n+1}.
+|\mathcal H^{2\cdot n} (E(S)) - \mathcal M (\phi _1 (S))| < 2{\cdot}\delta{\cdot}r^{n+1}.
 \end{equation}
 In order to prove \eqref{eq:finally}, let $S^+$ be the subset of all vectors $v\in S $ for which $\phi_1 (v)$ exists and is contained in $TX_{reg}$.
 For all $v\in S^+$, we have $-\phi _1 (v) \in D^r$ and, due to \eqref{eq:symm},
@@ -710,16 +708,18 @@ $$E(-\phi_1 (v)) =J(E(v)).$$
 The involution $I(v)=-v$ is $\mathcal M$-preserving on $TX_{reg}$. And the involution
 $J\:X\times X\to X\times X$ given by $J(x,y)=(y,x)$ preserves $\mathcal H^{2\cdot n}$. Therefore, from \eqref{eq:almostall} we deduce
 \begin{equation} \label{eq:final+}
-|\mathcal H^{2\cdot n} (E(S^+)) - \mathcal M (\phi _1 (S^+))| < \delta r^{n+1}.
+|\mathcal H^{2\cdot n} (E(S^+)) - \mathcal M (\phi _1 (S^+))| < \delta{\cdot}r^{n+1}.
 \end{equation}
 On the other hand, by construction,
 $$ \mathcal M (S\setminus S^+ )=0
 \quad\text{and}\quad
 \phi _1 (S\setminus S^+)\cap TX_{reg} =\emptyset.$$
 Hence, applying \eqref{eq:almostall}, we see
-$$|\mathcal H^{2\cdot n} (E(S))- \mathcal H^{2\cdot n} (E(S^+))|< \delta r^{n+1}
-\quad\text{and}\quad
-\mathcal M (\phi _1 (S\setminus S^+)) =0.$$
+\begin{align*}
+|\mathcal H^{2\cdot n} (E(S))- \mathcal H^{2\cdot n} (E(S^+))|&< \delta{\cdot}r^{n+1}
+\intertext{and}
+\mathcal M (\phi _1 (S\setminus S^+)) &=0.
+\end{align*}
 Together with \eqref{eq:final+} this finishes the proof of \eqref{eq:finally}.
 
 Coming back to our subsets $A_m\subset T^{r_m} K$, we have
@@ -836,6 +836,7 @@ This finishes the proof of the claim and of \lref{lem:bl}.
 
 \subsection{Local finiteness of mm-curvature}
 Now we are ready to prove and prove the following generalization of \tref{intsurface}.
+
 \begin{thm}\label{intsurface1}
 Let $X$ be an Alexandrov surface with integral curvature bounds. Then, equipped with the Hausdorff measure $\mathcal H^2$, the space $X$ has locally finite mm-curvature.
 \end{thm}
@@ -892,23 +893,33 @@ This finishes the proof of the theorem.
 \end{proof}
 
 \section{Convex hypersurface} \label{sec:hyper}
-In this section we are going to prove \tref{thmfirst}. The proof will follow from \tref{thmmain} by comparing the mm-boundary with the mean curvature measure on convex hypersurfaces.
-It is possible to deduce the theorem without a reference to \tref{alexandrovthm}, from \lref{lem:mean} alone, but using our main technical result \tref{alexandrovthm}
-shortens the proof. All results in this section are local. For simplicity, we nevertheless assume all convex hypersurfaces to be closed in $\R^{n+1}$. They will always be equipped with the induced intrinsic metric, not with the restricted distance function from $\mathbb R^{n+1}$.
-We assume in here some familiarity with the basics of the theory of convex functions and convex geometry.
-\subsection{Mean curvature}
-Let $X^n$ be a convex hypersurface in $\R ^{n+1}$. Recall that there exists a Radon measure $K$ on $X$, called the mean curvature measure, which has the following properties; see also \cite{Schneider}, \cite{Fedcurvature}.
-For smooth hypersurfaces $X$, we have $K=\kappa \cdot \mathcal H^n$, where $\kappa$ is the usual mean curvature function of $X$.
-The mean curvature measure is stable under Hausdorff convergence of convex hypersurfaces in $\R^{n+1}$. If the hypersurface is rescaled by $\lambda$, the mean curvature $K$ is rescaled by $\lambda ^{n-1}$.
+In this section we are going to prove \tref{thmfirst}.
 
-We call a point $x$ in the convex hypersurface $X$ a smooth point if there is a unique supporting hyperplane of $X$ at this point.
+The proof will follow from \tref{thmmain} by comparing the mm-boundary with the mean curvature measure on convex hypersurfaces.
+
+It is possible to deduce the theorem without a reference to \tref{alexandrovthm}, from \lref{lem:mean} alone, but using \tref{alexandrovthm} shortens the proof.
+
+All results in this section are local,
+but for simplicity, we assume all convex hypersurfaces to be closed in $\R^{n+1}$.
+They will always be equipped with the induced intrinsic metric, not with the restricted distance function from $\mathbb R^{n+1}$.
+
+We assume that the reader is familiar with the basics of the theory of convex functions and convex geometry.
+
+\subsection{Mean curvature}
+Let $X^n$ be a convex hypersurface in $\R ^{n+1}$. Recall that there exists a Radon measure $\mathcal K$ on $X$, called the mean curvature measure, which has the following properties; see also \cite{Schneider}, \cite{Fedcurvature}.
+For smooth hypersurfaces $X$, we have $\mathcal K=\kappa \cdot \mathcal H^n$, where $\kappa$ is the usual mean curvature function of $X$.
+The mean curvature measure is stable under Hausdorff convergence of convex hypersurfaces in $\R^{n+1}$. 
+If the hypersurface is rescaled by $\lambda$, the mean curvature $\mathcal K$ is rescaled by $\lambda^{n-1}$. %???
+
+A point $x$ in the convex hypersurface $X$ is called \emph{smooth} if there is a unique supporting hyperplane of $X$ at this point.
 For any smooth point $x\in X$, any sequence $x_j\in X$ converging to $x$ and any sequence of positive numbers $t_j$ converging to $0$, the
 sequence of convex hypersurfaces $X_j$ obtained from $X$ by the dilatation by the factor $\frac 1 {t_j}$ centered at the point $x_j$ converges
-to the tangent hyperplane of $X$ at $x$. Using stability of the mean curvature measures $K$, vanishing of $K$ on flat hyperplanes and
-the behavior of $K$ under rescalings gives us the following conclusion.
+to the tangent hyperplane of $X$ at $x$. Using stability of the mean curvature measures $\mathcal K$, vanishing of $\mathcal K$ on flat hyperplanes and
+the behavior of $\mathcal K$ under rescalings gives us the following.
+
 \begin{lem} \label{lem:compsm}
 Let $X$ be a convex hypersurface in $\R^{n+1}$. Let $A$ be a compact set of smooth points in $X$ and let $\delta >0$ be arbitrary.
-Then there exists some $t>0$ such that for any $y\in B_{t} (A)$ and any $0<r<t$ we have $K(B_r(y)) \leq \delta \cdot r^{n-1}$.
+Then there exists some $t>0$ such that for any $y\in B_{t} (A)$ and any $0<r<t$ we have $\mathcal K(B_r(y)) \leq \delta \cdot r^{n-1}$.
 \end{lem}
 Thus, the following lemma applies to all small balls in a neighborhood of any smooth point.
 
@@ -916,10 +927,10 @@ Thus, the following lemma applies to all small balls in a neighborhood of any sm
 
 \begin{lem} \label{lem:mean}
 There exist numbers $\delta_0,C>0$ depending only on $n$ with the following property. Let $X$ be a convex hypersurface in $\R^{n+1}$.
-Let $x\in X$ be a point and $r>0$ be such that the mean curvature $K$ satisfies $K(B_{6r} (x)) < \delta \cdot r^{n-1}$ with $\delta <\delta _0$.
+Let $x\in X$ be a point and $r>0$ be such that the mean curvature $\mathcal K$ satisfies $\mathcal K(B_{6{\cdot}r} (x)) < \delta \cdot r^{n-1}$ with $\delta <\delta _0$.
 Then
 \begin{equation} \label{eq:lemma}
-| 1 - \frac {b_r (x)} { \omega _n r^n}| < C\cdot \delta \cdot K( B_{6r} (x)) \cdot r^{1-n}.
+| 1 - \frac {b_r (x)} { \omega _n{\cdot}r^n}| < C\cdot \delta \cdot \mathcal K( B_{6{\cdot}r} (x)) \cdot r^{1-n}.
 \end{equation}
 \end{lem}
 
@@ -928,7 +939,7 @@ By rescaling, it suffices to prove the existence of $\delta _0, C>0$ such that t
 By approximation, it is sufficient to prove the result for smooth convex hypersurfaces.
 
 We fix a sufficiently small $\varepsilon _0>0$. The mean curvature vanishes on $B_6 (x)$ if an only if $B_6(x)$ is contained in a flat hyperplane.
-Due to the stability of $K$ under convergence, if $\delta_0$ is small, then
+Due to the stability of $\mathcal K$ under convergence, if $\delta_0$ is small, then
 the ball $U=B_{5} (x) \subset X$ is close to a flat hyperplane in $\R^{n+1}$.
 Thus, we may assume that the tangent hyperplanes to points in $U$ are $\varepsilon_0$-close to the tangent
 space $W =T_xX \subset \R^{n+1}$. Therefore, $U$ is a graph $U=\{(x,f(x))\}$ of a convex function $f\:V\to \R$ defined on an open subset $V\subset W$. Moreover, $V$ contains the ball of radius $4$ in $W$ around $x$. Let $O$
@@ -970,18 +981,17 @@ Integrating over $S$ we obtain by Fubini's theorem a uniform positive lower boun
 This finishes the proof of \eqref{eq:vitya}, of the claim and of Lemma.
 \end{proof}
 
-\subsection{The proof} Now we can provide the proof of
+\subsection{The proof} The following theorem is the first part of \tref{hypersurface};
+the second part follows from \tref{intsurface1}.
+In combination with \tref{thmmain} it also finishes the proof of \tref{thmfirst}. %???
+
 \begin{thm} \label{thmconv}
 Let $X=X^n$ be a convex hypersurface in $\R^{n+1}$.
 Then it has vanishing  mm-boundary.
 
 \end{thm}
-Together with \tref{intsurface} this finishes the proof of \tref{hypersurface}. In combination with \tref{thmmain} it also finishes the proof of \tref{thmfirst}.
-% it is sufficient to show that $X$ has trivial mm-boundary. This claim is local on $X$.
-%Taking a small neighborhood of an arbitrary point in $X$ we can extend it to compact convex hypersurface. Thus we may and will assume that $X$
-%is compact.
+
 \begin{proof}
-%For any $r>0$ the signed measure $v_r$ on $X$ defined by \eqref{eq:first} is non-negative by the theorem of Bishop--Gromov.
 Since $X$ has locally finite mm-boundary by
 \tref{alexandrovthm}, it suffices to prove that any limit measure $\nu$ of a sequence $\frac 1 {r_j} v_{r_j}$ for $r_j\to 0$ must be the zero measure.
 Let us fix such a limit measure $\nu$. Due to \tref{alexandrovthm}, $\nu (A)=0$ for any Borel subset $A\subset X$ with $\mathcal H^{n-1} (A)<\infty$.
@@ -990,22 +1000,22 @@ Let $Y\subset X$ be the set of smooth points of $X$.
 The complement $X\setminus Y$ is a countable union of subsets with finite $(n-1)$-dimensional Hausdorff measure, \cite[Theorem 1.4]{Schneider}, therefore $\nu (X\setminus Y) =0$. Therefore, it is sufficient to prove $\nu (A)=0$
 for any compact subset $A\subset Y$.
 
-Let $A$ be such a compact subset and let $\delta>0$ be an arbitrary sufficiently small number. Consider a positive $1>t>0$ provided by \lref{lem:compsm}. Let $U$ be the open set $B_t (A)$. Making $t$ smaller, if needed, we may assume that $K(B_{7t}(A))$ is bounded by a
+Let $A$ be such a compact subset and let $\delta>0$ be an arbitrary sufficiently small number. Consider a positive $1>t>0$ provided by \lref{lem:compsm}. Let $U$ be the open set $B_t (A)$. Making $t$ smaller, if needed, we may assume that $\mathcal K(B_{7{\cdot}t}(A))$ is bounded by a
 fixed constant $C_1$ independent of $\delta$.
 
 Let $0<r<t$ be arbitrary. Then, by \lref{lem:mean}, for any $x\in U$ we have \eqref{eq:lemma}.
 Therefore, 
 \begin{align*}
 |v_r| (U)
-&\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot K (B_{6{\cdot}r} (y)) \cdot d\mathcal H^n (y) \leq
+&\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot \mathcal K (B_{6{\cdot}r} (y)) \cdot d\mathcal H^n (y) \leq
 \\
-&\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B_{7{\cdot}t} (A)} \mathcal H^n (B_{6{\cdot}r} (y)) \cdot dK(y) 
+&\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B_{7{\cdot}t} (A)} \mathcal H^n (B_{6{\cdot}r} (y)) \cdot d\mathcal K(y) 
 \leq 
 \\
-&\leq C\cdot \delta \cdot r^{1-n} \cdot (6{\cdot}r) ^n \cdot K(B_{7{\cdot}t} (A)),
+&\leq C\cdot \delta \cdot r^{1-n} \cdot (6{\cdot}r) ^n \cdot \mathcal K(B_{7{\cdot}t} (A)),
 \end{align*}
 where we have used \lref{lem:exchange} in the second and the theorem of Bishop--Gromov in the last inequality. Hence
-$$|\nu| (A) \leq |\nu| (U) \leq C\cdot \delta \cdot 6^n \cdot K(B_7 (A)). $$
+$$|\nu| (A) \leq |\nu| (U) \leq C\cdot \delta \cdot 6^n \cdot \mathcal K(B_7 (A)). $$
 Since $\delta$ can be chosen arbitrary small, we obtain $|\nu| (A)=0$.
 
 This finishes the proof of the claim and, therefore, of \tref{thmconv}.
@@ -1065,7 +1075,9 @@ $$K (x)=\sup _{|v|_x =1}\, \frac d {dt}\Big |_{t=0} |v| _{x+tv}.$$
 By smoothness of the determinant and the square root,
 we find a constant $C_1$ such that for all $x\in U$ we have
 \begin{equation} \label{eq:Kg}
-|u' (x)| \leq C_1\cdot |g' (x)| \; \; \text{and} \; \; K (x) \leq C_1 \cdot |g' (x)|.
+|u' (x)| \leq C_1\cdot |g' (x)|
+\quad\text{and}\quad
+K (x) \leq C_1 \cdot |g' (x)|.
 \end{equation}
 We fix $A\subset X$ and $r>0$ as in the formulation of the proposition. For $x\in U$ denote by $B_x$
 the metric ball $B_r(x)$ in $U$. By $B^x$ we denote the metric ball of radius $r$ in the Euclidean norm $|\cdot |_x$. In this Euclidean metric the ball $B^x$ has measure
@@ -1080,15 +1092,30 @@ We may assume that the bi-Lipschitz constant $1+\frac 1 C$ is close to 1, so tha
 
 In order to bound the first summand, for $x\in A$ and $|v|_x=1$, we set $l^x_v$ to be the length of the segment $[x,x+v]$
 in the Riemannian metric $g$. Then we compute
-$$l_v ^x -r= \int _0 ^r |v|_{x+tv} \, dt - \int _0 ^r |v|_x \, dt \leq \int _0 ^r (\int _0 ^t K(x+sv) \, ds)\, dt \leq $$
-$$\leq \int _0 ^r (\int _0 ^r K(x+sv) \, ds)\, dt = r\cdot \int _0 ^r K(x+sv) \, ds.$$
+\begin{align*}
+l_v ^x -r
+&=
+\int _0 ^r |v|_{x+tv} \, dt - \int _0 ^r |v|_x \, dt 
+\leq
+\\
+&\leq \int _0 ^r (\int _0 ^t K(x+sv) \, ds)\, dt 
+\leq 
+\\
+&\leq \int _0 ^r (\int _0 ^r K(x+sv) \, ds)\, dt 
+=
+\\
+&= r\cdot \int _0 ^r K(x+sv) \, ds.
+\end{align*}
 Observe now that the intersection of $B^x\setminus B_x$ with the ray starting in $x$ in the direction of $v$ has $\mathcal H^1$-measure
 ( with respect to the norm $|\cdot |_x$)
 at most $2\cdot (l_v^x -r)$, once the bi-Lipschitz constant $(1+\frac 1 C)$ is close to $1$.
 Integrating in polar coordinates over the ball $B^x\subset (\R^n, |\cdot|_x)$ we infer:
-$$u(x)\cdot \mathcal L^n (B^x\setminus B_x) \leq r^{n-1} \cdot \Big (\int _{v\in S^{n-1} _x} ( 2\cdot r \cdot \int _0 ^r K(x+sv) \, ds)
-\cdot d\mathcal H^{n-1} \Big ) =$$
-$$=2{\cdot}r^n \cdot \int _{B^x} K(y) \cdot |y-x|^{n-1} \cdot u(x) \cdot d\mathcal L^n,$$
+\begin{align*}
+u(x)\cdot \mathcal L^n (B^x\setminus B_x) 
+&\leq r^{n-1} \cdot \Big (\int _{v\in S^{n-1} _x} ( 2\cdot r \cdot \int _0 ^r K(x+sv) \, ds)
+\cdot d\mathcal H^{n-1} \Big ) =
+\\&=2{\cdot}r^n \cdot \int _{B^x} K(y) \cdot |y-x|^{n-1} \cdot u(x) \cdot d\mathcal L^n,
+\end{align*}
 where $S^{n-1} _x$ is the unit sphere in $(\R^n, |\cdot|_x)$.
 
 To get a similar estimate of the other summand in \eqref{eq:summand},
@@ -1128,7 +1155,9 @@ If $f\:U\to \R$ is a BV function, which is continuous on a subset $R \subset U$ 
 Let $f\:U\to \R$ be of class BV. Then for $\mathcal H^n$-almost every point
 $x\in U$ there exists an affine function $\hat f _x\:\R^n\to \R$, such that for the BV function $h_x=f-\hat f_x$ we have
 \begin{equation}\label{DC-ae-diff}
-\lim_{r\to 0}\frac 1 {r^{n+1}}\cdot \int _{B_r(x)}|h_x| =0 \; ;\; \; \text{and} \; \; \; \lim _{r\to 0} \frac 1 {r^n} \cdot [Dh_x] (B_r (x)) =0;
+\lim_{r\to 0}\frac 1 {r^{n+1}}\cdot \int _{B_r(x)}|h_x| =0
+\quad\text{and}\quad
+\lim _{r\to 0} \frac 1 {r^n} \cdot [Dh_x] (B_r (x)) =0;
 \end{equation}
 see \cite[ Theorem 6.1 (2),(3)]{Evans} for the second and the H\"older inequality and \cite[ Theorem 6.1 (1)]{Evans} for the first inequality.
 %A function $f\co U\to \R$ is called $DC$ if it can be locally represented as $h-g$ where $h$ and $g$ are semiconcave.
@@ -1233,7 +1262,7 @@ The total derivatives $|g_{\varepsilon} '|$, considered as measures, satisfy $|g
 
 Denote by $d_{\varepsilon}$ the distance function induced by $g_{\varepsilon}$. From the last statement and the properties (2),(5) in the definition of an almost Riemannian metric space we deduce that
 \[
-\lim _{\varepsilon \to 0}\, \Big (\sup _{x,y \in V, d(x,y) <r} |d_{\varepsilon} (x,y) -d(x,y)|\Big )=0  .
+\lim _{\varepsilon \to 0} \sup \set{|d_{\varepsilon} (x,y) -d(x,y)|}{x,y \in V, d(x,y) <r}=0  .
 \]
 Finally, the Hausdorff measures of the Riemannian metrics $g_{\varepsilon}$ converge on $V$ to the Hausdorff measure of $V$ with respect to the original metric.
 
@@ -1252,8 +1281,8 @@ $r<r_0$ we have $$v_r (A) \leq r\cdot 2 (n+2)\cdot C\cdot \mathcal N (A)\,. $$
 \begin{proof}
 Cover $A$ by finitely many regular charts $U_i$ such that $\sum \mathcal N_0 (U_i)$ is sufficiently close to $\mathcal N (A)$.
 Since the covering dimension of $X$ is $n$, we find a finite covering $V_j$ of $A$, which refines the first covering but has intersection multiplicity less than $(n+2)$. Considering each $V_j$ as a subchart of the corresponding chart $U_i$ we see that
-$$\sum \mathcal N_0 (V_j) \leq (n+2) \sum \mathcal N(A)  .$$
-Consider $r_0>0$ such that for any $x\in A$ the ball $B_{4r_0} (x)$ is contained in one of the sets $V_j$. Denote by $A_j$ the set of all such $x$.
+$$\sum \mathcal N_0 (V_j) \leq (n+2)\cdot \sum \mathcal N(A)  .$$
+Consider $r_0>0$ such that for any $x\in A$ the ball $B_{4{\cdot}r_0} (x)$ is contained in one of the sets $V_j$. Denote by $A_j$ the set of all such $x$.
 Then $v_r (A) \leq \sum v_r (A_j)$ and, due to \cref{cor-dc-vr}, $v_r (A_j) \leq 2 \cdot C\cdot N_0 (V_j)$.
 Combining these inequalities finishes the proof.
 \end{proof}
@@ -1557,14 +1586,14 @@ Can one replace $\alpha>n-2$ by $\alpha=n-2$ in the statement of \pref{prop:cove
 
 % In the proofs of our main results about convex hypersurfaces and Alexandrov surfaces we deduced local volume bounds from
 %a much stronger bound on the optimal local bi-Lipschitz constant (for maps into the Euclidean space).
-It is interesting to understand if our results provide a quantitative version of bi-Lipschitz closedness of small balls to Euclidean balls. It is known~\cite{BGP} that there exists $\kappa(n,\delta)\to 0$ as $\delta\to 0$ such that if $X=X^n$ is an Alexandrov space of curvature $\ge -1$, $x\in X$ such that $\omega _n r^n -\mathcal H^n (B_r (x)) \leq \delta \cdot r ^n$ then $B_{\frac r 4} (x)$ is $(1+\kappa(n,\delta))$-bi-Lipschitz to a Euclidean ball.
+It is interesting to understand if our results provide a quantitative version of bi-Lipschitz closedness of small balls to Euclidean balls. It is known~\cite{BGP} that there exists $\kappa(n,\delta)\to 0$ as $\delta\to 0$ such that if $X=X^n$ is an Alexandrov space of curvature $\ge -1$, $x\in X$ such that $\omega _n{\cdot}r^n -\mathcal H^n (B_r (x)) \leq \delta \cdot r ^n$ then $B_{\frac r 4} (x)$ is $(1+\kappa(n,\delta))$-bi-Lipschitz to a Euclidean ball.
 \begin{quest}
 Can $\kappa(n,\delta)$ above be chosen 
 %to be linear in $\delta$, i.e. to be
 of the form $C(n)\cdot \delta$? 
 %More precisely:}
 %Does there exist a constant $C=C(n)$ such that for any Alexandrov space $X=X^n$ {\color{red} of curvature $\ge -1$}, any $x\in X$ and any $\delta <\frac 1 C$ the following holds true.
-%If $\omega _n r^n -\mathcal H^n (B_r (x)) \leq \delta \cdot r ^n$, then
+%If $\omega _n{\cdot}r^n -\mathcal H^n (B_r (x)) \leq \delta \cdot r ^n$, then
 %the ball $B_{\frac r 4} (x)$ is $(1+C \cdot \delta )$-bi-Lipschitz to a Euclidean ball.
 \end{quest}
 
