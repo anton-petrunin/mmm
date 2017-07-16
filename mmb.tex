@@ -345,7 +345,7 @@ If $X$ is a manifold with two-sided bounded curvature in the sense of Alexandrov
 \begin{ex} \label{ex:cone}
 Let $X$ be the flat cone over the circle $S_{\rho}$of length $\rho$.
 Then $X$ has finite mm-curvature. The mm-curvature is a Dirac measure of mass $m(\rho)$ concentrated in the origin.
-If $\alpha =2\pi-\rho$ denotes the curvature of the vertex of $X$ then the classical curvature measure is the Dirac measure of total mass
+If $\alpha =2{\cdot}\pi-\rho$ denotes the curvature of the vertex of $X$ then the classical curvature measure is the Dirac measure of total mass
 $\frac \alpha 6$. On the other hand $m(\rho)= \frac \alpha 6 + f(\alpha)$, where
 $f(\alpha)$ is a non-zero function the form $f(\alpha)= O(\alpha ^3)$.
 \end{ex}
@@ -394,7 +394,8 @@ $$ d(\gamma (t),\gamma (s)) =\lambda \cdot |t-s|.$$
 In particular, we allow $\gamma$ to have any constant velocity $\lambda \geq 0$.
 % On the other hand, geodesics
 %as defined here will always be globally ``minimizing geodesics'' in the usual notations of Riemannian geometry.
-A \emph{geodesic} is a curve $\gamma\: \mathbb I\to X$ such that its restriction to a small neighborhood of any point in $\mathbb I$ is a minimizing geodesic. Note that a geodesic is a curve of constant velocity.
+A \emph{geodesic} is a curve $\gamma\: \mathbb I\to X$ such that its restriction to a small neighborhood of any point in $\mathbb I$ is a minimizing geodesic.
+Note that a geodesic is a curve of constant velocity.
 
 \subsection{Metric measure spaces} We refer to \cite{Federer} and \cite{Evans} for basics on measure theory.
 
@@ -600,12 +601,23 @@ $\phi _1(v)$ is defined.
 \begin{proof}
 If at least one $r_m$ with the above property exists, then $X$ does not have the Liouville property by definition.
 
+{\color{red}
+
 Assume that $X$ does not have the Liouville property.
 Then, by homogeneity of the geodesic flow, $\phi _1$ is either undefined  on a subset of $TX$ with positive measure
 or it does not preserve the measure $\mathcal M$.
-In both cases we can find a compact subset $K_1\subset X_{reg}$ and (by homogeneity) a Borel subset $A\subset T^1 K_1$ such that either $\phi_1$ is not defined on almost all of $A$ or $\mathcal M (A) > \mathcal M(\phi (A))$.
-Replacing $A$ by a smaller subset, if necessary, we find in both cases some $\varepsilon >0$, such that $$\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).$$
-Since $$\phi_1 (A)=2\cdot \phi _2 \Big (\frac 1 2 \cdot A \Big)=2\cdot \Big(\phi _1 \circ \phi_1 \Big (\frac 1 2 A \Big ) \Big ),$$
+In both cases we can find a compact subset $K_1\subset X_{reg}$ and a Borel subset $A\subset T^1 K_1$ such that 
+\[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\]
+for some $\varepsilon >0$. 
+
+}
+
+Since 
+\begin{align*}
+\phi_1 (A)&=2\cdot \phi _2 (\tfrac 1 2 \cdot A )=
+\\
+&=2\cdot \phi _1 \circ \phi_1 (\tfrac 1 2\cdot  A ) ,
+\end{align*}
 we deduce
 \begin{align*}
 (\tfrac 1 2)^n \cdot \varepsilon &\leq \mathcal M \big(\tfrac 1 2\cdot A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot A ) \big) +
@@ -653,21 +665,21 @@ subsets $A_m\subset T^{r_m} K$ provided by \lref{infini}.
 
 Let $Y$ be the closure of $B_1 (K)$.
 Recall that $D\subset TX$ is the set of all vectors at which the exponential map is defined.
-For $r>0$, denote by $N^r$ the intersection of $D$ with $T^r Y$ and consider the ``total exponential map''
-$E\:N^r \to X\times X$ given by 
+For $r>0$, denote by $D^r$ the intersection of $D$ with $T^r Y$ and consider the ``total exponential map''
+$E\:D^r \to X\times X$ given by 
 $$E(v)= (\pi (v), \pi (\exp (v))).$$
 As above, let $U^r =U^r(Y)$ be the set of all
 pairs $(y,x) \in X\times X$ with $y\in Y$ and $d(x,y)<r$.
 Note that
 \begin{equation} \label{eq:image}
-E(N^r) =U^r.
+E(D^r) =U^r.
 \end{equation}
-Moreover, for any fixed $x \in Y$, the restriction of $E$ to $D_x \cap N^r$ is
+Moreover, for any fixed $x \in Y$, the restriction of $E$ to $D_x \cap D^r$ is
 a $(1+ C r^2)$-Lipschitz continuous map from $D_x\subset T_xX$ onto the set $U^r \cap (\{x \} \times X)$ (see Subsection \ref{subsec:Alex}).
-Thus, for all sufficiently small $r$, and any Borel subset $S\subset D_x \cap N^r$, we have
+Thus, for all sufficiently small $r$, and any Borel subset $S\subset D_x \cap D^r$, we have
 $$\mathcal H^n (E(S)) \leq (1+4{\cdot} n{\cdot}  C{\cdot}  r^2)\cdot \mathcal H^n (S).$$
 Using the definition of the Liouville measure $\mathcal M$ and Fubini's formula for the product measure
-$\mathcal H^{2\cdot n} =\mathcal H^n \otimes \mathcal H^n $ on $X\times X$ we obtain for any $\mathcal M$-measurable subset $S$ of $N^r$
+$\mathcal H^{2\cdot n} =\mathcal H^n \otimes \mathcal H^n $ on $X\times X$ we obtain for any $\mathcal M$-measurable subset $S$ of $D^r$
 \begin{equation} \label{eq:contract}
 \mathcal H^{2\cdot n} (E(S)) \leq (1+4{\cdot} n{\cdot} C{\cdot}  r^2) \cdot \mathcal M(S).
 \end{equation}
@@ -677,23 +689,23 @@ Thus, up to terms of higher order, the map $E$ does not increase the measure of 
 coincide with the total mass of the target.
 Thеrefore, $E$ is measure preserving up to terms of higher order.
 % \footnote{Is this explanation helpful? \color{red} too long IMO. I shortened it a bit, Vitya}
-More precisely, combining the last two inequalities we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset N^r$
+More precisely, combining the last two inequalities we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
 we have
 \begin{equation} \label{eq:almostall}
-\mathcal M (T^r Y)- \mathcal M (N^r) < \delta r^{n+1}
+\mathcal M (T^r Y)- \mathcal M (D^r) < \delta r^{n+1}
 \quad\text{and}\quad
 |\mathcal H^{2\cdot n} (E(S)) - \mathcal M (S)| < \delta r^{n+1}.
 \end{equation}
-% and for all measurable subsets $S\subset N^r$ we have
+% and for all measurable subsets $S\subset D^r$ we have
 % \begin{equation} \label{eq:almostiso}
 % |\mathcal H^{2\cdot n} (E(S)) - \mathcal M (S)| < \delta r^{n+1}.
 %\end{equation}
-For any measurable subset $S\subset N^r \cap TK$ we now claim
+For any measurable subset $S\subset D^r \cap TK$ we now claim
 \begin{equation} \label{eq:finally}
 |\mathcal H^{2\cdot n} (E(S)) - \mathcal M (\phi _1 (S))| < 2 \delta r^{n+1}.
 \end{equation}
 In order to prove \eqref{eq:finally}, let $S^+$ be the subset of all vectors $v\in S $ for which $\phi_1 (v)$ exists and is contained in $TX_{reg}$.
-For all $v\in S^+$, we have $-\phi _1 (v) \in N^r$ and, due to \eqref{eq:symm},
+For all $v\in S^+$, we have $-\phi _1 (v) \in D^r$ and, due to \eqref{eq:symm},
 $$E(-\phi_1 (v)) =J(E(v)).$$
 The involution $I(v)=-v$ is $\mathcal M$-preserving on $TX_{reg}$. And the involution
 $J\:X\times X\to X\times X$ given by $J(x,y)=(y,x)$ preserves $\mathcal H^{2\cdot n}$. Therefore, from \eqref{eq:almostall} we deduce
@@ -714,9 +726,9 @@ Coming back to our subsets $A_m\subset T^{r_m} K$, we have
 \begin{align*}
 \varepsilon \cdot r_m^ {n+1} &\leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m)) \leq 
 \\
-&\leq\mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap N^r)).
+&\leq\mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap D^r)).
 \end{align*}
-Setting $S_m=A_m\cap N^{r_m}$ we estimate the right hand side as the sum of the following three terms:
+Setting $S_m=A_m\cap D^{r_m}$ we estimate the right hand side as the sum of the following three terms:
 \begin{align*}
 &|\mathcal M (A_m) - \mathcal M(S_m)|,
 \\
@@ -731,75 +743,6 @@ Therefore
 for all large $m$.
 Since $\delta$ is an arbitrary positive number, this leads to a contradiction.
 \end{proof}
-
-%\subsection{Another measure}
-
-%We will need a simple lemma:
-
-%\begin{lem} \label{anothermeasure}
-%Let $L,n$ be given. There is some $\bar L= \bar L (L,n)$ with the following properties.
-%Assume that $Lr^n \geq \vol (B_r (x)) \geq 1/L r^n$ for all $x \in X$ and all small
-%$4r\leq r_0$. Let $K$ be a positive measure on $X$. Let $A\subset X$ be given, with finite $K (B_{2{\cdot}r} (A))$.
-%Then $\int _A K(B_r (x)) d\vol (x) \leq \bar L r^n \cdot K (B_{2{\cdot}r}(A))$.
-%\end{lem}
-
-%\begin{proof}
-%Cover $A$ by balls $B_i$ of radius $2{\cdot}r$, such that the balls with the same centers and radii $r$ still cover $A$ and such that
-%the intersection multiplicity of the covering $B_i$ is bounded by some
-%$L'=L' (L)$. Then estimate all $K(B_r (x))$ by $K(B_i)$ for some for some $i$,
-%with $x\in B_i$. We deduce
-
-%$$\int _A K(B_r (x)) d\vol (x) \leq \int _A K(B_i) \cdot Char _{B_i} (x) d\vol (x) \leq $$
-
-%$$\leq \Sigma K(B_i) L (2{\cdot}r)^n \leq 2^n L L' K(B_{2{\cdot}r} (A))$$
-%\end{proof}
-
-%\subsection{Regular-Singular Decomposition}
-
-%\begin{prop} \label{regsing}
-%Let $X$ be a space with another positive measure $K$ (absolute value of scalar curvature). Assume that there are constants
-%$C$ (measure of singular locus), $L$ (some growth constant), $l$ (equal to 1 or 2 for us), $\delta ,r_0$
-%(some thresholds) such that the following holds true. For any $r<r_0$ there is a decomposition
-%$X=X_r \cup Y_r$ with $\vol (Y_r) \leq C\cdot r^l$. For any $x\in X_r$ and any $s\leq r$ the volume of
-%$ (B_s (x)) $ is bounded by $L^{\pm 1} s^n$ and for any $x\in X$ it is bounded from above by $L\cdot s^n$.
-% Assume further, that for any $x\in X_r$ the inequality
-%$K(B_{Lr} (x)) \leq \delta r^{n-l}$ implies $|\vol (B_r (x) ) - b_n r^n| \leq L \cdot K ( B_{Lr} (x)) \cdot r^l$.
-
-%Then there is some number $\bar L$, such that for all small $r$ and all $A\subset X$ we have
-%$\|v_r (A)\| \leq \bar L \cdot (K(B_{2Lr} (A)) +C) \cdot r^l$.
-%\end{prop}
-
-%\begin{proof}
-% Set $S^r := \{ x\in A \cap X_r| K(B_{Lr} (x)) > \delta r^{n-l} \}$.
-% Let $N_1$ be the maximal $2Lr$-net in $S^r$. Then $|N_1| \leq K (B_{Lr} (A)) /(\delta _0 r^{n-l})$ elements.
-% Thus $\vol (S^r)$ is bounded from above by $2^n \cdot L ^{n+1} \cdot \delta _0 ^{-1} \cdot r^l \cdot K(B_{Lr} (A)) $.
-% Therefore $|v_r |(S^r) \leq \bar L_1 \cdot K (B_{Lr } (A)) \cdot r^l$.
-
-% On the other hand, $\vol (A \cap Y_r) \leq C \cdot r^l$. Thus
-% $|v_r| (A\cap Y_r) \leq \bar L_2 \cdot C \cdot r^l$.
-
-% Finally, for any $x$ in $A^+ := A\setminus (S^r \cup Y^r)$, we have
-% $|\vol (B_r (x))- b_n r^n | \leq L \cdot K(B_{Lr} (x)) \cdot r^l$.
-
-% Thus $r^n \cdot |v_r| (A^+) \leq \int _{A^+} L \cdot K(B_{Lr} (x)) \cdot r^l d\vol (x)
-% \leq \bar L_3 \cdot r^{n+l} \cdot K (B_{2Lr} (A^+))$, by \lref{anothermeasure}.
-
-% Summing up, we obtain the desired inequality.
-% \end{proof}
-
-%\subsection{Limiting case}
-%Under the assumptions of the previous section, let $\delta$ be fixed. Assume that as $r$ goes to $0$, all subsets $X_r$ are open (this assumption can be easiely achieved by enlarging $X_r$ slightly). Assume further that $X_r \subset X_s$ for
-%all $s\leq r$. Set $X_{reg} = \cup X_r$ and $Y_0 = \cap Y_r$. Set, finally,
-%$C''=\limsup _{r\to 0} \frac {vol (Y_r)} {r^l}$.
-
-% From \pref{regsing}, we conclude that the measures $\frac {v_r } {r^l}$ are
-%uniformly bounded. Let $\mu$ be any weak limit
-%$\mu = \lim _{r_i \to 0} (v_{r_i} / r_i ^l)$. Then for some constant
-%$L$ depending on the privious $L$, the measure $\mu$ satisfies the following:
-
-%1) $\mu (Y_0) \leq L C'$;
-
-%2) $\mu$ is bounded on $X_{reg}$ by $L \cdot |K|$.
 
 \subsection{Quasi-geodesics flow} \label{subsec:quasi}
 Finally, we discuss some relations with quasi-geodesics, referring the reader to \cite{Petsemi} for the basic properties of such curves.
@@ -821,47 +764,78 @@ Moreover, in this case, the corresponding quasi-geodesic flow preserves $\mathca
 Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see that the above assumptions are fulfilled whenever the complement $X\setminus\partial X$ has vanishing  mm-boundary. Indeed, in this case the mm-boundary of $Z$ must be concentrated on $\partial X \subset Z$, hence it must be trivial by \tref{alexandrovthm},(3).
 
 \section{Surfaces with bounded integral curvature in the sense of Alexandrov} \label{sec:surface}
-\subsection{Preparations} We assume here some familiarity with the theory of surfaces with bounded integral curvature; see also \cite{AZ} and
-\cite{Reshetnyak-GeomIV}. Such a surface $X$ is a locally geodesic metric space, homeomorphic to a two-dimensional surface. It has Hausdorff dimension $2$ and the Hausdorff measure $\mathcal H^2$ is a Radon measure on $X$. There is another canonical signed Radon measure on $X$, the so called curvature measure $\Omega$, \cite[Section 8]{Reshetnyak-GeomIV}. Unlike when talking about Alexandrov spaces \emph{we will not assume that $X$ is complete}.
-We will derive \tref{intsurface} as a consequence of the following local and non-exact version of a theorem of M. Bonk and U.Lang, \cite{Bonk-Lang}, relating the curvature measure $\Omega$ to the volume of balls.
+
+\subsection{Preparations} 
+We assume that the reader is familiar with the theory of surfaces with bounded integral curvature; see \cite{AZ} and \cite{Reshetnyak-GeomIV}.
+
+Let $X$ be a surfaces with bounded integral curvature;
+it is a locally geodesic metric space, homeomorphic to a two-dimensional surface.
+It has Hausdorff dimension $2$ and the Hausdorff measure $\mathcal H^2$ is a Radon measure on $X$. There is another signed Radon measure on $X$, the so called \emph{curvature measure} which will be denoted $\Omega$, \cite[Section 8]{Reshetnyak-GeomIV}.
+We will not assume that $X$ is complete.
+
+We will derive \tref{intsurface} as a consequence of the following local and non-exact %???
+version of a theorem of M. Bonk and U. Lang, \cite{Bonk-Lang}, relating the curvature measure $\Omega$ to the volume of balls.
+
+{\color{red}
 
 \begin{lem} \label{lem:bl}
 There exists some $\delta _0>0$ with the following property.
-Let $X$ be a surface with bounded integral curvature and let $\Omega\in \mathcal M(X)$ be its curvature measure. Let $x\in X$ be a point and let $r>0$ be such that
-$\bar B_{r} (x)$ is compact, $| \Omega| ( B_{r} (x) ) < \delta _0$ and $\bar B_{r} (x)\subset U$ where $U$ is an open subset of $X$ homeomorphic to $\R^2$.
-Then $$|1- \frac {b_r(x)} {\pi{\cdot}r^2} | \leq 3 \cdot |\Omega |( B_{r} (x)).$$
+
+Let $X$ be a surface with bounded integral curvature and let $\Omega\in \mathcal M(X)$ be its curvature measure.
+Assume $X$ is homeomorphic to the plane and $| \Omega|(X) < \delta _0$.
+Then for any point $x\in X$, and $r>0$ such that
+$\bar B_{r} (x)$ is compact we have
+$$\left|1- \frac {b_r(x)} {\pi{\cdot}r^2} \right| \leq 3 \cdot |\Omega |( B_{r} (x)).$$
 \end{lem}
 
+}
+
 \begin{proof}
-Set $\delta = |\Omega |( B_{r} (x))$. By continuity, it is sufficient to prove that $|1- \frac {b_s(x)} {\pi s^2}| \leq 3 \cdot \delta $ for any $s<r$. Using approximations of
-the metric on $U$ by polyhedral metrics \cite[Theorem 8.4.3, Theorem 8.1.9]{Reshetnyak-GeomIV}, it is sufficient to prove this statement for polyhedral metrics. Thus we assume from now on that $X$ is polyhedral and homeomorphic to $\R^2$.
+{\color{red}
+Set $\delta = |\Omega |( B_{r} (x))$. By continuity, it is sufficient to prove that $|1- \frac {b_s(x)} {\pi{\cdot}s^2}| \leq 3{\cdot}\delta $ for any $s<r$. Using approximations of
+the metric on $X$ by polyhedral metrics \cite[Theorem 8.4.3, Theorem 8.1.9]{Reshetnyak-GeomIV}, we assume from now on that $X$ is polyhedral and homeomorphic to $\R^2$.
 
 \emph{Claim:} There exists a complete polyhedral surface $\hat X$ homeomorphic to a plane, which contains a copy of $B_s (x)$ and such that
-the curvature measure $\hat \Omega$ of $\hat X$ satisfies $|\hat \Omega | (\hat X) < 3\delta$. Once the claim is proven and $3\delta < 2\pi$,
-\cite{Bonk-Lang} provides us an $L$-bi-Lipschitz map $f\:\hat X\to \R^2$ with $L\leq 1+\frac {3\delta} {2\pi -3\delta}$.
-For sufficiently small $\delta$, we would only need to apply \eqref{eq:bilip} to finish the proof of the lemma.
+the curvature measure $\hat \Omega$ of $\hat X$ satisfies $|\hat \Omega | (\hat X) < 3 \cdot \delta$.
 
-It remains to prove the existence of $\hat X$. We take some $r>t>s$ and consider the compact metric ball $\bar B_t (x) \subset B_r (x)$.
+Once the claim is proven,
+\cite{Bonk-Lang} provides us an bi-Lipschitz map $f\:\hat X\to \R^2$ with the constant $L\leq 1+\frac {3{\cdot}\delta} {2{\cdot}\pi -3{\cdot}\delta}$.
+Since $\delta$ is small, it will remain to apply \eqref{eq:bilip} to finish the proof of the lemma.
+
+
+
+Take some $r>t>s$ and consider the compact metric ball $\bar B_t (x) \subset B_r (x)$.
 We may assume that the boundary $S_t=S_t (x)$ of
-$\bar B_t (x)$ does not contain singular points of $X$. Due to \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$. Since $U$ is homeomorphic to a plane this implies that $\bar B_t (x)$ is homeomorphic to a closed disk $\bar D^2$ in $\R^2$.
+$\bar B_t (x)$ does not contain singular points of $X$. 
+By \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2{\cdot}\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$. 
+Since $X$ is homeomorphic to a plane this implies that $\bar B_t (x)$ is homeomorphic to a closed disk $\bar D^2$ in $\R^2$.
 
-We find a polygonal Jordan curve $\Gamma$ in $B_t(x)$ approximating $S_t$ such that the negative part of the geodesic curvature of $\Gamma$ is smaller than $2\delta$. Consider the closed Jordan domain $Y$ bounded by $\Gamma$, which can be assumed to contain $B_s(x)$.
+}
+
+We find a polygonal Jordan curve $\Gamma$ in $B_t(x)$ approximating $S_t$ such that the negative part of the geodesic curvature of $\Gamma$ is smaller than $2{\cdot}\delta$. Consider the closed Jordan domain $Y$ bounded by $\Gamma$, which can be assumed to contain $B_s(x)$.
 Now we glue to $Y$ along any edge of $\Gamma$ a flat half-strip.
 The boundary of the arising polyhedral surface consists of pairs of rays
-$\gamma _i ^{\pm}$ emanating from the vertices $V_1,..,V_k$ of $\Gamma$. The rays $\gamma _i^{\pm}$ enclose an angle equal to $2\pi- \alpha _i$, where $\pi-\alpha _i$ is the angle of $\Gamma$ at $V_i$ measured in $Y$. In order to finish the construction of $\hat X$ we glue a flat sector of
+$\gamma _i ^{\pm}$ emanating from the vertices $V_1,\dots,V_k$ of $\Gamma$. The rays $\gamma _i^{\pm}$ enclose an angle equal to $2{\cdot}\pi- \alpha _i$, where $\pi-\alpha _i$ is the angle of $\Gamma$ at $V_i$ measured in $Y$. In order to finish the construction of $\hat X$ we glue a flat sector of
 angle $\alpha _i$ between $\gamma _i ^{\pm}$, if $\alpha _i >0$ and we glue $\gamma _i^{\pm}$ together if $\alpha _i \leq 0$.
 Since $Y$ was a polyhedral disc, the arising space $\hat X$ is a complete polyhedral plane.
-All of the singularities of $\hat X$ are contained in $B_s(x) \cup \{ V_1,...., V_k\}$. Moreover, by construction, the curvature measure
+All of the singularities of $\hat X$ are contained in $B_s(x) \cup \{ V_1,\dots, V_k\}$. Moreover, by construction, the curvature measure
 $\hat \Omega$ of $\hat X$ satisfies
 $$\hat \Omega (V_i) = \min \{ 0, \alpha _i \}.$$
 We deduce,
-$$|\hat \Omega | ( \hat X) = |\Omega (B_s (x))| + |\hat \Omega | ( \Gamma ) \leq \delta + |\kappa ^-| (\Gamma ) < 3 \delta.$$
+\begin{align*}
+|\hat \Omega | ( \hat X) &= |\Omega (B_s (x))| + |\hat \Omega | ( \Gamma ) \leq
+\\
+&\leq \delta + |\kappa ^-| (\Gamma ) <
+\\
+&< 3{\cdot}\delta.
+\end{align*}
+
+
 This finishes the proof of the claim and of \lref{lem:bl}.
 \end{proof}
 
 \subsection{Local finiteness of mm-curvature}
-Now we are in position to prove
-the following generalization of \tref{intsurface}.
+Now we are ready to prove and prove the following generalization of \tref{intsurface}.
 \begin{thm}\label{intsurface1}
 Let $X$ be an Alexandrov surface with integral curvature bounds. Then, equipped with the Hausdorff measure $\mathcal H^2$, the space $X$ has locally finite mm-curvature.
 \end{thm}
@@ -869,23 +843,45 @@ Let $X$ be an Alexandrov surface with integral curvature bounds. Then, equipped 
 \begin{proof}
 Let again $\Omega$ denote the curvature measure of $X$. Let $\delta _0>0$ be sufficiently small and satisfy the conclusion of \lref{lem:bl}.
 The statement of \tref{intsurface1} is local, so we need to prove it only in a small neighborhood of any point.
-Thus we may and will assume that there is a point $x_0\in X$
-such that $| \Omega| (X \setminus \{ x_0 \} )< \delta _0$ and that $X$ is homeomorphic to a plane.
+Thus we may (and will) assume that there is a point $x_0\in X$
+such that $| \Omega| (X \setminus \{ x_0 \}) < \delta _0$ and that $X$ is homeomorphic to a plane.
 
-Let $A\subset X$ be a compact subset. Choose some $\varepsilon >0$ such that the closure of $B_{2\varepsilon} (A)$ in $X$ is compact and such that,
-for any $0<2{\cdot}r<\varepsilon$ the inequality $\mathcal H^2 (B_{2{\cdot}r}(x_0)) < \frac 1 {\varepsilon} r^2$ holds true; see also \cite[Lemma 8.1.1]{Reshetnyak-GeomIV}.
+Let $A\subset X$ be a compact subset. Choose some $\varepsilon >0$ such that the closure of $B_{2{\cdot}\varepsilon} (A)$ in $X$ is compact and such that,
+for any $0<2{\cdot}r<\varepsilon$ the inequality $\mathcal H^2 (B_{2{\cdot}r}(x_0)) < \tfrac 1 {\varepsilon}\cdot r^2$ holds true; see also \cite[Lemma 8.1.1]{Reshetnyak-GeomIV}.
 
 Let $r<\varepsilon$ be arbitrary.
-For any $x\in B_{2{\cdot}r} (x_0)$ we have $$b_r (x) =\mathcal H^2 (B_r (x)) \leq \mathcal H^2 (B_{3r} (x_0)) \leq \frac 1 {\varepsilon} r^2.$$
-For any $x\notin B_{r} (x_0)$ we have $| \Omega |(B_r (x)) < \delta _0$. Thus, by Lemma~\ref{lem:bl}, $$|1-\frac {b_r(x)} {\pi{\cdot}r^2} | \leq 3 |\Omega | ( B_{r} (x)).$$
+For any $x\in B_{2{\cdot}r} (x_0)$ we have 
+\begin{align*}
+b_r (x) &=\mathcal H^2 (B_r (x)) \leq
+\\
+&\leq \mathcal H^2 (B_{3{\cdot}r} (x_0)) \leq
+\\
+&\leq \tfrac 1 {\varepsilon}\cdot r^2.
+\end{align*}
+
+
+For any $x\notin B_{r} (x_0)$ we have $| \Omega |(B_r (x)) < \delta _0$. Thus, by Lemma~\ref{lem:bl}, $$|1-\frac {b_r(x)} {\pi{\cdot}r^2} |
+\leq
+3\cdot |\Omega | ( B_{r} (x)).$$
 For the deviation measures $v_r$ from \eqref{eq:first} we estimate:
-$$|v_r| (A\cap B_{2{\cdot}r} (x_0))) \leq |v_r| (B_{2{\cdot}r} (x_0)) \leq (1+ \frac 1 {\varepsilon}) \cdot \mathcal H^2 (B_{2{\cdot}r} (x_0)) \leq
-(1+ \frac 1 {\varepsilon}) \cdot \frac 1 {\varepsilon} r^2.$$
+\begin{align*}
+|v_r| (A\cap B_{2{\cdot}r} (x_0))
+&\leq |v_r| (B_{2{\cdot}r} (x_0)) \leq
+\\
+&\leq (1+ \tfrac 1 {\varepsilon}) \cdot \mathcal H^2 (B_{2{\cdot}r} (x_0)) \leq
+\\
+&\leq
+(1+ \tfrac 1 {\varepsilon}) \cdot \tfrac 1 {\varepsilon} \cdot r^2.
+\end{align*}
 On the other hand,
-%for any $x\in A\setminus B_{r} (x_0)$ we have $\bar \Omega (B_r (x)) < \delta _0$, hence $|\frac {b_r(x)} {\pi{\cdot}r^2} -1| \leq 5 |\Omega | (\bar B_{r} (x))$. Therefore,
-$$|v_r| (A\setminus B_{2{\cdot}r} (x_0)) \leq \int _{A \setminus B_{2{\cdot}r} (x_0) } 3 \cdot |\Omega| (B_r (x)) \cdot d\mathcal H^2 (x) \leq $$
-$$\leq 3 \int _{B_r (A\setminus B_{2{\cdot}r} (x_0))} \mathcal H^2 (B_r(x)) \cdot d|\Omega | (x),$$
-%where $Q= B_r (A\setminus B_{2{\cdot}r} (x_0)$, and
+\begin{align*}
+|v_r| (A\setminus B_{2{\cdot}r} (x_0))
+&\leq 
+\int _{A \setminus B_{2{\cdot}r} (x_0) } 3 \cdot |\Omega| (B_r (x)) \cdot d\mathcal H^2 (x) 
+\leq
+\\
+&\leq 3\cdot \int _{B_r (A\setminus B_{2{\cdot}r} (x_0))} \mathcal H^2 (B_r(x)) \cdot d|\Omega | (x),
+\end{align*}
 where we have used \lref{lem:exchange} in the last step.
 For any $x$ contained in the domain of integration of the last integral, we have $\mathcal H^2 (B_r(x)) =b_r (x) \leq 2{\cdot}\pi{\cdot}r^2$, by \lref{lem:bl}, once $\delta _0$ has been chosen to be sufficiently small.
 We deduce $|v_r| (A\setminus B_{2{\cdot}r} (x_0)) \leq 6 {\cdot}\pi {\cdot}\delta _0 {\cdot} r^2$.
@@ -943,7 +939,6 @@ If $\delta _0$ is small, then $a<\varepsilon_0$.
 The orthogonal projection $P\:U\to V$ is $1$-Lipschitz and the restriction of the inverse $P^{-1}$ to $O$ has Lipschitz constant $$\sqrt {1+ a^2} \leq 1+a^2 \leq 1+\varepsilon_0 ^2.$$
 Applying \eqref{eq:bilip} we only need to prove that $a < C \cdot \delta $ for a constant $C$.
 
-%In the following we denote by $C_1,C_2...$ positive constants depending only on $n$.
 Denote by $|D^2f|$ the largest eigenvalue of the Hessian $D^2f$.
 Since $f$ is convex and $\varepsilon _0$ is small, the mean curvature $\mathcal \kappa (x)$ at the point $(x,f(x))$ of the graph $U$ of $f$ satisfies $\kappa (x) \geq \frac n 2 \cdot |D^2 f|$. Hence, the conclusion follows from the following statement.
 
@@ -962,15 +957,15 @@ Convexity of $f$ implies that $|y_0|=3$.
 Since $f(0)=0$ and $f$ is convex, we must have $f(y)\leq \frac 1 3$ for all $y\in B_1(0)$.
 
 By convexity and the choice of $y_0$, the restriction of $f$ to the supporting hyperplane $H$ of $\bar B_3(0)$ at $y_0$ is bounded from below by $1$. Consider the ball $S$ of radius $\frac 1 2$ in $H$ around $y_0$. For any point $z\in S$ consider the restriction
-$$f_z (t)= f(z- \frac t 3 y_0 ) \;, t\in [0,6]$$
+$$f_z (t)= f(z- \frac t 3 y_0 ),\quad t\in [0,6]$$
 to the segment of length $6$ starting at $z$ orthogonal to $H$.
 Then 
-$$f_z(0)\geq 1 \; ; \; 
-f_z (3)\leq \frac 1 3 \; ; \; 
+$$f_z(0)\geq 1,\quad 
+f_z (3)\leq \frac 1 3,\quad
 f_z (6) \geq 0.$$
 Thus for some $t\in (0,3)$ we have $f_z'(t) \leq -\frac 2 9$ and for some $t\in (3,6)$ we have $f_z'(t) \geq - \frac 1 9$.
 Therefore
-$$\int _0 ^6 f_z'' (t)\, dt \geq \frac 1 9.$$
+$$\int _0 ^6 f_z'' (t)\cdot dt \geq \frac 1 9.$$
 Integrating over $S$ we obtain by Fubini's theorem a uniform positive lower bound on $\int _{B} |D^2f|$.
 This finishes the proof of \eqref{eq:vitya}, of the claim and of Lemma.
 \end{proof}
@@ -999,8 +994,16 @@ Let $A$ be such a compact subset and let $\delta>0$ be an arbitrary sufficiently
 fixed constant $C_1$ independent of $\delta$.
 
 Let $0<r<t$ be arbitrary. Then, by \lref{lem:mean}, for any $x\in U$ we have \eqref{eq:lemma}.
-Therefore, $$|v_r| (U)\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot K (B_{6r} (y)) \cdot d\mathcal H^n (y) \leq $$
-$$\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B_{7t} (A)} \mathcal H^n (B_{6r} (y)) \cdot dK(y) \leq C\cdot \delta \cdot r^{1-n} \cdot (6r) ^n \cdot K(B_{7t} (A)), $$
+Therefore, 
+\begin{align*}
+|v_r| (U)
+&\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot K (B_{6{\cdot}r} (y)) \cdot d\mathcal H^n (y) \leq
+\\
+&\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B_{7{\cdot}t} (A)} \mathcal H^n (B_{6{\cdot}r} (y)) \cdot dK(y) 
+\leq 
+\\
+&\leq C\cdot \delta \cdot r^{1-n} \cdot (6{\cdot}r) ^n \cdot K(B_{7{\cdot}t} (A)),
+\end{align*}
 where we have used \lref{lem:exchange} in the second and the theorem of Bishop--Gromov in the last inequality. Hence
 $$|\nu| (A) \leq |\nu| (U) \leq C\cdot \delta \cdot 6^n \cdot K(B_7 (A)). $$
 Since $\delta$ can be chosen arbitrary small, we obtain $|\nu| (A)=0$.
@@ -1100,9 +1103,13 @@ Taking both estimates together with \eqref{eq:Kg}, embedding $B_x$ and $B^x$ in 
 \]
 
 We divide both sides by $\omega _n \cdot r^n$ and integrate over $A$. Using that the bi-Lipschitz constant is close to $1$, we see:
-$$v_r (A) \leq C_4 \int _A \Big (\int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n}\cdot d\mathcal L^n (y) \Big ) \cdot d\mathcal L^n (x) \leq$$
-$$\leq C_4 \int _{B_{2{\cdot}r} (A)} \Big ( \int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n} \cdot d\mathcal L^n (x) \Big ) \cdot d\mathcal L^n (y) = $$
-$$= \frac 4 3 C_4 \int _{B_{2{\cdot}r} (A)} |g'(y)| \cdot r \cdot d\mathcal L^n (y),$$
+\begin{align*}
+v_r (A) &\leq C_4\cdot \int _A \Big (\int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n}\cdot d\mathcal L^n (y) \Big ) \cdot d\mathcal L^n (x) \leq
+\\
+&\leq C_4\cdot \int _{B_{2{\cdot}r} (A)} \Big ( \int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n} \cdot d\mathcal L^n (x) \Big ) \cdot d\mathcal L^n (y) = 
+\\
+&= \frac 4 3\cdot  C_4\cdot \int _{B_{2{\cdot}r} (A)} |g'(y)| \cdot r \cdot d\mathcal L^n (y),
+\end{align*}
 where we have used \lref{lem:exchange} in the second inequality.
 This finishes the proof of Proposition~\ref{prop-smooth}.
 \end{proof}
@@ -1121,7 +1128,7 @@ If $f\:U\to \R$ is a BV function, which is continuous on a subset $R \subset U$ 
 Let $f\:U\to \R$ be of class BV. Then for $\mathcal H^n$-almost every point
 $x\in U$ there exists an affine function $\hat f _x\:\R^n\to \R$, such that for the BV function $h_x=f-\hat f_x$ we have
 \begin{equation}\label{DC-ae-diff}
-\lim_{r\to 0}\frac 1 {r^{n+1}} \int _{B_r(x)}|h_x| =0 \; ;\; \; \text{and} \; \; \; \lim _{r\to 0} \frac 1 {r^n} \cdot [Dh_x] (B_r (x)) =0;
+\lim_{r\to 0}\frac 1 {r^{n+1}}\cdot \int _{B_r(x)}|h_x| =0 \; ;\; \; \text{and} \; \; \; \lim _{r\to 0} \frac 1 {r^n} \cdot [Dh_x] (B_r (x)) =0;
 \end{equation}
 see \cite[ Theorem 6.1 (2),(3)]{Evans} for the second and the H\"older inequality and \cite[ Theorem 6.1 (1)]{Evans} for the first inequality.
 %A function $f\co U\to \R$ is called $DC$ if it can be locally represented as $h-g$ where $h$ and $g$ are semiconcave.
@@ -1183,7 +1190,8 @@ In order to prove \eqref{eq:deriv}, we follow \cite[Section 4.2]{Per-DC} and con
 $x\in U$ a smooth symmetric $2$-tensor $\hat g =\hat g_x$ on $U$ such that for
 $u=g-\hat g$ we have:
 \begin{equation} \label{eq:u}
-\lim_{r\to 0}\frac 1 {r^{n+1}} \int _{B_r(x)} ||u|| =0 \; ;\; \; \text{and} \; \; \;
+\lim_{r\to 0}\frac 1 {r^{n+1}}\cdot \int _{B_r(x)} ||u|| =0
+\quad\text{and}\quad
 \lim _{r\to 0} \frac 1 {r^n} \cdot [Du] (B_r (x)) =0  .
 \end{equation}
 The first statement implies that $\hat g$ is indeed a Riemannian metric in a neighborhood $U_0$ of $x$.
@@ -1211,17 +1219,17 @@ Continuing to denote by $C=C(n)$ the constant from Proposition~\ref{prop-smooth}
 \begin{cor} \label{cor-dc-vr}
 Let $U$ regular chart of an almost Riemannian metric space $X$. Identifying $U$ with its image $O=\phi (U)$, let
 $g$ be the metric tensor and the measure $\mathcal N_0 =[Dg]$ the derivative of the metric tensor. For any Borel subset $A\subset U$ and any $r$
-such that $B_{3r} (A)$ is relatively compact in $U$ we have
+such that $B_{3{\cdot}r} (A)$ is relatively compact in $U$ we have
 
 \[
-v_r (A) \leq 2 \cdot C \cdot \mathcal N_0 (B_{3r} (A))\, .
+v_r (A) \leq 2 \cdot C \cdot \mathcal N_0 (B_{3{\cdot}r} (A))\, .
 \]
 \end{cor}
 
 \begin{proof}
 Consider a relatively compact open subset $ V \subset U$, which contains $B_{2{\cdot}r} (A)$. Apply (coordinatewise) the standard mollifying construction
 to the Riemannian tensor $g$. For all small positive $\varepsilon$, we thus obtain smooth metrics $g_{\varepsilon}$ on $V$ with the following properties.
-The total derivatives $|g_{\varepsilon} '|$, considered as measures, satisfy $|g_{\varepsilon} '|\leq \mathcal N_0$ on $V$, \cite[Theorem 5.3.1]{Ziemer}. Since $g$ is pointwise $\frac 1 C$-close to the background Euclidean inner product, the same is true for $g_{\varepsilon}$. For all sufficiently small $\varepsilon$ the $2{\cdot}r$-tubular neighborhood around $A$ with respect to $g_{\varepsilon}$ is contained in the $3r$-tubular neighborhood around $A$ with respect to the original distance in $X$. Moreover, $g_{\varepsilon}$ converges to $g$ pointwise at all points of $R$, \cite[Theorem 1.6.1]{Ziemer}.
+The total derivatives $|g_{\varepsilon} '|$, considered as measures, satisfy $|g_{\varepsilon} '|\leq \mathcal N_0$ on $V$, \cite[Theorem 5.3.1]{Ziemer}. Since $g$ is pointwise $\frac 1 C$-close to the background Euclidean inner product, the same is true for $g_{\varepsilon}$. For all sufficiently small $\varepsilon$ the $2{\cdot}r$-tubular neighborhood around $A$ with respect to $g_{\varepsilon}$ is contained in the $3{\cdot}r$-tubular neighborhood around $A$ with respect to the original distance in $X$. Moreover, $g_{\varepsilon}$ converges to $g$ pointwise at all points of $R$, \cite[Theorem 1.6.1]{Ziemer}.
 
 Denote by $d_{\varepsilon}$ the distance function induced by $g_{\varepsilon}$. From the last statement and the properties (2),(5) in the definition of an almost Riemannian metric space we deduce that
 \[
@@ -1267,9 +1275,9 @@ If $x\in X_{r,\delta}$ then, for all large $i$, the point $x_i$ has an $Ar$-long
 
 \item The union $X_{\delta}:= \cup _{r>0} X_{r,\delta}$ contains the set $X_{reg}$ of all regular points of $X$. The Hausdorff dimension of the set $X\setminus (X_{\delta} \cup \partial X)$ is at most $n-2$~\cite[10.6, 10.6.1, 12.8]{BGP}.
 
-\item For any point $x\in X_{r,\delta}$ there are natural distance coordinates $\phi\: B_{3r} (x) \to \R^n$ which are $(1+\varepsilon)$-bi-Lipschitz onto an open subset $O \subset \R^n$. Here, $\varepsilon\to 0$ as $A\to\infty$, \cite[9.4]{BGP}.
+\item For any point $x\in X_{r,\delta}$ there are natural distance coordinates $\phi\: B_{3{\cdot}r} (x) \to \R^n$ which are $(1+\varepsilon)$-bi-Lipschitz onto an open subset $O \subset \R^n$. Here, $\varepsilon\to 0$ as $A\to\infty$, \cite[9.4]{BGP}.
 
-\item The natural coordinates $\phi$ can be smoothed out to satisfy the following property, \cite[Theorem B]{Otsu-Shioya}. There exists a continuous Riemannian metric $g$ on $\phi (X_{reg} \cap B_{3r} (x)) \subset O$ such that for any curve $\gamma \subset X_{reg} \cap B_{3r} $ its length
+\item The natural coordinates $\phi$ can be smoothed out to satisfy the following property, \cite[Theorem B]{Otsu-Shioya}. There exists a continuous Riemannian metric $g$ on $\phi (X_{reg} \cap B_{3{\cdot}r} (x)) \subset O$ such that for any curve $\gamma \subset X_{reg} \cap B_{3{\cdot}r} $ its length
 coincides with the length of $\phi (\gamma )$ with respect to the Riemannian metric $g$.
 
 \item The metric tensor $g$ on a chart $O$ defined above is of bounded variation on $O$, \cite[4.2]{Per-DC} (see also \cite{AB15}).
@@ -1286,14 +1294,15 @@ In fact, the arguments in \cite[4.2]{Per-DC}, provide a slightly more precise ve
 In the notations above, the constant $A$ can be chosen sufficiently large, so that the following holds true.
 The derivative measure $[g']$ of the Riemannian tensor $g$
 in the canonical distance chart $O$ satisfies $[g'] (\hat O) \leq A \cdot r^{n-1} $, where $\hat O$ is the image $\phi (B_{2{\cdot}r} (x)) \subset O=
-\phi (B_{3r} (x))$.
+\phi (B_{3{\cdot}r} (x))$.
 \end{lem}
 
 \begin{proof}
-We only sketch the proof, referring to \cite{Per-DC} for details. First we fix $r=\frac 1 {A^2}$.
+We only sketch the proof, referring to \cite{Per-DC} for details.
+First we fix $r=\frac 1 {A^2}$.
 
 The fact that $g$ has bounded variation in the chart $O$ follows in \cite[Section 4.2]{Per-DC}, by writing the coordinates of $g$
-as a universal smooth map $\Phi (f_1,....,f_{\alpha})$ of a finite number of distance functions $f_j$ on $X$ and their partial derivatives, both expressed in the chart $\phi$.
+as a universal smooth map $\Phi (f_1,\dots,f_{\alpha})$ of a finite number of distance functions $f_j$ on $X$ and their partial derivatives, both expressed in the chart $\phi$.
 It is shown in \cite[Section 3]{Per-DC}, that any such distance function $f_j$ is expressed in the chart $O$ as a difference of two $L$-Lipschitz and $\lambda$-concave functions, where $L,\lambda$ depends only on the semi-concavity of the corresponding distance functions in $X$. Since we have fixed $r>0$, these numbers $\lambda,L$ can be chosen independently of $X$.
 Thus, $f_j$ can be written in the chart $O$ as the difference of two convex functions with universal Lipschitz constants $L'$.
 Therefore, for any unit vector $v\in \R^n$, we have a uniform bound on the total mass of the
@@ -1401,7 +1410,10 @@ The volume of the union of bad balls in $\mathcal F_l$ is at most $g_l^-$ and co
 
 Let $\mathcal F$ be the set of all good balls $B_j =B_{r_j} (x_j)$ from all the coverings $\mathcal F_l$.
 Then $\mathcal H^n (B_s (x) \setminus (\cup _{\mathcal F} B_j ) \leq \lim _{l\to \infty} g_l ^- =0$. On the other hand,
-by construction, $\sum _{B_j\in \mathcal F} r_j^{\alpha} = \lim _{l\to \infty} g_l^+ \leq 3N \cdot s^{\alpha}$.
+by construction,
+$\sum _{B_j\in \mathcal F} r_j^{\alpha} 
+= \lim _{l\to \infty} g_l^+ 
+\leq 3{\cdot N}{\cdot} s^{\alpha}$.
 
  Setting $q=3\cdot N$ finishes the proof.
 \end{proof}
@@ -1416,7 +1428,8 @@ Thus in order to control the mm-boundary we only need to bound $v_r$ from above 
 Let the constants $A,C$ be chosen as above, so that \pref{ballmeasure} can be applied.
 
 Let us first assume that $\partial X$ is empty.
-Let $W\subset X$ be an arbitrary compact subset. Fix $\alpha =n-\frac 3 2$ and choose the constant $q$ as in Proposition \ref{prop:covering}.
+Let $W\subset X$ be an arbitrary compact subset.
+Fix $\alpha =n-\tfrac 3 2$ and choose the constant $q$ as in Proposition \ref{prop:covering}.
 For any $x\in W$ and $s<1$ consider the good balls $B_i=B_{r_i} (x_i)$ provided by Proposition \ref{prop:covering} and set $K'=\cup _i B_i$. Let $r<\frac 1 {A^2}$ be sufficiently small. Since $\mathcal H^n (K\setminus K')=0$
 we have $ v_r (K)=v_r (K')$.
 
@@ -1464,7 +1477,7 @@ $ (1-k_1) \cdot \omega _n \cdot r^n$, for
 any point $z\in B_{\frac 1 {10} r} (K)$. Here $ k_1=k_1(n)>0 $ is a universal constant.
  Moreover, the set $B_{\frac 1 {10} r} (K)$ has volume at least $\frac 1 {20} \cdot r\cdot \cdot \omega _{n-1} \cdot s^{n-1}$.
 Integrating over $V$ (and using the inequality of Bishop--Gromov on the complement of $B_{\frac 1 {10} r} (K)$) we deduce:
-$$v_r (V) \geq k_1\cdot \frac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
+$$v_r (V) \geq k_1\cdot \tfrac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
 for some $k_3$ depending only on the volume of $V$ and independent of $r$.
 Dividing by $r$ and letting it go to $0$ we obtain $\nu (V) \geq k_4\cdot s^{n-1}$, for a universal constant $k_4>0$.
 Since the neighborhood $V$ of $K$ was arbitrary,
