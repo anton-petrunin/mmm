@@ -197,7 +197,7 @@ We say that $X$ has locally finite metric-measure boundary, abbreviated as mm-bo
 if the family of signed Radon measures
 \[\set{\frac { v_r } {r }}{0<r\leq 1}\]
 is uniformly bounded.
-% we say that $X$ has locally finite mm-boundary ({%\color{red} or metric-measure boundary}).
+% we say that $X$ has locally finite mm-boundary ({\color{red} or metric-measure boundary}).
 If $\lim _{r\to 0} v_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has trivial mm-boundary.
 \end{defn}
 
@@ -403,7 +403,11 @@ Let $X$ be a locally compact separable metric space.
 A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
 Any Radon measure belong to the space $\mathrm M(X)$ dual to the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
 All elements in $\mathrm M(X)$ are called \emph{signed Radon measures}.
-For any signed Radon measure $\mu$ there exist unique Radon measures $\mu^{\pm}$ such that $\mu =\mu ^+- \mu ^-$.
+{\color{red}
+For any signed Radon measure $\mu$ there exist unique Radon measures $\mu^{\pm}$ defined by
+\[\mu^\pm(A)=\pm\sup\set{\pm\mu(B)}{B\subset A}.\]
+Clearly $\mu =\mu ^+- \mu ^-$.
+}
 In such a situation, we will denote by $|\mu |$ the Radon measure $\mu ^+ +\mu ^-$ and call it the \emph{total variation} of $\mu$.
 
 
@@ -544,7 +548,7 @@ Thus, for $\mathcal M$-almost all $v\in D$ we have the following
 \end{equation}
 \end{itemize}
 
-{%\color{red}
+{\color{red}
 
 \subsection{Measurability} \label{subsec:measur}
 
@@ -601,7 +605,7 @@ $\phi _1(v)$ is defined.
 \begin{proof}
 If at least one $r_m$ with the above property exists, then $X$ does not have the Liouville property by definition.
 
-{%\color{red}
+{\color{red}
 
 Assume that $X$ does not have the Liouville property.
 Then, by homogeneity of the geodesic flow, $\phi _1$ is either undefined  on a subset of $TX$ with positive measure
@@ -688,7 +692,7 @@ $$\lim _{r\to 0} \frac 1 {r^{n+1} }\cdot |\mathcal M(T^{r} Y) -\mathcal H^{2\cdo
 Thus, up to terms of higher order, the map $E$ does not increase the measure of subsets, but the total mass of the image
 coincide with the total mass of the target.
 Thеrefore, $E$ is measure preserving up to terms of higher order.
-% \footnote{Is this explanation helpful? %\color{red} too long IMO. I shortened it a bit, Vitya}
+% \footnote{Is this explanation helpful? \color{red} too long IMO. I shortened it a bit, Vitya}
 More precisely, combining the last two inequalities we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
 we have
 \begin{equation} \label{eq:almostall}
@@ -753,7 +757,7 @@ The latter statement slightly strengthening Lemma \ref{lem:measurability}.
 As in Subsection \ref{subsec:tb}, we have a canonical measure $\mathcal M _1$ on the unit tangent bundle $\Sigma X \subset TX $ of $X$, which we also call the Liouville measure. Whenever
 $X$ has the Liouville property, then the geodesic flow is defined $\mathcal M_1\otimes \mathcal H^1$-almost everywhere on $\Sigma X \times \R$ and preserves $\mathcal M_1$. In this case for $\mathcal M_1$-almost each unit direction there exists exactly one quasi-geodesic starting in this direction.
 
-Let now $X$ be an Alexandrov space with topological boundary $\partial X$ and let $Z$ be the doubling $X\cup _{\partial X} X$, which
+Let now $X$ be an Alexandrov space with topological boundary $\partial X$ and let $Z$ be the doubling $X\sqcup_{\partial X} X$, which
 is an Alexandrov space without boundary, \cite{P2}.
 Quasi-geodesics in $X$ are exactly the projections of the quasi-geodesics in $Z$ under
 the folding $f\:Z\to X$.
@@ -775,7 +779,7 @@ We will not assume that $X$ is complete.
 We will derive \tref{intsurface} as a consequence of the following weak local
 version of a theorem of M. Bonk and U. Lang, \cite{Bonk-Lang}, which relate the curvature measure to the volume of balls.
 
-{%\color{red}
+{\color{red}
 
 \begin{lem} \label{lem:bl}
 There exists some $\delta _0>0$ with the following property.
@@ -790,7 +794,7 @@ $$\left|1- \frac {b_r(x)} {\pi{\cdot}r^2} \right| \leq 3 \cdot |\Omega |( B (x,{
 }
 
 \begin{proof}
-{%\color{red}
+{\color{red}
 Set $\delta = |\Omega |( B (x,{r}))$. By continuity, it is sufficient to prove that $|1- \frac {b_s(x)} {\pi{\cdot}s^2}| \leq 3{\cdot}\delta $ for any $s<r$. Using approximations of
 the metric on $X$ by polyhedral metrics \cite[Theorem 8.4.3, Theorem 8.1.9]{Reshetnyak-GeomIV}, we assume from now on that $X$ is polyhedral and homeomorphic to $\R^2$.
 
@@ -1157,7 +1161,7 @@ This finishes the proof of Proposition~\ref{prop-smooth}.
 \end{proof}
 
 %\begin{rem}
-%Estimating $v_r (A)$ from below seems to be more difficult. We do not need a lower estimate in the general case in this paper because in our applications $v_r$ is nonnegative due to Bishop--Gromov volume comparison. \footnote{ {V.:%\color{red} do we need to go into this?} A.: No it is not needed. Should we mention the problem somewhere or just delete it? }
+%Estimating $v_r (A)$ from below seems to be more difficult. We do not need a lower estimate in the general case in this paper because in our applications $v_r$ is nonnegative due to Bishop--Gromov volume comparison. \footnote{ {V.:\color{red} do we need to go into this?} A.: No it is not needed. Should we mention the problem somewhere or just delete it? }
 %\end{rem}
 
 \subsection{Functions of bounded variations}
@@ -1306,14 +1310,15 @@ Combining these inequalities finishes the proof.
 \section{Alexandrov spaces} \label{sec:Alex}
 \subsection{Strained points} \label{subsec:strainer}
 Strainers and strainer maps are basic tools for Alexandrov spaces; see also \cite{BGP}, \cite{Otsu-Shioya}, \cite{Shioya} and will play an important role in the proof of \tref{alexandrovthm}.
-Rather than recalling the definition, we will just list main properties of the subsets of strained points. We fix a natural number $n$.
-% and only consider Alexandrov spaces of curvature $\geq -1$ below.
+
+Let us list main properties of the subsets of strained points.
+We fix a natural number $n$.
 There exist a positive number $A=A(n)$ such that for all $0<r,\delta \leq \frac 1 {A^2}$ and all $n$-dimensional Alexandrov space $X$ of curvature $\geq -1$ the following holds true.
 \begin{enumerate}
 
 \item The set $X_{r,\delta}$ of points in $X$ which have an $Ar$-long $(n,\delta)$-strainer is open in $X$. For $s<r$, we have $X_{r,\delta} \subset X_{s,\delta}$, \cite[9.7]{BGP}.
 
-\item Let a sequence $(X_i ^n,x_i)$ of Alexandrov spaces of curvature $\geq -1$ converge in the pointed Gromov--Hausdroff topology to an $n$-dimensional Alexandrov space $(X,x)$.
+\item Assume a sequence $(X_i ^n,x_i)$ of Alexandrov spaces of curvature $\geq -1$ converges to an $n$-dimensional Alexandrov space $(X,x)$ in the pointed Gromov--Hausdroff topology.
 If $x\in X_{r,\delta}$ then, for all large $i$, the point $x_i$ has an $Ar$-long $(n, \delta)$-strainer in $X_i$.
 
 \item Rescaling $X$ with a constant $\lambda \geq 1$ sends the subset $X_{r,\delta}$ to a subset of $(\lambda X )_{\lambda r, \delta} $ of the rescaled Alexandrov space $\lambda X$.
@@ -1322,14 +1327,15 @@ If $x\in X_{r,\delta}$ then, for all large $i$, the point $x_i$ has an $Ar$-long
 
 \item For any point $x\in X_{r,\delta}$ there are natural distance coordinates $\phi\: B (x,{3{\cdot}r}) \to \R^n$ which are $(1+\varepsilon)$-bi-Lipschitz onto an open subset $O \subset \R^n$. Here, $\varepsilon\to 0$ as $A\to\infty$, \cite[9.4]{BGP}.
 
-\item The natural coordinates $\phi$ can be smoothed out to satisfy the following property, \cite[Theorem B]{Otsu-Shioya}.
+\item The chart $\phi$ can be smoothed to satisfy the following property, \cite[Theorem B]{Otsu-Shioya}.
 There exists a continuous Riemannian metric $g$ on $\phi (X_{reg} \cap B (x,{3{\cdot}r})) \subset O$ such that for any curve $\gamma \subset X_{reg} \cap B(x,{3{\cdot}r})$ its length
 coincides with the length of $\phi (\gamma )$ with respect to the Riemannian metric $g$.
 
 \item The metric tensor $g$ on a chart $O$ defined above is of bounded variation on $O$, \cite[4.2]{Per-DC} (see also \cite{AB15}).
 \end{enumerate}
 
-The last three statements in the above list together with the density and convexity of the set $X_{reg}$ of regular points imply:
+The last three statements in the above list together with the density and convexity of the set $X_{reg}$ of regular points imply the following.
+
 \begin{cor}
 In the above notations, the subset $X_{\delta} \subset X$ is an almost Riemannian metric space, once $A$ is sufficiently large.
 \end{cor}
@@ -1381,16 +1387,10 @@ $v_s (K) \leq 2\cdot C\cdot A \cdot r^{n-1}.$
 \subsection{Decomposition in good balls}
 Let the constant $A$ be as above.
 A ball $B(x,r)$ in $X^n$ will be called \emph{good} if $x\in X_{r,\delta}$.
-%if any point $p\in B(x,2 R)$ is $(AR,\delta)$-strained with respect to a fixed
-%collection of points say $a_1,\dots a_n,b_1,\dots,b_n$.
-%Recall that in this case
-%the distance map $B(x,r)\to \RR^m$
-%$$p\mapsto(|a_1p|,\dots,|a_np|)$$
-%is bi-Lipschitz with bi-Lipschitz constant close to 1.
-%
 A ball $B(x,r)$ in $X$ will be called \emph{bad} if it is not good.
-The aim of this subsection is the proof of a controlled covering result; see also Problem \ref{qe:control}.
-%Let us denote by $\alpha_m$ the volume of unit ball in the $m$-dimensional Euclidean space.
+
+In this subsection we give a controlled covering result; see also Problem \ref{qe:control}.
+
 
 \begin{prop}\label{prop:covering}
 Let $X^n$ be an $n$-dimensional Alexandrov space without boundary.
@@ -1444,7 +1444,6 @@ the ball $K_l$ by at most $N$ balls satisfying the conditions of the lemma.
 This contradiction to our assumption finishes the proof of the lemma.
 \qeds
 
-Now it is easy to derive
 \begin{proof}[Proof of Proposition \ref{prop:covering}]
 Cover $B (x,{s})$ by $N$ balls as in \lref{lem:covering} and call this covering $\mathcal F_1$. Now cover every bad
 ball from the covering $\mathcal F_1$ by at most $N$ balls provided by \lref{lem:covering}. Together with the good balls from $\mathcal F_1$ the new balls define a covering $\mathcal F_2$ of $B (x,s)$. Proceeding in this way define for each natural number $k$ a covering $\mathcal F_k$ of $B(x,s)$.
@@ -1457,7 +1456,7 @@ The volume of the union of bad balls in $\mathcal F_l$ is at most $g_l^-$ and co
 Let $\mathcal F$ be the set of all good balls $B_j =B (x_j,{r_j})$ from all the coverings $\mathcal F_l$.
 Then $\mathcal H^n (B (x,s) \setminus (\cup _{\mathcal F} B_j ) \leq \lim _{l\to \infty} g_l ^- =0$. On the other hand,
 by construction,
-\[\sum _{B_j\in \mathcal F} r_j^{\alpha} 
+\[\sum_{B_j\in \mathcal F} r_j^{\alpha} 
 = \lim _{l\to \infty} g_l^+ 
 \leq 3{\cdot N}{\cdot} s^{\alpha}.\]
 
@@ -1510,9 +1509,7 @@ By \lref{cor-mu-dc} the Radon measure $\nu$ is absolutely continuous with respec
 Now (1) and (3) of \tref{alexandrovthm} follow from \lref{lem:minderiv}.
 This finishes the proof in the case $\partial X=\emptyset$.
 
-%since $$\sum_{r_n< r} \vol_m W'_n\le \alpha_m\cdot \sum_{r_n< r}r_n^m.$$
-
-Assume now that $\partial X\ne\emptyset$ and consider the doubling $Y=X\cup _{\partial X} X$ of $X$. Consider $X$ as a convex subset of $Y$ and let $K\subset X$ be compact. We find a constant $L>0$ such that for all sufficiently small $r>0$, we have 
+Assume now that $\partial X\ne\emptyset$ and consider the doubling $Y=X\sqcup _{\partial X} X$ of $X$. Consider $X$ as a convex subset of $Y$ and let $K\subset X$ be compact. We find a constant $L>0$ such that for all sufficiently small $r>0$, we have 
 $\mathcal H^n (K\cap B(r,{2{\cdot})} (\partial X)) \leq L \cdot r$. (This follows, for example, by the coarea formula using the Lipschitz properties of the gradient flow of the distance function $d(\cdot, \partial X)$ which is semiconcave). On the other hand, for $x\in K\setminus B (\partial X,r)$, the volumes of the $r$-ball in $X$ and in $Y$ coincide. Using that $Y$ has locally finite mm-boundary, we deduce that $v_r(K)$ (computed in the space $X$) is bounded from above $L\cdot r + \tilde v_r (K)$, where $\tilde v_r (K)$ is the deviation measure of $K$ considered as a subset of $Y$. This implies that $v_r /r$ is uniformly bounded for $r\to 0$. Thus $X$ has locally finite mm-boundary as well.
 
 Any limit of a sequence $v_{r_j} /r_j$ for some $r_j\to 0$ must be again non-negative, hence a Radon measure. Outside of $\partial X$
@@ -1532,10 +1529,10 @@ In order to prove this inequality, we consider any open neighborhood $V$ of $K$ 
 For all small $r>0$, the neighborhood $V$ contains $B (K,{2{\cdot}r})$.
 Once $\varepsilon$ has been chosen sufficiently small, the ball $B (z,r)$ in $X$ has volume at most
 $ (1-k_1) \cdot \omega _n \cdot r^n$, for
-any point $z\in B (K,{\frac 1 {10} r})$. Here $ k_1=k_1(n)>0 $ is a universal constant.
- Moreover, the set $B (K,{\frac 1 {10} r})$ has volume at least 
+any point $z\in B (K,{\frac 1 {10}{\cdot}r})$. Here $ k_1=k_1(n)>0 $ is a universal constant.
+ Moreover, the set $B (K,{\frac 1 {10}{\cdot}r})$ has volume at least 
  $\frac 1 {20} \cdot r \cdot \omega _{n-1} \cdot s^{n-1}$.
-Integrating over $V$ (and using the inequality of Bishop--Gromov on the complement of $B (K,{\frac 1 {10} r})$) we deduce:
+Integrating over $V$ (and using the inequality of Bishop--Gromov on the complement of $B (K,{\frac 1 {10}{\cdot}r})$) we deduce:
 $$v_r (V) \geq k_1\cdot \tfrac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
 for some $k_3$ depending only on the volume of $V$ and independent of $r$.
 Dividing by $r$ and letting it go to $0$ we obtain $\nu (V) \geq k_4\cdot s^{n-1}$, for a universal constant $k_4>0$.
@@ -1622,7 +1619,7 @@ Can $\kappa(n,\delta)$ above be chosen
 %to be linear in $\delta$, i.e. to be
 of the form $C(n)\cdot \delta$? 
 %More precisely:}
-%Does there exist a constant $C=C(n)$ such that for any Alexandrov space $X=X^n$ {%\color{red} of curvature $\ge -1$}, any $x\in X$ and any $\delta <\frac 1 C$ the following holds true.
+%Does there exist a constant $C=C(n)$ such that for any Alexandrov space $X=X^n$ {\color{red} of curvature $\ge -1$}, any $x\in X$ and any $\delta <\frac 1 C$ the following holds true.
 %If $\omega _n{\cdot}r^n -\mathcal H^n (B (x,r)) \leq \delta \cdot r ^n$, then
 %the ball $B (x,{\frac r 4})$ is $(1+C \cdot \delta )$-bi-Lipschitz to a Euclidean ball.
 \end{quest}
