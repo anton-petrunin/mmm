@@ -152,9 +152,9 @@ denote by $B(x,r)$ the open metric ball of radius $r$ around $x$. Consider the B
 b_r(x):=\mu (B(x,r)).
 \end{equation}
 
-We define the \emph{deviation measure} $v_r$ of $X$ as a signed Radon measure $v_r$ on $X$, absolutely continuous with respect to $\mu$, given by
+We define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure $\mathcal{V}_r$ on $X$, absolutely continuous with respect to $\mu$, given by
 \begin{equation} \label{eq:first}
-v_r = (1 - \frac {b_r} { \omega _n{\cdot}r^n} )\cdot \mu \, .
+\mathcal{V}_r = (1 - \frac {b_r} { \omega _n{\cdot}r^n} )\cdot \mu \, .
 \end{equation}
 Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
 
@@ -166,12 +166,12 @@ that is, if for any compact subset $K\subset X$ the values $\nu (K), \nu \in \ma
 
 In all examples and applications below, $\mu$ is the $n$-dimensional Hausdorff measure $\mathcal H^n =\mathcal H^n _X$ on $X$, always normalized so that it coincides with the Lebesgue measure on $\R^n$.
 
-The map $r\mapsto v_r \in \mathrm M(X)$ measures the deviation of $X$ from $\R^n$.
-The Taylor coefficients of $v_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with the following example.
+The map $r\mapsto \mathcal{V}_r \in \mathrm M(X)$ measures the deviation of $X$ from $\R^n$.
+The Taylor coefficients of $\mathcal{V}_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with the following example.
 
 \begin{ex} \label{smoothscal}
 Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu =\mathcal H^n$. Then, for $r\to 0$,
-the measures $v_r /r^2$ converge in $\mathrm M(X)$ to $\frac 1 {6(n+2)}\cdot scal \cdot \mu$, where
+the measures $\mathcal{V}_r /r^2$ converge in $\mathrm M(X)$ to $\frac 1 {6(n+2)}\cdot scal \cdot \mu$, where
 $scal$ denotes the scalar curvature of $X$;
 equivalently, 
 \[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6(n+2)}\cdot r^{n+2}\]
@@ -183,22 +183,22 @@ the details.
 
 \begin{ex} \label{mainex}
 Let $X$ be a smooth $n$-dimensional Riemannian manifold with boundary $\partial X$.
-Then, for $r\to 0$, the measures $v_r/r$ converge in $\mathrm M(X)$ to
+Then, for $r\to 0$, the measures $\mathcal{V}_r/r$ converge in $\mathrm M(X)$ to
 $c_n \cdot \mathcal H^{n-1} _{\partial X}$, for some constant $c_n >0$ depending only on $n$.
 \end{ex}
 
-This example suggests to view the first Taylor coefficient of $v_r$ as the ``boundary'' of the metric-measure space $(X, d, \mu)$.
+This example suggests to view the first Taylor coefficient of $\mathcal{V}_r$ as the ``boundary'' of the metric-measure space $(X, d, \mu)$.
 It motivates the following definition.
 
 \begin{defn} \label{def:first}
-Let $(X,d,\mu)$ be a metric measure space as above. Let $v_r$ be the deviation measure of $X$, as in \eqref{eq:first}.
-%and let the Radon measure $|v_r|$ be the total variation of $v_r$.
+Let $(X,d,\mu)$ be a metric measure space as above. Let $\mathcal{V}_r$ be the deviation measure of $X$, as in \eqref{eq:first}.
+%and let the Radon measure $|\mathcal{V}_r|$ be the total variation of $\mathcal{V}_r$.
 We say that $X$ has locally finite metric-measure boundary, abbreviated as mm-boundary,
 if the family of signed Radon measures
-\[\set{\frac { v_r } {r }}{0<r\leq 1}\]
+\[\set{\frac { \mathcal{V}_r } {r }}{0<r\leq 1}\]
 is uniformly bounded.
 % we say that $X$ has locally finite mm-boundary ({\color{red} or metric-measure boundary}).
-If $\lim _{r\to 0} v_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has trivial mm-boundary.
+If $\lim _{r\to 0} \mathcal{V}_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has trivial mm-boundary.
 \end{defn}
 
 We refer to Subsection \ref{subsec:example} and Section \ref{sec:final} for a discussion of examples and questions, and
@@ -219,7 +219,7 @@ The next theorem shows that, similarly to \exref{mainex}, the topological bounda
 \begin{thm} \label{alexandrovthm}
 Let $X^n$ be an $n$-dimensional Alexandrov space.
 Then $X$ has locally finite mm-boundary.
-If $ \nu= \lim \frac{v_{s_j}}{s_j}$, for a sequence $s_j \to 0 $, then $\nu$ is a Radon measure and
+If $ \nu= \lim \frac{\mathcal{V}_{s_j}}{s_j}$, for a sequence $s_j \to 0 $, then $\nu$ is a Radon measure and
 the following holds true.
 \begin{enumerate}
 \item\label{full-measure-zero-nu}There is a Borel set $A_0$ with $\mathcal H^n (X\setminus A_0) = \nu (A_0)=0$.
@@ -244,17 +244,17 @@ Yet another proof follow from a much stronger result discussed in the next subse
 
 \subsection{Metric-measure-curvature} \label{subsec:curv}
 Motivated by Example \ref{smoothscal} one can naively hope that the second Taylor coefficient at $0$ of the
-map $v_r\colon r\mapsto \mathrm M(X)$ describes the scalar curvature of the space.
+map $\mathcal{V}_r\colon r\mapsto \mathrm M(X)$ describes the scalar curvature of the space.
 %This again has natural analogy with the classical integral geometry.
 
 \begin{defn}
-Let $X,v_r$ be as in Definition \ref{def:first}.
-If the family $v_r /r^2, r\leq 1$ is uniformly bounded then we say that $X$ has locally finite mm-curvature.
-% For any compact subspace $K$ of $X$, we call $\limsup _{r\to 0} \|v_r /r\| _K$ the bound of the scalar curvature in $K$.
-If the measures $v_r /r^2$ converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
+Let $X,\mathcal{V}_r$ be as in Definition \ref{def:first}.
+If the family $\mathcal{V}_r /r^2, r\leq 1$ is uniformly bounded then we say that $X$ has locally finite mm-curvature.
+% For any compact subspace $K$ of $X$, we call $\limsup _{r\to 0} \|\mathcal{V}_r /r\| _K$ the bound of the scalar curvature in $K$.
+If the measures $\mathcal{V}_r /r^2$ converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
 \end{defn}
 
-%If, in the definition above, the measures $v_r /r^2$ locally converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
+%If, in the definition above, the measures $\mathcal{V}_r /r^2$ locally converge to a measure $\nu$, we call $\nu$ the mm-curvature of $X$.
 Clearly, local finiteness of mm-curvature as defined above implies that the mm-boundary vanishes.
 Thus, the following result proves \tref{hypersurface} in the $2$-dimensional case.
 
@@ -330,7 +330,7 @@ The following examples are not needed in the sequel and we omit the somewhat ted
 
 \begin{ex} Let $X$ be an $n$-dimensional \emph{Lipschitz manifold}; that is, an $n$-dimensional manifold equipped with intrinsic metric such that any point admits a neighborhood which is bi-Lipschitz to an open set in a Euclidean space.
 Let us equip $X$ with the measure $\mu=\mathcal H^n$.
-Then $\lim _{r\to 0} v_r =0$. Moreover, $\mathcal H^n$ is the only measure with this property.
+Then $\lim _{r\to 0} \mathcal{V}_r =0$. Moreover, $\mathcal H^n$ is the only measure with this property.
 \end{ex}
 
 \begin{ex}
@@ -454,8 +454,8 @@ Moreover, for a constant $C=C(\kappa)\geq 0$ and all $r< \frac 1 C$ the map $\ex
 
 By the theorem of Bishop--Gromov, the volume $b_r (x)=\mathcal H^n (B(x,r))$ is bounded from above by the corresponding volume in the
 space of constant curvature $\kappa$. In particular, $b_r (x) \leq \omega _n \cdot r^n + C \cdot r^{n+2}$ for all $r\leq \frac 1 C$, where
-the constant $C$ can be chosen as before. Thus, the deviation measures $v_r $ from \eqref{eq:first} satisfy
-$$v_r \geq -C\cdot r^2\cdot  \mathcal H^n,$$ 
+the constant $C$ can be chosen as before. Thus, the deviation measures $\mathcal{V}_r $ from \eqref{eq:first} satisfy
+$$\mathcal{V}_r \geq -C\cdot r^2\cdot  \mathcal H^n,$$ 
 for all sufficiently small $r$.
 Here and in the previous paragraph, one can set $C=0$ if $\kappa \geq 0$.
 
@@ -477,7 +477,7 @@ $B (A,{(1+\delta) \cdot r}) \subset U$ and $B (f(A),{(1+\delta) \cdot r}) \subse
 \begin{equation} \label{eq:bilip}
 (1+\delta) ^{-2\cdot n} \leq \frac {b_r(x)} {\omega _n \cdot r^n} \leq (1+\delta ) ^{2\cdot n}.
 \end{equation}
-Therefore, if $\delta $ is sufficiently small, $|v_r | (A) \leq 3\cdot  n \cdot \delta \cdot \mathcal H^n (A).$
+Therefore, if $\delta $ is sufficiently small, $|\mathcal{V}_r | (A) \leq 3\cdot  n \cdot \delta \cdot \mathcal H^n (A).$
 
 \section{Liouville measure and geodesics} \label{sec:Liou}
 \subsection{Tangent bundle and Liouville measure} \label{subsec:tb}
@@ -642,7 +642,7 @@ The claim follows since all $K_m$ are contained in the set $B (K_1,1)$, whose cl
 The completeness of the space $X$ is used in the proof of \tref{thmmain} only once, namely in the last line of the above proof.
 \end{rem}
 
-\subsection{Relation with the mm-boundary} Let us interpret the deviation measures $v_r$ from \eqref{eq:first} in suitable geometric terms.
+\subsection{Relation with the mm-boundary} Let us interpret the deviation measures $\mathcal{V}_r$ from \eqref{eq:first} in suitable geometric terms.
 
 Let $K\subset X$ be measurable and let $r>0$ be arbitrary.
 Since $\mathcal H^n (X\setminus X_{reg} )=0$, we have
@@ -651,9 +651,9 @@ Denote now by $U^r(K)$
 the set of all pairs $(x,y)\in X\times X$ with $x\in K$ and $d(x,y)<r$.
 By Fubini's theorem the set $U^r(K)$ is $\mathcal H^n \otimes \mathcal H^n =\mathcal H^{2\cdot n}$ measurable and we have
 $$\mathcal H^{2\cdot n} (U^r (K))= \int _K b_r (x) \cdot d\mathcal H^n (x). $$
-Taking both equations together, we see that the signed measure $v_r$ expresses the difference between $\mathcal H^{2\cdot n}$ and $\mathcal M$. More precisely,
+Taking both equations together, we see that the signed measure $\mathcal{V}_r$ expresses the difference between $\mathcal H^{2\cdot n}$ and $\mathcal M$. More precisely,
 \begin{equation} \label{eq:compare}
-v_r (K) = \frac 1 {\omega_n \cdot r^n}\cdot \Big(\mathcal M (T^r K)- \mathcal H^{2\cdot n} (U^r (K)) \Big).
+\mathcal{V}_r (K) = \frac 1 {\omega_n \cdot r^n}\cdot \Big(\mathcal M (T^r K)- \mathcal H^{2\cdot n} (U^r (K)) \Big).
 \end{equation}
 
 The following statement is a reformulating of \tref{thmmain}.
@@ -867,10 +867,10 @@ b_r (x) &=\mathcal H^2 (B (x,r)) \leq
 For any $x\notin B (x_0,{r})$ we have $| \Omega |(B(x,r )) < \delta _0$. Thus, by Lemma~\ref{lem:bl}, $$|1-\frac {b_r(x)} {\pi{\cdot}r^2} |
 \leq
 3\cdot |\Omega | ( B (x,{r})).$$
-For the deviation measures $v_r$ from \eqref{eq:first} we estimate:
+For the deviation measures $\mathcal{V}_r$ from \eqref{eq:first} we estimate:
 \begin{align*}
-|v_r| (A\cap B (x_0,{2{\cdot}r}))
-&\leq |v_r| (B (x_0,{2{\cdot}r})) \leq
+|\mathcal{V}_r| (A\cap B (x_0,{2{\cdot}r}))
+&\leq |\mathcal{V}_r| (B (x_0,{2{\cdot}r})) \leq
 \\
 &\leq (1+ \tfrac 1 {\varepsilon}) \cdot \mathcal H^2 (B (x_0,{2{\cdot}r})) \leq
 \\
@@ -879,7 +879,7 @@ For the deviation measures $v_r$ from \eqref{eq:first} we estimate:
 \end{align*}
 On the other hand,
 \begin{align*}
-|v_r| (A\setminus B (x_0,{2{\cdot}r}))
+|\mathcal{V}_r| (A\setminus B (x_0,{2{\cdot}r}))
 &\leq 
 \int _{A \setminus B (x_0,{2{\cdot}r}) } 3 \cdot |\Omega| (B (x,r)) \cdot d\mathcal H^2 (x) 
 \leq
@@ -888,10 +888,10 @@ On the other hand,
 \end{align*}
 where we have used \lref{lem:exchange} in the last step.
 For any $x$ contained in the domain of integration of the last integral, we have $\mathcal H^2 (B(x,r)) =b_r (x) \leq 2{\cdot}\pi{\cdot}r^2$, by \lref{lem:bl}, once $\delta _0$ has been chosen to be sufficiently small.
-We deduce $|v_r| (A\setminus B (x_0,{2{\cdot}r})) \leq 6 {\cdot}\pi {\cdot}\delta _0 {\cdot} r^2$.
+We deduce $|\mathcal{V}_r| (A\setminus B (x_0,{2{\cdot}r})) \leq 6 {\cdot}\pi {\cdot}\delta _0 {\cdot} r^2$.
 
 Thus, for some constant $C=C(\varepsilon)$ and all $r<\varepsilon$, we obtain
-$$|v_r|(A) \leq C\cdot r^2.$$
+$$|\mathcal{V}_r|(A) \leq C\cdot r^2.$$
 This finishes the proof of the theorem.
 \end{proof}
 
@@ -1007,7 +1007,7 @@ Then it has vanishing  mm-boundary.
 
 \begin{proof}
 Since $X$ has locally finite mm-boundary by
-\tref{alexandrovthm}, it suffices to prove that any partial limit measure $\nu$ of a sequence $\frac 1 {r_j}\cdot v_{r_j}$ for $r_j\to 0$ must be the zero measure.
+\tref{alexandrovthm}, it suffices to prove that any partial limit measure $\nu$ of a sequence $\frac 1 {r_j}\cdot \mathcal{V}_{r_j}$ for $r_j\to 0$ must be the zero measure.
 
 Fix a partial limit measure $\nu$.
 Due to \tref{alexandrovthm}, $\nu (A)=0$ for any Borel subset $A\subset X$ with $\mathcal H^{n-1} (A)<\infty$.
@@ -1022,7 +1022,7 @@ fixed constant $C_1$ independent of $\delta$.
 Assume $0<r<t$.
 Applying \lref{lem:mean}, for $x\in U$ we get
 \begin{align*}
-|v_r| (U)
+|\mathcal{V}_r| (U)
 &\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot \mathcal K (B (y,{6{\cdot}r})) \cdot d\mathcal H^n (y) \leq
 \\
 &\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B (A,{7{\cdot}t})} \mathcal H^n (B (y,{6{\cdot}r})) \cdot d\mathcal K(y) 
@@ -1057,7 +1057,7 @@ This finishes the proof of the claim and, therefore, of \tref{thmconv}.
 % \end{prop}
 
 \section{An integral inequality for Riemannian metrics}\label{sec-BV-estimate}
-\subsection{The smooth case} We start by estimating from above the deviation measure $v_r$ on a smooth Riemannian manifold in terms of the first
+\subsection{The smooth case} We start by estimating from above the deviation measure $\mathcal{V}_r$ on a smooth Riemannian manifold in terms of the first
 derivatives of the metric. We do not know how to prove a similar estimate from below, see Problem \ref{qe:BV}. However, for the applications
 to Alexandrov spaces discussed in the next section, the estimate from below is a consequence of the theorem of Bishop--Gromov.
 
@@ -1073,7 +1073,7 @@ metric $g$ which is $(1+\frac 1 C)$-bi-Lipschitz to the background Euclidean met
 %$\varepsilon$.
 Let $A\subset U$ be a Borel subset. Let $r>0$ be such that $B (A,{2{\cdot}r})$ is relatively compact in $U$.
 Then 
-$$v_r (A) \leq C \cdot r \cdot \int _{B ( A,{2{\cdot}r})} |g' |.$$
+$$\mathcal{V}_r (A) \leq C \cdot r \cdot \int _{B ( A,{2{\cdot}r})} |g' |.$$
 \end{prop}
 
 \begin{proof}
@@ -1100,7 +1100,7 @@ For $x\in U$ denote by $B_x$
 the metric ball $B(x,r)$ in $U$. 
 By $B^x$ we denote the metric ball of radius $r$ in the Euclidean norm $|\cdot |_x$. In this Euclidean metric the ball $B^x$ has measure
 $$\omega _n\cdot r^n =u(x)\cdot \int _{B^x} d\mathcal L^n.$$
-Thus, in order to estimate the deviation measure $v_r$, we only need to control the summands on the right of the following inequality:
+Thus, in order to estimate the deviation measure $\mathcal{V}_r$, we only need to control the summands on the right of the following inequality:
 \begin{equation} \label{eq:summand}
 \omega_n \cdot r^n - b_r (x) \leq u(x) \cdot \mathcal L^n( B^x\setminus B_x) + \int _{B_x} |u(x)- u(y)| \cdot
 d\mathcal L^n (y).
@@ -1150,7 +1150,7 @@ Taking both estimates together with \eqref{eq:Kg}, embedding $B_x$ and $B^x$ in 
 
 We divide both sides by $\omega _n \cdot r^n$ and integrate over $A$. Using that the bi-Lipschitz constant is close to $1$, we see:
 \begin{align*}
-v_r (A) &\leq C_4\cdot \int _A \Big (\int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n}\cdot d\mathcal L^n (y) \Big ) \cdot d\mathcal L^n (x) \leq
+\mathcal{V}_r (A) &\leq C_4\cdot \int _A \Big (\int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n}\cdot d\mathcal L^n (y) \Big ) \cdot d\mathcal L^n (x) \leq
 \\
 &\leq C_4\cdot \int _{B (A,{2{\cdot}r})} \Big ( \int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n} \cdot d\mathcal L^n (x) \Big ) \cdot d\mathcal L^n (y) = 
 \\
@@ -1161,7 +1161,7 @@ This finishes the proof of Proposition~\ref{prop-smooth}.
 \end{proof}
 
 %\begin{rem}
-%Estimating $v_r (A)$ from below seems to be more difficult. We do not need a lower estimate in the general case in this paper because in our applications $v_r$ is nonnegative due to Bishop--Gromov volume comparison. \footnote{ {V.:\color{red} do we need to go into this?} A.: No it is not needed. Should we mention the problem somewhere or just delete it? }
+%Estimating $\mathcal{V}_r (A)$ from below seems to be more difficult. We do not need a lower estimate in the general case in this paper because in our applications $\mathcal{V}_r$ is nonnegative due to Bishop--Gromov volume comparison. \footnote{ {V.:\color{red} do we need to go into this?} A.: No it is not needed. Should we mention the problem somewhere or just delete it? }
 %\end{rem}
 
 \subsection{Functions of bounded variations}
@@ -1270,7 +1270,7 @@ $g$ be the metric tensor and the measure $\mathcal N_0 =[Dg]$ the derivative of 
 such that $B (A,{3{\cdot}r})$ is relatively compact in $U$ we have
 
 \[
-v_r (A) \leq 2 \cdot C \cdot \mathcal N_0 (B (A,{3{\cdot}r}))\, .
+\mathcal{V}_r (A) \leq 2 \cdot C \cdot \mathcal N_0 (B (A,{3{\cdot}r}))\, .
 \]
 \end{cor}
 
@@ -1288,14 +1288,14 @@ Finally, the Hausdorff measures of the Riemannian metrics $g_{\varepsilon}$ conv
 Now the result follows directly from \pref{prop-smooth} applied to the metrics $g_{\varepsilon}$, by letting $\varepsilon$ go to $0$.
 \end{proof}
 
-As a consequence of \cref{cor-dc-vr}, the minimal metric derivative measure bounds from above the deviations measure $v_r$
+As a consequence of \cref{cor-dc-vr}, the minimal metric derivative measure bounds from above the deviations measure $\mathcal{V}_r$
 on any almost Riemannian metric space:
 
 \begin{lem} \label{cor-mu-dc}
 Let $X$ be a almost Riemannian metric space with the metric derivative measure $\mathcal N$.
 Then for any compact subset $A\subset X$, there exists some $r_0>0$ such that for all
 $r<r_0$ we have 
-$$v_r (A) \leq r\cdot 2\cdot  (n+2)\cdot C\cdot \mathcal N (A)\,. $$
+$$\mathcal{V}_r (A) \leq r\cdot 2\cdot  (n+2)\cdot C\cdot \mathcal N (A)\,. $$
 \end{lem}
 
 \begin{proof}
@@ -1303,7 +1303,7 @@ Cover $A$ by finitely many regular charts $U_i$ such that $\sum \mathcal N_0 (U_
 Since the covering dimension of $X$ is $n$, we find a finite covering $V_j$ of $A$, which refines the first covering but has intersection multiplicity less than $(n+2)$. Considering each $V_j$ as a subchart of the corresponding chart $U_i$ we see that
 $$\sum \mathcal N_0 (V_j) \leq (n+2)\cdot \sum \mathcal N(A)  .$$
 Consider $r_0>0$ such that for any $x\in A$ the ball $B (x,{4{\cdot}r_0})$ is contained in one of the sets $V_j$. Denote by $A_j$ the set of all such $x$.
-Then $v_r (A) \leq \sum v_r (A_j)$ and, due to \cref{cor-dc-vr}, $v_r (A_j) \leq 2 \cdot C\cdot N_0 (V_j)$.
+Then $\mathcal{V}_r (A) \leq \sum \mathcal{V}_r (A_j)$ and, due to \cref{cor-dc-vr}, $\mathcal{V}_r (A_j) \leq 2 \cdot C\cdot N_0 (V_j)$.
 Combining these inequalities finishes the proof.
 \end{proof}
 
@@ -1380,8 +1380,8 @@ Now we use \cref{cor-dc-vr} to conclude:
 %The measure $\mu$ defined in the last section satisfies $\mu (X_{\delta } )< \infty$.
 Let $C=C(n),A=A(n)$ be the constants from \pref{prop-smooth} and \lref{lem:A}.
 For any point $x\in X_{r,\delta}$, any $s<r$ and any
-Borel subset $K\subset B (x,r)$ the deviation measure $v_s $ satisfies
-$v_s (K) \leq 2\cdot C\cdot A \cdot r^{n-1}.$
+Borel subset $K\subset B (x,r)$ the deviation measure $\mathcal{V}_s $ satisfies
+$\mathcal{V}_s (K) \leq 2\cdot C\cdot A \cdot r^{n-1}.$
 \end{prop}
 
 \subsection{Decomposition in good balls}
@@ -1466,9 +1466,9 @@ by construction,
 \subsection{Final step}
 Now we can provide the
 \begin{proof}[Proof of Theorem~\ref{alexandrovthm}]
-Let $X$ be a fixed $n$-dimensional Alexandrov space. By the inequality of Bishop--Gromov, the deviations measures $v_r$ are uniformly bounded from below
+Let $X$ be a fixed $n$-dimensional Alexandrov space. By the inequality of Bishop--Gromov, the deviations measures $\mathcal{V}_r$ are uniformly bounded from below
 by a quadratic term in $r$.
-Thus in order to control the mm-boundary we only need to bound $v_r$ from above on balls in $X$.
+Thus in order to control the mm-boundary we only need to bound $\mathcal{V}_r$ from above on balls in $X$.
 
 Let the constants $A,C$ be chosen as above, so that \pref{ballmeasure} can be applied.
 
@@ -1476,13 +1476,13 @@ Let us first assume that $\partial X$ is empty.
 Let $W\subset X$ be an arbitrary compact subset.
 Fix $\alpha =n-\tfrac 3 2$ and choose the constant $q$ as in Proposition \ref{prop:covering}.
 For any $x\in W$ and $s<1$ consider the good balls $B_i=B (x_i,{r_i})$ provided by Proposition \ref{prop:covering} and set $K'=\cup _i B_i$. Let $r<\frac 1 {A^2}$ be sufficiently small. Since $\mathcal H^n (K\setminus K')=0$
-we have $ v_r (K)=v_r (K')$.
+we have $ \mathcal{V}_r (K)=\mathcal{V}_r (K')$.
 
 For all $m$ with $r<r_m$, we apply \pref{ballmeasure} and infer
-$$v_r(B_m \cap K)\le 2\cdot C\cdot A \cdot r\cdot r_m^{n-1} $$
+$$\mathcal{V}_r(B_m \cap K)\le 2\cdot C\cdot A \cdot r\cdot r_m^{n-1} $$
 On the other hand, for $r_m<r$, we have
 \begin{align*}
-v_r (B_m\cap K) 
+\mathcal{V}_r (B_m\cap K) 
 &\leq \mathcal H^n (B_m) \leq 
 \\ &\leq
 2 \cdot \omega _n \cdot r_m ^n < 
@@ -1491,15 +1491,15 @@ v_r (B_m\cap K)
 Summing up and using $r_m^{n-1} < r_m ^{\alpha}$ we obtain
 \begin{equation} \label{eq:density}
 \begin{aligned}
-v_r (K) 
-&\leq \sum_m v_r (B_m \cap K) \leq 
+\mathcal{V}_r (K) 
+&\leq \sum_m \mathcal{V}_r (B_m \cap K) \leq 
 \\&\leq 
 (2\cdot C\cdot A+2\cdot \omega _n) \cdot q\cdot r \cdot s^{\alpha}  .
 \end{aligned}
 \end{equation}
 
 This proves that $X$ has locally finite mm-boundary.
-As already mentioned and used above, any signed Radon measure $\nu$ obtained as a limit of a sequence $v_{r_j} /r_j$ for some $r_j\to 0$ must be non-negative, hence a Radon measure. We fix such $\nu$.
+As already mentioned and used above, any signed Radon measure $\nu$ obtained as a limit of a sequence $\mathcal{V}_{r_j} /r_j$ for some $r_j\to 0$ must be non-negative, hence a Radon measure. We fix such $\nu$.
 
 Inequality \eqref{eq:density} implies that $\nu$ has finite $\alpha$-dimensional density at every point of $X$, in particular, $\nu$ vanishes on subsets of Hausdorff dimension $\leq n-2$.
 Thus $\nu (X \setminus X_{\delta } )=0$.
@@ -1509,10 +1509,15 @@ By \lref{cor-mu-dc} the Radon measure $\nu$ is absolutely continuous with respec
 Now (1) and (3) of \tref{alexandrovthm} follow from \lref{lem:minderiv}.
 This finishes the proof in the case $\partial X=\emptyset$.
 
-Assume now that $\partial X\ne\emptyset$ and consider the doubling $Y=X\sqcup _{\partial X} X$ of $X$. Consider $X$ as a convex subset of $Y$ and let $K\subset X$ be compact. We find a constant $L>0$ such that for all sufficiently small $r>0$, we have 
-$\mathcal H^n (K\cap B(r,{2{\cdot})} (\partial X)) \leq L \cdot r$. (This follows, for example, by the coarea formula using the Lipschitz properties of the gradient flow of the distance function $d(\cdot, \partial X)$ which is semiconcave). On the other hand, for $x\in K\setminus B (\partial X,r)$, the volumes of the $r$-ball in $X$ and in $Y$ coincide. Using that $Y$ has locally finite mm-boundary, we deduce that $v_r(K)$ (computed in the space $X$) is bounded from above $L\cdot r + \tilde v_r (K)$, where $\tilde v_r (K)$ is the deviation measure of $K$ considered as a subset of $Y$. This implies that $v_r /r$ is uniformly bounded for $r\to 0$. Thus $X$ has locally finite mm-boundary as well.
+Assume now that $\partial X\ne\emptyset$ and consider the doubling $Y=X\sqcup_{\partial X} X$ of $X$.
+Consider $X$ as a convex subset of $Y$ and let $K\subset X$ be compact.
+We find a constant $L>0$ such that for all sufficiently small $r>0$, we have 
+$\mathcal H^n (K\cap B(r,{2{\cdot})} (\partial X)) \leq L \cdot r$. 
+(This follows, for example, by the coarea formula using the Lipschitz properties of the gradient flow of the distance function $d(\cdot, \partial X)$ which is semiconcave.)
+On the other hand, for $x\in K\setminus B (\partial X,r)$, the volumes of the $r$-ball in $X$ and in $Y$ coincide.
+Using that $Y$ has locally finite mm-boundary, we deduce that $\mathcal{V}_r(K)$ (computed in the space $X$) is bounded from above $L\cdot r + \tilde{\mathcal{V}}_r (K)$, where $\tilde{\mathcal{V}}_r (K)$ is the deviation measure of $K$ considered as a subset of $Y$. This implies that $\mathcal{V}_r /r$ is uniformly bounded for $r\to 0$. Thus $X$ has locally finite mm-boundary as well.
 
-Any limit of a sequence $v_{r_j} /r_j$ for some $r_j\to 0$ must be again non-negative, hence a Radon measure. Outside of $\partial X$
+Any limit of a sequence $\mathcal{V}_{r_j} /r_j$ for some $r_j\to 0$ must be again non-negative, hence a Radon measure. Outside of $\partial X$
 $\nu$ coincides with the restriction of the corresponding measure defined on $Y$. From the corresponding statement about $Y$ we deduce that $\nu$ is absolutely singular with respect to $\mathcal H^n$. Moreover, $\nu$ vanishes on subsets $S\subset X\setminus \partial X$ with finite $\mathcal H^{n-1} (S)$.
 
 It remains to prove (2), i.e. to show that the restriction of $\nu$ onto $\partial X$ is at least
@@ -1533,7 +1538,7 @@ any point $z\in B (K,{\frac 1 {10}{\cdot}r})$. Here $ k_1=k_1(n)>0 $ is a univer
  Moreover, the set $B (K,{\frac 1 {10}{\cdot}r})$ has volume at least 
  $\frac 1 {20} \cdot r \cdot \omega _{n-1} \cdot s^{n-1}$.
 Integrating over $V$ (and using the inequality of Bishop--Gromov on the complement of $B (K,{\frac 1 {10}{\cdot}r})$) we deduce:
-$$v_r (V) \geq k_1\cdot \tfrac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
+$$\mathcal{V}_r (V) \geq k_1\cdot \tfrac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
 for some $k_3$ depending only on the volume of $V$ and independent of $r$.
 Dividing by $r$ and letting it go to $0$ we obtain $\nu (V) \geq k_4\cdot s^{n-1}$, for a universal constant $k_4>0$.
 Since the neighborhood $V$ of $K$ was arbitrary,
@@ -1563,7 +1568,7 @@ tensor of class $W^{1,1}$, since the metric derivative measure is absolutely sin
 The following question is motivated by \lref{cor-mu-dc} and potential applications to geodesic flows of spaces with curvature bounded from above; see also Problem \ref{qe:CAT}.
 
 \begin{quest} \label{qe:BV}
-Let $X$ be an almost Riemannian space. Can one use the minimal metric derivative measure in order to control the deviation measures $v_r$ from below?
+Let $X$ be an almost Riemannian space. Can one use the minimal metric derivative measure in order to control the deviation measures $\mathcal{V}_r$ from below?
 \end{quest}
 
 \subsection{Surfaces and hypersurfaces}
