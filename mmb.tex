@@ -154,7 +154,7 @@ b_r(x):=\mu (B(x,r)).
 
 We define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure $\mathcal{V}_r$ on $X$, absolutely continuous with respect to $\mu$, given by
 \begin{equation} \label{eq:first}
-\mathcal{V}_r = (1 - \frac {b_r} { \omega _n{\cdot}r^n} )\cdot \mu \, .
+\mathcal{V}_r = \left(1 - \frac {b_r} { \omega _n{\cdot}r^n} \right)\cdot \mu \, .
 \end{equation}
 Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
 
@@ -171,10 +171,10 @@ The Taylor coefficients of $\mathcal{V}_r$ at $0$ (if they are defined) can be i
 
 \begin{ex} \label{smoothscal}
 Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu =\mathcal H^n$. Then, for $r\to 0$,
-the measures $\mathcal{V}_r /r^2$ converge in $\mathrm M(X)$ to $\frac 1 {6(n+2)}\cdot scal \cdot \mu$, where
+the measures $\mathcal{V}_r /r^2$ converge in $\mathrm M(X)$ to $\frac 1 {6\cdot(n+2)}\cdot scal \cdot \mu$, where
 $scal$ denotes the scalar curvature of $X$;
 equivalently, 
-\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6(n+2)}\cdot r^{n+2}\]
+\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6 \cdot(n+2)}\cdot r^{n+2}\]
 for any measurable set $A\subset X$
 \end{ex}
 
@@ -198,7 +198,7 @@ if the family of signed Radon measures
 \[\set{\frac { \mathcal{V}_r } {r }}{0<r\leq 1}\]
 is uniformly bounded.
 % we say that $X$ has locally finite mm-boundary ({\color{red} or metric-measure boundary}).
-If $\lim _{r\to 0} \mathcal{V}_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has trivial mm-boundary.
+If $\lim _{r\to 0} \mathcal{V}_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has vanishing mm-boundary.
 \end{defn}
 
 We refer to Subsection \ref{subsec:example} and Section \ref{sec:final} for a discussion of examples and questions, and
@@ -231,7 +231,7 @@ for a positive constant $c$ depending only on $n$.
 
 We believe that an Alexandrov space with empty topological boundary $\partial X$ has vanishing mm-boundary,
 which would solve the question about the existence of infinite geodesics.
-This conjecture will be proved in two partial cases.
+This conjecture will be proved in two cases.
 
 \begin{thm} \label{hypersurface}
 Let $X^n$ be a convex hypersurface in $\R^{n+1}$ or let $X$ be a two-dimensional Alexandrov space without boundary. 
@@ -270,7 +270,7 @@ in \tref{intsurface} does not need to coincide with the ``curvature measure'' as
 In particular, this shows that the mm-curvatures in $2$-dimensional Alexandrov spaces are not stable under Gromov--Hausdroff convergence.
 
 \begin{rem}
-N. Lebedeva and the third named author have found in \cite{LP} a ``scalar curvature measure'' on all smoothable Alexandrov spaces.
+Nina Lebedeva and the third named author have found in \cite{LP} a ``scalar curvature measure'' on all smoothable Alexandrov spaces.
 % which has the property of being stable
 %under non-collapsed Hausdroff convergence.
 There is a hope, supported by our proof of \tref{intsurface}, that a better understanding of this ``stable curvature measure'' will
@@ -319,7 +319,8 @@ Thus, there is no hope to deduce \tref{intsurface}, \tref{hypersurface} or \tref
 
 For instance, being a geodesic is a local notion, not preserved under limits.
 However, any limit of geodesics in a non-collapsed limit of Alexandrov spaces is a curve sharing many properties with geodesics.
-These properties are used to define the so called \emph{quasi-geodesics}; see \cite{PP}, \cite{Petsemi} and the references therein. 
+These properties are used to define the so called \emph{quasi-geodesics};
+see \cite{PP}, \cite{Petsemi} and the references therein. 
 It was shown that any direction is the starting direction of an infinite quasi-geodesic.
 One motivation for the present paper was an attempt to prove Liouville's theorem for the ``quasi-geodesic flow'', see Subsection \ref{subsec:quasi}.
 
@@ -370,7 +371,7 @@ Finally, on the regular part we estimate the mm-curvature and mm-boundary via th
 In the case of surfaces, this comparison measure is the classical curvature measure, in the case of convex hypersurfaces, this comparison measure is the mean curvature. 
 Finally, in the case of a general Alexandrov space, the comparison is given by the derivative of the metric tensor expressed in DC-coordinates, \cite{Per-DC}.
 
-The needed control of the ball growth in terms of these measures is given by a theorem of M. Bonk and U. Lang in the case of surfaces and follows from classical convex geometry in the case of hypersurfaces.
+The needed control of the ball growth in terms of these measures is given by a theorem of Mario  Bonk and Urs Lang in the case of surfaces and follows from classical convex geometry in the case of hypersurfaces.
 The analytical comparison result needed for Alexandrov spaces is established in Section \ref{sec-BV-estimate}.
 
 In the final Section \ref{sec:final} we collect a number of comments and open questions which naturally arose during the work on this paper.
@@ -397,7 +398,8 @@ In particular, we allow $\gamma$ to have any constant velocity $\lambda \geq 0$.
 A \emph{geodesic} is a curve $\gamma\: \mathbb I\to X$ such that its restriction to a small neighborhood of any point in $\mathbb I$ is a minimizing geodesic.
 Note that a geodesic is a curve of constant velocity.
 
-\subsection{Metric measure spaces} We refer to \cite{Federer} and \cite{Evans} for basics on measure theory.
+\subsection{Metric measure spaces}
+We refer to \cite{Federer} and \cite{Evans} for basics on measure theory.
 
 Let $X$ be a locally compact separable metric space.
 A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
@@ -433,7 +435,7 @@ Since $S\subset T$, the statement follows.
 \end{proof}
 
 \subsection{Alexandrov spaces} \label{subsec:Alex}
-We are assuming that the reader is familiar with basic theory of Alexandrov spaces and refer to ~\cite{BGP} as an introduction to the subject.
+We are assuming that the reader is familiar with basic theory of Alexandrov spaces and refer to~\cite{BGP} as an introduction to the subject.
 In this paper, an \emph{Alexandrov space} is a complete, locally compact, geodesic metric space of finite Hausdorff dimension and of curvature bounded from below by some $\kappa \in \R$.
 For Alexandrov spaces, an upper index will indicate the Hausdorff dimension; that is, $X^n$ denotes an $n$-dimensional Alexandrov space, equipped with the $n$-dimensional Hausdorff measure $\mathcal H^n$.
 
@@ -777,7 +779,7 @@ It has Hausdorff dimension $2$ and the Hausdorff measure $\mathcal H^2$ is a Rad
 We will not assume that $X$ is complete.
 
 We will derive \tref{intsurface} as a consequence of the following weak local
-version of a theorem of M. Bonk and U. Lang, \cite{Bonk-Lang}, which relate the curvature measure to the volume of balls.
+version of a theorem of Mario Bonk and Urs Lang, \cite{Bonk-Lang}, which relate the curvature measure to the volume of balls.
 
 {\color{red}
 
@@ -1527,8 +1529,8 @@ are isometric to flat halfspaces.
 We fix such a point $x\in \partial X$. We further fix a sufficiently small $\varepsilon >0$ and find
 a small neighborhood $U$ of $x$ in $X$ which is
 $(1+\varepsilon)$-bi-Lipschitz to a half-ball in the Euclidean space. Choose an arbitrary $s>0$ such that $B (x,{2{\cdot}s})\subset U$.
-Let $K= \bar B (x,s) \cap \partial X$ be the closed ball of radius $s$ in $\partial X$ with respect to the ambient metric. Due to \cite[Section 1.6]{Evans},
- it is sufficient to prove that $\nu (K) \geq c_0 \cdot s^{n-1}$ for a universal constant $c_0$ depending only on the dimension.
+Let $K= \bar B (x,s) \cap \partial X$ be the closed ball of radius $s$ in $\partial X$ with respect to the ambient metric.
+Due to \cite[Section 1.6]{Evans}, it is sufficient to prove that $\nu (K) \geq c_0 \cdot s^{n-1}$ for a universal constant $c_0$ depending only on the dimension.
 
 In order to prove this inequality, we consider any open neighborhood $V$ of $K$ in $X$.
 For all small $r>0$, the neighborhood $V$ contains $B (K,{2{\cdot}r})$.
@@ -1583,7 +1585,7 @@ In view of \tref{intsurface} it is reasonable to expect an affirmative answer to
 Do convex hypersurfaces of $\R^n$ have locally finite mm-curvature?
 \end{quest}
 
-A natural approach to this question is related to the following conjectural generalization of a theorem of Bonk and Lang~\cite{Bonk-Lang}:
+A natural approach to this question is related to the following conjectural generalization of Bonk--Lang theorem \cite{Bonk-Lang}:
 \begin{quest}
 Let $X$ be a convex hypersurface sufficiently close to a flat hyperplane. Can we bound the optimal bi-Lipschitz constant for maps into the Euclidean space in terms of the total scalar curvature?
 \end{quest}
@@ -1618,7 +1620,8 @@ Can one replace $\alpha>n-2$ by $\alpha=n-2$ in the statement of \pref{prop:cove
 
 % In the proofs of our main results about convex hypersurfaces and Alexandrov surfaces we deduced local volume bounds from
 %a much stronger bound on the optimal local bi-Lipschitz constant (for maps into the Euclidean space).
-It is interesting to understand if our results provide a quantitative version of bi-Lipschitz closedness of small balls to Euclidean balls. It is known~\cite{BGP} that there exists $\kappa(n,\delta)\to 0$ as $\delta\to 0$ such that if $X=X^n$ is an Alexandrov space of curvature $\ge -1$, $x\in X$ such that $\omega _n{\cdot}r^n -\mathcal H^n (B (x,r)) \leq \delta \cdot r ^n$ then $B (x,{\frac r 4})$ is $(1+\kappa(n,\delta))$-bi-Lipschitz to a Euclidean ball.
+It is interesting to understand if our results provide a quantitative version of bi-Lipschitz closedness of small balls to Euclidean balls.
+It is known~\cite{BGP} that there exists $\kappa(n,\delta)\to 0$ as $\delta\to 0$ such that if $X=X^n$ is an Alexandrov space of curvature $\ge -1$, $x\in X$ such that $\omega _n{\cdot}r^n -\mathcal H^n (B (x,r)) \leq \delta \cdot r ^n$ then $B (x,{\frac r 4})$ is $(1+\kappa(n,\delta))$-bi-Lipschitz to a Euclidean ball.
 \begin{quest}
 Can $\kappa(n,\delta)$ above be chosen 
 %to be linear in $\delta$, i.e. to be
@@ -1641,7 +1644,7 @@ Finally, it seems reasonable to expect some generalizations to spaces with Ricci
 Can one control the mm-boundary of noncollapsed limits of Riemannian manifolds with Ricci curvature bounded below? Can one expect something like a geodesic flow in this setting?
 \end{quest}
 
-From the work of Cheeger and Naber \cite{Ch-Na-codim4} it should follow that on any non-collapsed limit of manifolds with both-sided Ricci curvature bounds, the mm-curvature is locally finite and mm-boundary is zero.
+From the work of Jeff Cheeger and Aaron Naber \cite{Ch-Na-codim4} it should follow that on any non-collapsed limit of manifolds with both-sided Ricci curvature bounds, the mm-curvature is locally finite and mm-boundary is zero.
 Vanishing of the mm-boundary should then imply that the geodesic flow is defined almost everywhere and preserves the Liouville measure by the same argument as in the proof of Theorem~\ref{thmmain}.
 \bibliographystyle{alpha}
 %\bibliography{mmm}
