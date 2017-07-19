@@ -166,11 +166,13 @@ Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v
 %for any measurable set $A\subset X$
 \end{ex}
 
-In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient. The question
- can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$.  In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is " sufficiently small" in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
+In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient;
+{\color{red} in particular we assume that $v_r$ converges to zero in some integral sense.}
+%The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$. 
+In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is ``sufficiently small'' in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
  
- \begin{ex}      \label{ex:rect}
- Let $X$ be  a countably $n$-rectifiable set, \footnote{Please make a reference to {Ambrosio Kirchheim}}
+\begin{ex}      \label{ex:rect}
+Let $X$ be  a countably $n$-rectifiable set, \footnote{Please make a reference to {Ambrosio Kirchheim}}
  and assume that $\mathcal H^n$ is a Radon measure and   non-zero on open subsets of $X$.
  Then for $\mu =\mathcal H^n$ the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property. 
  \end{ex}
@@ -179,8 +181,8 @@ In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and
 
 
 As seen in Example \ref{ex:rect} and well-known from many important classes of spaces, most points in the space are rather regular.
- It is  conceivable, that by averaging  the deviation functions $v_r$ we will smooth out the "wildest singularities". The obtained objects will experience  better behaviour at $r=0$ and tell us more about
- the  regularity of the space. 
+It is  conceivable, that by averaging  the deviation functions $v_r$ we will smooth out the ``wildest singularities''.
+The obtained objects will experience  better behaviour at $r=0$ and tell us more about the  regularity of the space. 
  
 
 
@@ -230,7 +232,7 @@ Let $(X,d,\mu)$ be a metric measure space as above. Let $\mathcal{V}_r$ be the d
 %and let the Radon measure $|\mathcal{V}_r|$ be the total variation of $\mathcal{V}_r$.
 We say that $X$ has locally finite metric-measure boundary, abbreviated as mm-boundary,
 if the family of signed Radon measures
-\[\set{\frac { \mathcal{V}_r } {r }}{0<r\leq 1}\]
+\[\set{\mathcal{V}_r/r }{0<r\leq 1}\]
 is uniformly bounded.
 % we say that $X$ has locally finite mm-boundary ({\color{red} or metric-measure boundary}).
 If $\lim _{r\to 0} \mathcal{V}_r /r =\nu $ in $\mathrm M(X)$, we call $\nu$ the mm-boundary of $X$. If $\nu =0$ we say that $X$ has vanishing mm-boundary.
