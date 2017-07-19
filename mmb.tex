@@ -121,9 +121,9 @@ The following question in the theory of Alexandrov spaces was formulated in a sl
 \end{itemize}
 
 We address this question and obtain an affirmative answer in several cases.
-It was doen by by developing an analytic tool --- the Taylor expansion of the average volume growth.
-This tool has a formal similarity with classical integral geometry
-and might be interesting in its own right, beyond the realm of Alexandrov geometry.
+{\color {green} The main new tool is the investigation of  the Taylor expansion of the average volume growth.
+The central results relate the first coefficient of this expansion to  the geodesic flow and show how to control
+the Taylor expansion. This tool  might be interesting in its own right, beyond the realm of Alexandrov geometry}.
 
 In particular, we prove the existence of such infinite geodesics in the most classical examples of non-smooth Alexandrov spaces:
 
@@ -135,51 +135,86 @@ Moreover, the geodesic flow is defined almost everywhere and preserves the Liouv
 \end{thm}
 
 Apparently, the existence of a \emph{single} infinite geodesic has not been known, even in the two-dimesional case \cite{Zam-quest}.
-Our result might appear a bit surprising,
+Our result might appear
+%a bit
+{\color {green}  surprising},
 since on \emph{most} convex surfaces \emph{most points in the sense of Baire categories} are not inner points of any geodesic;
 see \cite{Zam-inv}.
 
 \subsection{Metric-measure-boundary}
-In the following definition we capture the size of the boundary by estimating the average volumes of small balls and their deviations from the corresponding volumes in the Euclidean space.
+{\color {green} On a smooth manifold with boundary the geodesic flow is not defined for all times. The amount of geodesics terminating at the boundary in a given time depends on the the size of this boundary,  due to Sanatlo's integral  formula.
+
+ We are going to} capture the size of the boundary by estimating the average volumes of small balls and their deviations from the corresponding volumes in the Euclidean space.
 
 Let $(X,d)$ be a locally compact separable metric space,
-$\mu$ be a Radon measure on $X$ which takes finite values on the bounded subsets
-and $n$ be a natural number.%???Maybe we should say that X is proper???
-(The definition will be applied in the case when $n$ is the Hausdorff dimension of $(X,d)$.)
-For $x\in X$ and $r>0$
-denote by $B(x,r)$ the open metric ball of radius $r$ around $x$. Consider the Borel function $b_r\:X\to [0,\infty )$,
+$\mu$ be a Radon measure on $X$ which takes finite values on the bounded subsets.
+%and $n$ be a natural number.%???Maybe we should say that X is proper???
+%(The definition will be applied in the case when $n$ is the Hausdorff dimension of $(X,d)$.)
+{\color{green} For $x\in X$ and $r>0$
+denote by $B(x,r)$ the open metric ball of radius $r$ around $x$. Consider the  volume growth function}  $b_r\:X\to [0,\infty )$,
 \begin{equation}
 b_r(x):=\mu (B(x,r)).
 \end{equation}
+{\color  {green} For a natural number $n>0$,  let $\omega _n$ be the volume of the $n$-dimensional unit Euclidean ball. The  deviation function
+$$v_r (x)=1 - \frac {b_r (x)} { \omega _n{\cdot}r^n} $$
+measures in a very rough sense the deviation of the metric measure space $(X,d,\mu)$ from $\R^n$.  Moreover, one can expect the behaviour of $v_r$ at the origin $r=0$ to reflect some curvature-like properties of the space $X$, as in the following fundamental example.
 
-We define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure $\mathcal{V}_r$ on $X$, absolutely continuous with respect to $\mu$, given by
-\begin{equation} \label{eq:first}
-\mathcal{V}_r = \left(1 - \frac {b_r} { \omega _n{\cdot}r^n} \right)\cdot \mu \, .
+\begin{ex} \label{smoothscal}
+Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v_r (x)= \frac 1 {6\cdot(n+2)}\cdot scal \cdot r^2$ up to terms of higher order in $r$.  Here $scal$ denotes the scalar curvature of $X$.
+%equivalently,
+%\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6 \cdot(n+2)}\cdot r^{n+2}\]
+%for any measurable set $A\subset X$
+\end{ex}
+
+In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient. The question
+ can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$.  In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is " sufficiently small" in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
+ 
+ \begin{ex}      \label{ex:rect}
+ Let $X$ be  a countably $n$-rectifiable set, \footnote{Please make a reference to {Ambrosio Kirchheim}}
+ and assume that $\mathcal H^n$ is a Radon measure and   non-zero on open subsets of $X$.
+ Then for $\mu =\mathcal H^n$ the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property. 
+ \end{ex}
+ 
+ Therefore, in the sequel, the number $n$ will always be the Hausdorff dimension of $X$ and $\mu$ will be the $n$-dimensional Hausdorff measure.
+
+
+As seen in Example \ref{ex:rect} and well-known from many important classes of spaces, most points in the space are rather regular.
+ It is  conceivable, that by averaging  the deviation functions $v_r$ we will smooth out the "wildest singularities". The obtained objects will experience  better behaviour at $r=0$ and tell us more about
+ the  regularity of the space. 
+ 
+
+
+%\begin{ex} If the functions $v_r$  for $0<r\leq 1$ are locally  uniformly bounded on $X$ then the measure $\mu$ is absolutely continuous with respect %to the $n$-dimensional Hausdorff measure $\mathcal H^n$.  If the space $X$ is $n$-dimensional rectifiable  then for $\mu =\mathcal H^n$ the deviation
+%functions $v_r$ converge almost everywhere to $0$ for $r\to 0$.
+% always normalized so that it coincides with the Lebesgue measure on $\R^n$.}
+%\end{ex}
+
+
+Thus instead of looking on the point-wise behaviour of $v_r$ at $r=0$ we 
+ define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure \begin{equation} \label{eq:first}
+\mathcal{V}_r = v_r \cdot \mu \, ,
 \end{equation}
-Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
+absolutely continuous with respect to $\mu$.}
+%Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
 
 \emph{Signed Radon measure} is defined as an element of the space $\mathrm M(X)$ dual to the space of compactly supported continuous functions $C_c (X)$.
-We consider the space $\mathrm M(X)$ with the topology of weak convergence. 
-Recall that a subset $\mathcal F \subset \mathrm M(X)$ is relatively compact if and only if 
+We consider the space $\mathrm M(X)$ with the topology of weak convergence.
+Recall that a subset $\mathcal F \subset \mathrm M(X)$ is relatively compact if and only if
 it is \emph{uniformly bounded};
 that is, if for any compact subset $K\subset X$ the values $\nu (K), \nu \in \mathcal F$ are uniformly bounded.
 
-In all examples and applications below, $\mu$ is the $n$-dimensional Hausdorff measure $\mathcal H^n =\mathcal H^n _X$ on $X$, always normalized so that it coincides with the Lebesgue measure on $\R^n$.
+%In all examples and applications below, $\mu$ is the $n$-dimensional Hausdorff measure $\mathcal H^n =\mathcal H^n _X$ on $X$, always normalized so that it coincides with the Lebesgue measure on $\R^n$.
 
-The map $r\mapsto \mathcal{V}_r \in \mathrm M(X)$ measures the deviation of $X$ from $\R^n$.
-The Taylor coefficients of $\mathcal{V}_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with the following example.
+%The map $r\mapsto \mathcal{V}_r \in \mathrm M(X)$ measures the deviation of $X$ from $\R^n$.
+%The Taylor coefficients of $\mathcal{V}_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with the following exam
 
-\begin{ex} \label{smoothscal}
-Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu =\mathcal H^n$. Then, for $r\to 0$,
-the measures $\mathcal{V}_r /r^2$ converge in $\mathrm M(X)$ to $\frac 1 {6\cdot(n+2)}\cdot scal \cdot \mu$, where
-$scal$ denotes the scalar curvature of $X$;
-equivalently, 
-\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6 \cdot(n+2)}\cdot r^{n+2}\]
-for any measurable set $A\subset X$
-\end{ex}
-
-The next example can be obtained by computations in local coordinates. Since it is not needed in the sequel, we omit
-the details.
+ {\color {green}
+The next example, fundamental for this paper,  can be obtained by computations in local coordinates.
+% and together with Example \ref{smoothscal} is the 
+%motivating example for this paper.  
+Since it is formally not needed in the sequel, we omit
+the details, however the proof is contained between the lines in the proof of \tref{alexandrovthm} in Section \ref{sec:Alex} below.}
+ 
 
 \begin{ex} \label{mainex}
 Let $X$ be a smooth $n$-dimensional Riemannian manifold with boundary $\partial X$.
@@ -207,7 +242,7 @@ state now our central result connecting mm-boundaries to the existence of infini
 \begin{thm} \label{thmmain}
 Let $X$ be an Alexandrov space.
 If $X$ has vanishing mm-boundary, then almost each direction of the tangent
-bundle $TX$ is the starting direction of an infinite geodesic. 
+bundle $TX$ is the starting direction of an infinite geodesic.
 Moreover, the geodesic flow preserves the Liouville measure on $TX$.
 \end{thm}
 
@@ -234,7 +269,7 @@ which would solve the question about the existence of infinite geodesics.
 This conjecture will be proved in two cases.
 
 \begin{thm} \label{hypersurface}
-Let $X^n$ be a convex hypersurface in $\R^{n+1}$ or let $X$ be a two-dimensional Alexandrov space without boundary. 
+Let $X^n$ be a convex hypersurface in $\R^{n+1}$ or let $X$ be a two-dimensional Alexandrov space without boundary.
 Then $X$ has vanishing  mm-boundary.
 \end{thm}
 
@@ -274,17 +309,17 @@ Nina Lebedeva and the third named author have found in \cite{LP} a ``scalar curv
 % which has the property of being stable
 %under non-collapsed Hausdroff convergence.
 There is a hope, supported by our proof of \tref{intsurface}, that a better understanding of this ``stable curvature measure'' will
-lead to some control of the mm-boundary and mm-curvature discussed here. 
+lead to some control of the mm-boundary and mm-curvature discussed here.
 \end{rem}
 
 \subsection{Idea of the proof of \tref{thmmain}}
-Let $M$ be compact convex body or compact smooth submanifold in $\R^n$. 
-Given $r>$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$. 
+Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
+Given $r>$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$.
 The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$, and its coefficients are the called the Killing--Lipschitz curvatures of $M$.
-They are given by integrals over some intrinsically defined curvature terms; 
+They are given by integrals over some intrinsically defined curvature terms;
 these coefficients can be localized and considered as measures on $M$.
-We refer to \cite{Alesker} for a short account of the theory, connection of the theory with 
-\cite{LP} and further hypothetical relations with the theory of Alexandrov spaces. 
+We refer to \cite{Alesker} for a short account of the theory, connection of the theory with
+\cite{LP} and further hypothetical relations with the theory of Alexandrov spaces.
 
 To make the formal similarity with our approach to mm-boundary and mm-curvature more transparent, we observe that
 (at least for a smooth $n$-dimensional manifold $M$) the number $\int _M \mathcal H^n (B(x,r))\, \cdot d\mathcal H^n (x)$ can be interpreted as the $\mathcal H^{2\cdot n}$-measures
@@ -320,7 +355,7 @@ Thus, there is no hope to deduce \tref{intsurface}, \tref{hypersurface} or \tref
 For instance, being a geodesic is a local notion, not preserved under limits.
 However, any limit of geodesics in a non-collapsed limit of Alexandrov spaces is a curve sharing many properties with geodesics.
 These properties are used to define the so called \emph{quasi-geodesics};
-see \cite{PP}, \cite{Petsemi} and the references therein. 
+see \cite{PP}, \cite{Petsemi} and the references therein.
 It was shown that any direction is the starting direction of an infinite quasi-geodesic.
 One motivation for the present paper was an attempt to prove Liouville's theorem for the ``quasi-geodesic flow'', see Subsection \ref{subsec:quasi}.
 
@@ -368,7 +403,7 @@ In Sections \ref{sec:surface}, \ref{sec:hyper} and \ref{sec:Alex} we prove the r
 The proofs of these theorems all rely on a decomposition of the space into a regular and a singular part, with a quantitative estimate of the size of the singular part.
 Finally, on the regular part we estimate the mm-curvature and mm-boundary via the other measures on these spaces.
 
-In the case of surfaces, this comparison measure is the classical curvature measure, in the case of convex hypersurfaces, this comparison measure is the mean curvature. 
+In the case of surfaces, this comparison measure is the classical curvature measure, in the case of convex hypersurfaces, this comparison measure is the mean curvature.
 Finally, in the case of a general Alexandrov space, the comparison is given by the derivative of the metric tensor expressed in DC-coordinates, \cite{Per-DC}.
 
 The needed control of the ball growth in terms of these measures is given by a theorem of Mario  Bonk and Urs Lang in the case of surfaces and follows from classical convex geometry in the case of hypersurfaces.
@@ -424,10 +459,10 @@ $$\int _A \mu (B(x,r)) \cdot d\nu (x) \leq \int _{B (A,r)} \nu (B (x,r)) \cdot d
 \end{lem}
 
 \begin{proof} Due to Fubini's theorem
-the left hand side is the volume of 
+the left hand side is the volume of
 $$S=\set{(y,x) \in X\times X}{y \in A,\, d(y,x) <r}$$
 with respect to the product measure $\nu \otimes \mu$. %???why not \oplus???
-And on the right hand side of the inequality is the volume of the larger set 
+And on the right hand side of the inequality is the volume of the larger set
 $$T=\set{(y,x) \in X\times X}{x\in B(A,r), \, d(y,x)<r}$$
 with respect to the same measure.
 
@@ -443,7 +478,7 @@ The set of starting directions of geodesics starting at a given point $x\in X$ c
 of $X$ at the point $x$. It is again an $n$-dimensional Alexandrov space of non-negative curvature. Moreover, it is the Euclidean cone
 over the space $\Sigma _x$ of unit directions. The Euclidean cone structure defines multiplications by positive scalars $\lambda \geq 0$ on $T_xX$. The origin
 of the cone $T_xX$ is denoted by $0=0_x$.
-Elements of $T_xX$ are called \emph{tangent vectors} at $x$, despite that $T_xX$ is not a vector space in general. 
+Elements of $T_xX$ are called \emph{tangent vectors} at $x$, despite that $T_xX$ is not a vector space in general.
 For $v\in T_xX$ the \emph{norm} $|v|$ of $v$ is the distance of $v$ from the origin $0_x$.
 
 Geodesics in $X$ do not branch
@@ -457,7 +492,7 @@ Moreover, for a constant $C=C(\kappa)\geq 0$ and all $r< \frac 1 C$ the map $\ex
 By the theorem of Bishop--Gromov, the volume $b_r (x)=\mathcal H^n (B(x,r))$ is bounded from above by the corresponding volume in the
 space of constant curvature $\kappa$. In particular, $b_r (x) \leq \omega _n \cdot r^n + C \cdot r^{n+2}$ for all $r\leq \frac 1 C$, where
 the constant $C$ can be chosen as before. Thus, the deviation measures $\mathcal{V}_r $ from \eqref{eq:first} satisfy
-$$\mathcal{V}_r \geq -C\cdot r^2\cdot  \mathcal H^n,$$ 
+$$\mathcal{V}_r \geq -C\cdot r^2\cdot  \mathcal H^n,$$
 for all sufficiently small $r$.
 Here and in the previous paragraph, one can set $C=0$ if $\kappa \geq 0$.
 
@@ -522,7 +557,7 @@ The set of all pairs $(v,t)\in TX\times\R$ such that $\phi_t(v)$ will be defined
 
 For $\lambda >0$, for $t,s\in \R$ and $v\in T_x X$ we have
 $$\phi _t(\lambda \cdot v) =\lambda \cdot \phi _{\lambda \cdot t} (v)
-\quad\text{and}\quad 
+\quad\text{and}\quad
 \phi _{t+s} (v) =\phi _t ( \phi _s (v)),$$
 whenever the right hand side is defined.
 
@@ -536,7 +571,7 @@ More precisely, consider the set
 that is, the set of all vectors $v\in TX$ for which $\exp _{\pi(v)} (v)$ is defined.
 Note that $\lambda\cdot D\subset D$ for any $0\leq \lambda \leq 1$.
 Moreover, for all $v\in D$ and all $0\leq \lambda <1$
-the geodesic flow $\phi_1(\lambda\cdot v)$ is defined (or, equivalently $(\lambda\cdot v,1)\in \mathcal F$) and 
+the geodesic flow $\phi_1(\lambda\cdot v)$ is defined (or, equivalently $(\lambda\cdot v,1)\in \mathcal F$) and
 \[\pi(\phi_1 (\lambda\cdot  v))= \exp _{\pi (v)} (\lambda\cdot  v).\]
 
 
@@ -555,7 +590,7 @@ Thus, for $\mathcal M$-almost all $v\in D$ we have the following
 \subsection{Measurability} \label{subsec:measur}
 
 \begin{lem}\label{lem:measurability}
-The set $\mathcal F\subset TX\times \R$ is 
+The set $\mathcal F\subset TX\times \R$ is
 is measurable with respect to the product of the Liouville's measure $\mathcal M$ on $TX$ and the Lebesgue measure on $\R$.
 Moreover the map $\phi \:\mathcal F \to TX$ is measurable.
 \end{lem}
@@ -563,7 +598,7 @@ Moreover the map $\phi \:\mathcal F \to TX$ is measurable.
 \begin{proof}
 Fix $(v,\tau)\in \mathcal F$ and set $\gamma(\tau\cdot t)=\phi_t(v)$, $t\in[0,1]$.
 Note that there exists some $k>0$ such that the restriction of $\gamma$ to any subinterval of length $\frac 1 k$ is a (minimizing) geodesic.
-In this case the geodesic $\gamma$ will be called $k$-geodesic and 
+In this case the geodesic $\gamma$ will be called $k$-geodesic and
 we will write $(v,\tau)\in \mathcal F_k$.
 
 Note that any converging sequence of $k$-geodesics is a $k$-geodesic.
@@ -573,7 +608,7 @@ It follows that $\mathcal F\cap (TX_{reg} \times \R)$ is an F-sigma set in $TX_{
 Moreover the restriction $\phi\: \mathcal F_k' \to TX_{reg}$ is continuous and therefore
 $\phi \:\mathcal F\cap (TX_{reg} \times \R) \to TX_{reg}$ is a Borel-measurable map.
 
-Since $\mathcal M(X\backslash X_{reg})=0$ the statement follows. 
+Since $\mathcal M(X\backslash X_{reg})=0$ the statement follows.
 \end{proof}
 
 See also Subsection \ref{subsec:quasi}.
@@ -587,7 +622,7 @@ and it is invariant under the geodesic flow $\phi$.
 Moreover, $\mathcal G\cap TX_{reg}$ is invariant under the involution $I (v)=-v$.
 
 \begin{defn}
-We say that an Alexandrov space $X$ has the \emph{Liouville property} if $\mathcal M(TX\setminus \mathcal G)=0$ and 
+We say that an Alexandrov space $X$ has the \emph{Liouville property} if $\mathcal M(TX\setminus \mathcal G)=0$ and
 for any $t\in \R$ the geodesic flow $\phi _t \:\mathcal G\to \mathcal G$ preserves the Liouville measure.
 \end{defn}
 
@@ -612,13 +647,13 @@ If at least one $r_m$ with the above property exists, then $X$ does not have the
 Assume that $X$ does not have the Liouville property.
 Then, by homogeneity of the geodesic flow, $\phi _1$ is either undefined  on a subset of $TX$ with positive measure
 or it does not preserve the measure $\mathcal M$.
-In both cases we can find a compact subset $K_1\subset X_{reg}$ and a Borel subset $A\subset T^1 K_1$ such that 
+In both cases we can find a compact subset $K_1\subset X_{reg}$ and a Borel subset $A\subset T^1 K_1$ such that
 \[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\]
-for some $\varepsilon >0$. 
+for some $\varepsilon >0$.
 
 }
 
-Since 
+Since
 \begin{align*}
 \phi_1 (A)&=2\cdot \phi _2 (\tfrac 1 2 \cdot A )=
 \\
@@ -665,14 +700,14 @@ If an Alexandrov space $X$ has vanishing  mm-boundary then it has the Liouville 
 \end{thm}
 
 \begin{proof}
-Arguing by contradiction, assume that $X$ does not have the Liouville property. 
+Arguing by contradiction, assume that $X$ does not have the Liouville property.
 Consider the compact subset $K \subset X$, the positive numbers $\varepsilon, r_m$ and the Borel
 subsets $A_m\subset T^{r_m} K$ provided by \lref{infini}.
 
 Let $Y$ be the closure of $B (K,1)$.
 Recall that $D\subset TX$ is the set of all vectors at which the exponential map is defined.
 For $r>0$, denote by $D^r$ the intersection of $D$ with $T^r Y$ and consider the ``total exponential map''
-$E\:D^r \to X\times X$ given by 
+$E\:D^r \to X\times X$ given by
 $$E(v)= (\pi (v), \pi (\exp (v))).$$
 As above, let $U^r =U^r(Y)$ be the set of all
 pairs $(y,x) \in X\times X$ with $y\in Y$ and $d(x,y)<r$.
@@ -729,7 +764,7 @@ Together with \eqref{eq:final+} this finishes the proof of \eqref{eq:finally}.
 
 Coming back to our subsets $A_m\subset T^{r_m} K$, we have
 \begin{align*}
-\varepsilon \cdot r_m^ {n+1} &\leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m)) \leq 
+\varepsilon \cdot r_m^ {n+1} &\leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m)) \leq
 \\
 &\leq\mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap D^r)).
 \end{align*}
@@ -770,7 +805,7 @@ Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see tha
 
 \section{Surfaces with bounded integral curvature in the sense of Alexandrov} \label{sec:surface}
 
-\subsection{Preparations} 
+\subsection{Preparations}
 We assume that the reader is familiar with the theory of surfaces with bounded integral curvature; see \cite{AZ} and \cite{Reshetnyak-GeomIV}.
 
 Let $X$ be a surfaces with bounded integral curvature;
@@ -811,8 +846,8 @@ Since $\delta$ is small, it will remain to apply \eqref{eq:bilip} to finish the 
 
 Take some $r>t>s$ and consider the compact metric ball $\bar B (x,t) \subset B (x,r)$.
 We may assume that the boundary $S_t$ of
-$\bar B (x,t)$ does not contain singular points of $X$. 
-By \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2{\cdot}\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$. 
+$\bar B (x,t)$ does not contain singular points of $X$.
+By \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2{\cdot}\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$.
 Since $X$ is homeomorphic to a plane this implies that $\bar B (x,t)$ is homeomorphic to a closed disk $\bar D^2$ in $\R^2$.
 
 }
@@ -856,7 +891,7 @@ Let $A\subset X$ be a compact subset. Choose some $\varepsilon >0$ such that the
 for any $0<2{\cdot}r<\varepsilon$ the inequality $\mathcal H^2 (B(x_0,{2{\cdot}r})) < \tfrac 1 {\varepsilon}\cdot r^2$ holds true; see also \cite[Lemma 8.1.1]{Reshetnyak-GeomIV}.
 
 Let $r<\varepsilon$ be arbitrary.
-For any $x\in B (x_0,{2{\cdot}r})$ we have 
+For any $x\in B (x_0,{2{\cdot}r})$ we have
 \begin{align*}
 b_r (x) &=\mathcal H^2 (B (x,r)) \leq
 \\
@@ -882,8 +917,8 @@ For the deviation measures $\mathcal{V}_r$ from \eqref{eq:first} we estimate:
 On the other hand,
 \begin{align*}
 |\mathcal{V}_r| (A\setminus B (x_0,{2{\cdot}r}))
-&\leq 
-\int _{A \setminus B (x_0,{2{\cdot}r}) } 3 \cdot |\Omega| (B (x,r)) \cdot d\mathcal H^2 (x) 
+&\leq
+\int _{A \setminus B (x_0,{2{\cdot}r}) } 3 \cdot |\Omega| (B (x,r)) \cdot d\mathcal H^2 (x)
 \leq
 \\
 &\leq 3\cdot \int _{B (A,r)\setminus B (x_0,{2{\cdot}r}))} \mathcal H^2 (B(x,r)) \cdot d|\Omega | (x),
@@ -915,7 +950,7 @@ Let $X$ be a convex hypersurface in $\R^{n+1}$. Recall that there exists a Radon
 
 The measure $\mathcal K$ has the following properties.
 For smooth hypersurfaces $X$, we have $\mathcal K=\kappa \cdot \mathcal H^n$, where $\kappa$ is the usual mean curvature function of $X$.
-The mean curvature measure is stable under Hausdorff convergence of convex hypersurfaces in $\R^{n+1}$. 
+The mean curvature measure is stable under Hausdorff convergence of convex hypersurfaces in $\R^{n+1}$.
 If the hypersurface is rescaled by $\lambda$, the mean curvature $\mathcal K$ is rescaled by $\lambda^{n-1}$. %???
 
 A point $x$ in the convex hypersurface $X$ is called \emph{smooth} if there is a unique supporting hyperplane of $X$ at this point.
@@ -928,7 +963,7 @@ the behavior of $\mathcal K$ under rescalings gives us the following.
 
 \begin{lem} \label{lem:compsm}
 Let $X$ be a convex hypersurface in $\R^{n+1}$. Let $A$ be a compact set of smooth points in $X$ and  $\delta >0$.
-Then there exists some $t>0$ such that 
+Then there exists some $t>0$ such that
 \[\mathcal K(B(y,r)) \leq \delta \cdot r^{n-1}\]
 for any $y\in B (A,{t})$ and any $0<r<t$.
 \end{lem}
@@ -941,7 +976,7 @@ There exist numbers $\delta_0,C>0$ depending only on $n$ with the following prop
 Let $x\in X$ be a point and $r>0$ be such that the mean curvature $\mathcal K$ satisfies $\mathcal K(B (x,{6{\cdot}r})) < \delta \cdot r^{n-1}$ with $\delta <\delta _0$.
 Then
 \begin{equation} \label{eq:lemma}
-\left| 1 - \frac {b_r (x)} { \omega _n{\cdot}r^n}\right| 
+\left| 1 - \frac {b_r (x)} { \omega _n{\cdot}r^n}\right|
 <
 C\cdot \delta \cdot \mathcal K( B (x,{6{\cdot}r})) \cdot r^{1-n}.
 \end{equation}
@@ -956,8 +991,8 @@ The mean curvature vanishes on $B (x,6)$ if an only if $B(x,6)$ is contained in 
 Due to the stability of $\mathcal K$ under convergence, if $\delta_0$ is small, then
 the ball $U=B (x,{5}) \subset X$ is close to a flat hyperplane in $\R^{n+1}$.
 Thus, we may assume that the tangent hyperplanes to points in $U$ are $\varepsilon_0$-close to the tangent
-space $W =T_xX \subset \R^{n+1}$. Therefore, $U$ is a graph $U=\{(x,f(x))\}$ of a convex function $f\:V\to \R$ defined on an open subset $V\subset W$. Moreover, $V$ contains the ball of radius $4$ in $W$ around $x$. 
-Denote by $B(x,2)_W$ the ball of radius $2$ in $W$ around $x$. 
+space $W =T_xX \subset \R^{n+1}$. Therefore, $U$ is a graph $U=\{(x,f(x))\}$ of a convex function $f\:V\to \R$ defined on an open subset $V\subset W$. Moreover, $V$ contains the ball of radius $4$ in $W$ around $x$.
+Denote by $B(x,2)_W$ the ball of radius $2$ in $W$ around $x$.
 Set
 $$a :=\sup \set{|\nabla f (y)|}{y\in B(x,2)_W}.$$
 If $\delta_0$ is small, then $a<\varepsilon_0$.
@@ -985,8 +1020,8 @@ Since $f(0)=0$ and $f$ is convex, we must have $f(y)\leq \frac 1 3$ for all $y\i
 By convexity and the choice of $y_0$, the restriction of $f$ to the supporting hyperplane $H$ of $\bar B(0,3)$ at $y_0$ is bounded from below by $1$. Consider the ball $S$ of radius $\frac 1 2$ in $H$ around $y_0$. For any point $z\in S$ consider the restriction
 $$f_z (t)= f(z- \tfrac t 3\cdot y_0 ),\quad t\in [0,6]$$
 to the segment of length $6$ starting at $z$ orthogonal to $H$.
-Then 
-$$f_z(0)\geq 1,\quad 
+Then
+$$f_z(0)\geq 1,\quad
 f_z (3)\leq \frac 1 3,\quad
 f_z (6) \geq 0.$$
 Thus for some $t\in (0,3)$ we have $f_z'(t) \leq -\frac 2 9$ and for some $t\in (3,6)$ we have $f_z'(t) \geq - \frac 1 9$.
@@ -1027,8 +1062,8 @@ Applying \lref{lem:mean}, for $x\in U$ we get
 |\mathcal{V}_r| (U)
 &\leq \int _U C\cdot \delta \cdot r^{1-n}\cdot \mathcal K (B (y,{6{\cdot}r})) \cdot d\mathcal H^n (y) \leq
 \\
-&\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B (A,{7{\cdot}t})} \mathcal H^n (B (y,{6{\cdot}r})) \cdot d\mathcal K(y) 
-\leq 
+&\leq C\cdot \delta \cdot r^{1-n} \cdot \int _{B (A,{7{\cdot}t})} \mathcal H^n (B (y,{6{\cdot}r})) \cdot d\mathcal K(y)
+\leq
 \\
 &\leq C\cdot \delta \cdot r^{1-n} \cdot (6{\cdot}r) ^n \cdot \mathcal K(B (A,{7{\cdot}t}));
 \end{align*}
@@ -1074,7 +1109,7 @@ metric $g$ which is $(1+\frac 1 C)$-bi-Lipschitz to the background Euclidean met
 %t $g_0$ denote the flat background metric and assume $\|g_x-g_0\| \leq \varepsilon$ for some fixed small
 %$\varepsilon$.
 Let $A\subset U$ be a Borel subset. Let $r>0$ be such that $B (A,{2{\cdot}r})$ is relatively compact in $U$.
-Then 
+Then
 $$\mathcal{V}_r (A) \leq C \cdot r \cdot \int _{B ( A,{2{\cdot}r})} |g' |.$$
 \end{prop}
 
@@ -1097,9 +1132,9 @@ we find a constant $C_1$ such that for all $x\in U$ we have
 \quad\text{and}\quad
 K (x) \leq C_1 \cdot |g' (x)|.
 \end{equation}
-We fix $A\subset X$ and $r>0$ as in the formulation of the proposition. 
+We fix $A\subset X$ and $r>0$ as in the formulation of the proposition.
 For $x\in U$ denote by $B_x$
-the metric ball $B(x,r)$ in $U$. 
+the metric ball $B(x,r)$ in $U$.
 By $B^x$ we denote the metric ball of radius $r$ in the Euclidean norm $|\cdot |_x$. In this Euclidean metric the ball $B^x$ has measure
 $$\omega _n\cdot r^n =u(x)\cdot \int _{B^x} d\mathcal L^n.$$
 Thus, in order to estimate the deviation measure $\mathcal{V}_r$, we only need to control the summands on the right of the following inequality:
@@ -1115,13 +1150,13 @@ in the Riemannian metric~$g$. Then we compute
 \begin{align*}
 l_v ^x -r
 &=
-\int _0 ^r |v|_{x+tv} \, dt - \int _0 ^r |v|_x \, dt 
+\int _0 ^r |v|_{x+tv} \, dt - \int _0 ^r |v|_x \, dt
 \leq
 \\
-&\leq \int _0 ^r (\int _0 ^t K(x+sv) \, ds)\, dt 
-\leq 
+&\leq \int _0 ^r (\int _0 ^t K(x+sv) \, ds)\, dt
+\leq
 \\
-&\leq \int _0 ^r (\int _0 ^r K(x+sv) \, ds)\, dt 
+&\leq \int _0 ^r (\int _0 ^r K(x+sv) \, ds)\, dt
 =
 \\
 &= r\cdot \int _0 ^r K(x+sv) \, ds.
@@ -1131,8 +1166,8 @@ Observe now that the intersection of $B^x\setminus B_x$ with the ray starting in
 at most $2\cdot (l_v^x -r)$, once the bi-Lipschitz constant $(1+\frac 1 C)$ is close to $1$.
 Integrating in polar coordinates over the ball $B^x\subset (\R^n, |\cdot|_x)$ we infer:
 \begin{align*}
-u(x)\cdot \mathcal L^n (B^x\setminus B_x) 
-&\leq r^{n-1} \cdot \int _{v\in S^{n-1} _x} 
+u(x)\cdot \mathcal L^n (B^x\setminus B_x)
+&\leq r^{n-1} \cdot \int _{v\in S^{n-1} _x}
 \Big( 2\cdot r \cdot \int _0 ^r K(x+sv) \, ds \Big)
 \cdot d\mathcal H^{n-1}  =
 \\&=2{\cdot}r^n \cdot \int _{B^x} K(y) \cdot |y-x|^{n-1} \cdot u(x) \cdot d\mathcal L^n,
@@ -1154,7 +1189,7 @@ We divide both sides by $\omega _n \cdot r^n$ and integrate over $A$. Using that
 \begin{align*}
 \mathcal{V}_r (A) &\leq C_4\cdot \int _A \Big (\int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n}\cdot d\mathcal L^n (y) \Big ) \cdot d\mathcal L^n (x) \leq
 \\
-&\leq C_4\cdot \int _{B (A,{2{\cdot}r})} \Big ( \int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n} \cdot d\mathcal L^n (x) \Big ) \cdot d\mathcal L^n (y) = 
+&\leq C_4\cdot \int _{B (A,{2{\cdot}r})} \Big ( \int _{|x-y|< \frac 4 3 r} |g'(y)| \cdot |y-x|^{1-n} \cdot d\mathcal L^n (x) \Big ) \cdot d\mathcal L^n (y) =
 \\
 &= \frac 4 3\cdot  C_4\cdot \int _{B (A,{2{\cdot}r})} |g'(y)| \cdot r \cdot d\mathcal L^n (y),
 \end{align*}
@@ -1170,7 +1205,7 @@ This finishes the proof of Proposition~\ref{prop-smooth}.
 %before proceeding let us briefly recall some known facts about $DC$ functions and $DC$ maps.
 Let $U$ be an open subset of $\R^n$. A function $f\in L^1 (U)$ is of class BV (bounded variation) if its first partial derivatives,
 $\frac{\partial f}{\partial x^i}$ (here and below always in the sense of distributions) are signed Radon measures with finite mass
-$|\frac{\partial f}{\partial x^i}|(U)$. We denote by $[Df ]$ the Radon measure $\sum_i |\frac{\partial f}{\partial x^i}|$ on $U$. 
+$|\frac{\partial f}{\partial x^i}|(U)$. We denote by $[Df ]$ the Radon measure $\sum_i |\frac{\partial f}{\partial x^i}|$ on $U$.
 If $f\:U\to \R$ is a BV function, which is continuous on a subset $R \subset U$ with $\mathcal H^{n-1} (U\setminus R)=0$ then the Radon measure $[Df]$ vanishes on all Borel subsets $A\subset U$ with $\mathcal H^{n-1} (A)<\infty$, \cite{Goffmann}.
 
 Let $f\:U\to \R$ be of class BV. Then for $\mathcal H^n$-almost every point
@@ -1296,7 +1331,7 @@ on any almost Riemannian metric space:
 \begin{lem} \label{cor-mu-dc}
 Let $X$ be a almost Riemannian metric space with the metric derivative measure $\mathcal N$.
 Then for any compact subset $A\subset X$, there exists some $r_0>0$ such that for all
-$r<r_0$ we have 
+$r<r_0$ we have
 $$\mathcal{V}_r (A) \leq r\cdot 2\cdot  (n+2)\cdot C\cdot \mathcal N (A)\,. $$
 \end{lem}
 
@@ -1458,8 +1493,8 @@ The volume of the union of bad balls in $\mathcal F_l$ is at most $g_l^-$ and co
 Let $\mathcal F$ be the set of all good balls $B_j =B (x_j,{r_j})$ from all the coverings $\mathcal F_l$.
 Then $\mathcal H^n (B (x,s) \setminus (\cup _{\mathcal F} B_j ) \leq \lim _{l\to \infty} g_l ^- =0$. On the other hand,
 by construction,
-\[\sum_{B_j\in \mathcal F} r_j^{\alpha} 
-= \lim _{l\to \infty} g_l^+ 
+\[\sum_{B_j\in \mathcal F} r_j^{\alpha}
+= \lim _{l\to \infty} g_l^+
 \leq 3{\cdot N}{\cdot} s^{\alpha}.\]
 
  Setting $q=3\cdot N$ finishes the proof.
@@ -1484,18 +1519,18 @@ For all $m$ with $r<r_m$, we apply \pref{ballmeasure} and infer
 $$\mathcal{V}_r(B_m \cap K)\le 2\cdot C\cdot A \cdot r\cdot r_m^{n-1} $$
 On the other hand, for $r_m<r$, we have
 \begin{align*}
-\mathcal{V}_r (B_m\cap K) 
-&\leq \mathcal H^n (B_m) \leq 
+\mathcal{V}_r (B_m\cap K)
+&\leq \mathcal H^n (B_m) \leq
 \\ &\leq
-2 \cdot \omega _n \cdot r_m ^n < 
-\\ &<2\cdot \omega_n \cdot r \cdot r_m ^{n-1} 
+2 \cdot \omega _n \cdot r_m ^n <
+\\ &<2\cdot \omega_n \cdot r \cdot r_m ^{n-1}
 \end{align*}
 Summing up and using $r_m^{n-1} < r_m ^{\alpha}$ we obtain
 \begin{equation} \label{eq:density}
 \begin{aligned}
-\mathcal{V}_r (K) 
-&\leq \sum_m \mathcal{V}_r (B_m \cap K) \leq 
-\\&\leq 
+\mathcal{V}_r (K)
+&\leq \sum_m \mathcal{V}_r (B_m \cap K) \leq
+\\&\leq
 (2\cdot C\cdot A+2\cdot \omega _n) \cdot q\cdot r \cdot s^{\alpha}  .
 \end{aligned}
 \end{equation}
@@ -1513,8 +1548,8 @@ This finishes the proof in the case $\partial X=\emptyset$.
 
 Assume now that $\partial X\ne\emptyset$ and consider the doubling $Y=X\sqcup_{\partial X} X$ of $X$.
 Consider $X$ as a convex subset of $Y$ and let $K\subset X$ be compact.
-We find a constant $L>0$ such that for all sufficiently small $r>0$, we have 
-$\mathcal H^n (K\cap B(r,{2{\cdot})} (\partial X)) \leq L \cdot r$. 
+We find a constant $L>0$ such that for all sufficiently small $r>0$, we have
+$\mathcal H^n (K\cap B(r,{2{\cdot})} (\partial X)) \leq L \cdot r$.
 (This follows, for example, by the coarea formula using the Lipschitz properties of the gradient flow of the distance function $d(\cdot, \partial X)$ which is semiconcave.)
 On the other hand, for $x\in K\setminus B (\partial X,r)$, the volumes of the $r$-ball in $X$ and in $Y$ coincide.
 Using that $Y$ has locally finite mm-boundary, we deduce that $\mathcal{V}_r(K)$ (computed in the space $X$) is bounded from above $L\cdot r + \tilde{\mathcal{V}}_r (K)$, where $\tilde{\mathcal{V}}_r (K)$ is the deviation measure of $K$ considered as a subset of $Y$. This implies that $\mathcal{V}_r /r$ is uniformly bounded for $r\to 0$. Thus $X$ has locally finite mm-boundary as well.
@@ -1537,7 +1572,7 @@ For all small $r>0$, the neighborhood $V$ contains $B (K,{2{\cdot}r})$.
 Once $\varepsilon$ has been chosen sufficiently small, the ball $B (z,r)$ in $X$ has volume at most
 $ (1-k_1) \cdot \omega _n \cdot r^n$, for
 any point $z\in B (K,{\frac 1 {10}{\cdot}r})$. Here $ k_1=k_1(n)>0 $ is a universal constant.
- Moreover, the set $B (K,{\frac 1 {10}{\cdot}r})$ has volume at least 
+ Moreover, the set $B (K,{\frac 1 {10}{\cdot}r})$ has volume at least
  $\frac 1 {20} \cdot r \cdot \omega _{n-1} \cdot s^{n-1}$.
 Integrating over $V$ (and using the inequality of Bishop--Gromov on the complement of $B (K,{\frac 1 {10}{\cdot}r})$) we deduce:
 $$\mathcal{V}_r (V) \geq k_1\cdot \tfrac 1 {20} \cdot \omega _{n-1} \cdot r\cdot s^{n-1} - k_3 \cdot r^2 ,$$
@@ -1557,7 +1592,7 @@ Construct a compact manifold with a continuous Riemannian metric
 that does not have finite mm-boundary.
 \end{quest}
 
-The following problem is motivated by our approach to \tref{alexandrovthm} in Sections \ref{sec-BV-estimate}, \ref{sec:Alex}. 
+The following problem is motivated by our approach to \tref{alexandrovthm} in Sections \ref{sec-BV-estimate}, \ref{sec:Alex}.
 
 
 \begin{quest} \label{qe:min}
@@ -1623,9 +1658,9 @@ Can one replace $\alpha>n-2$ by $\alpha=n-2$ in the statement of \pref{prop:cove
 It is interesting to understand if our results provide a quantitative version of bi-Lipschitz closedness of small balls to Euclidean balls.
 It is known~\cite{BGP} that there exists $\kappa(n,\delta)\to 0$ as $\delta\to 0$ such that if $X=X^n$ is an Alexandrov space of curvature $\ge -1$, $x\in X$ such that $\omega _n{\cdot}r^n -\mathcal H^n (B (x,r)) \leq \delta \cdot r ^n$ then $B (x,{\frac r 4})$ is $(1+\kappa(n,\delta))$-bi-Lipschitz to a Euclidean ball.
 \begin{quest}
-Can $\kappa(n,\delta)$ above be chosen 
+Can $\kappa(n,\delta)$ above be chosen
 %to be linear in $\delta$, i.e. to be
-of the form $C(n)\cdot \delta$? 
+of the form $C(n)\cdot \delta$?
 %More precisely:}
 %Does there exist a constant $C=C(n)$ such that for any Alexandrov space $X=X^n$ {\color{red} of curvature $\ge -1$}, any $x\in X$ and any $\delta <\frac 1 C$ the following holds true.
 %If $\omega _n{\cdot}r^n -\mathcal H^n (B (x,r)) \leq \delta \cdot r ^n$, then
