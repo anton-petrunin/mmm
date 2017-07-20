@@ -167,23 +167,22 @@ Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v
 
 In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient;
 in particular we assume that $v_r$ converges to zero in some integral sense.
-%The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$. 
+%The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$.
 In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is ``sufficiently small'' in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
- 
+
 \begin{ex}      \label{ex:rect}
-Let $X$ be  a countably $n$-rectifiable {\color{red} metric space},
- and assume that {\color{red}$\mu$ is a Radon measure which is } non-zero on open subsets of $X$.
- Then for $\mu =\mathcal H^n$ the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property~\cite{AmbKirk}[Theorem 5.4].
-  \footnote{That's the correct reference, right? Vitya}
+Let $X$ be  a countably $n$-rectifiable metric space.
+Assume that the Radon measure $\mu$  non-zero on open subsets of $X$.
+If $\mu =\mathcal H^n$ then the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property~\cite{AmbKirk}[Theorem 5.4].
  \end{ex}
- 
+
  Therefore, in the sequel, the number $n$ will always be the Hausdorff dimension of $X$ and $\mu$ will be the $n$-dimensional Hausdorff measure.
 
 
-As seen in Example \ref{ex:rect} and is well-known from many important classes of spaces, most points in {\color{red} reasonably nice} spaces are rather regular.
+As seen in Example \ref{ex:rect}, most points in reasonably nice spaces are rather regular.
 It is  conceivable, that by averaging  the deviation functions $v_r$ we will smooth out the ``wildest singularities''.
-The obtained objects will experience  better behaviour at $r=0$ and tell us more about the  regularity of the space. 
- 
+The obtained objects will experience  better behaviour at $r=0$ and tell us more about the  regularity of the space.
+
 
 
 %\begin{ex} If the functions $v_r$  for $0<r\leq 1$ are locally  uniformly bounded on $X$ then the measure $\mu$ is absolutely continuous with respect %to the $n$-dimensional Hausdorff measure $\mathcal H^n$.  If the space $X$ is $n$-dimensional rectifiable  then for $\mu =\mathcal H^n$ the deviation
@@ -192,14 +191,14 @@ The obtained objects will experience  better behaviour at $r=0$ and tell us more
 %\end{ex}
 
 
-Thus, instead of looking on the point-wise behaviour of $v_r$ at $r=0$ we 
+Thus, instead of looking on the point-wise behaviour of $v_r$ at $r=0$ we
  define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure \begin{equation} \label{eq:first}
 \mathcal{V}_r = v_r \cdot \mu \, ,
 \end{equation}
 absolutely continuous with respect to $\mu$.}
 %Here $\omega _n$ is the volume of the $n$-dimensional unit Euclidean ball.
 
-\emph{Signed Radon measure} is defined as an element of the space $\mathrm M(X)$ dual to the space of compactly supported continuous functions $C_c (X)$.
+The vector space  $\mathrm M(X)$ of \emph{signed Radon measures on $X$ is   dual  to the topological  vector} space of compactly supported continuous functions $C_c (X)$.
 We consider the space $\mathrm M(X)$ with the topology of weak convergence.
 Recall that a subset $\mathcal F \subset \mathrm M(X)$ is relatively compact if and only if
 it is \emph{uniformly bounded};
@@ -212,11 +211,11 @@ that is, if for any compact subset $K\subset X$ the values $\nu (K), \nu \in \ma
 
 
 The next example, fundamental for this paper,  can be obtained by computations in local coordinates.
-% and together with Example \ref{smoothscal} is the 
-%motivating example for this paper.  
+% and together with Example \ref{smoothscal} is the
+%motivating example for this paper.
 Since it is formally not needed in the sequel, we omit
-the details, however {\color{red} a rigorous  proof can be extracted from the proof }of \tref{alexandrovthm} in Section \ref{sec:Alex} below.
- 
+the details, however  a rigorous  proof can be extracted from the proof of \tref{alexandrovthm} in Section \ref{sec:Alex} below.
+
 
 \begin{ex} \label{mainex}
 Let $X$ be a smooth $n$-dimensional Riemannian manifold with boundary $\partial X$.
@@ -276,8 +275,8 @@ Then $X$ has vanishing  mm-boundary.
 \end{thm}
 
 In combination with \tref{thmmain} this proves \tref{thmfirst}.
-The two-dimensional case follows from the statement about convex hypersurfaces and Alexandrov's embedding theorems.
-Yet another proof follow from a much stronger result discussed in the next subsection.
+The two-dimensional case  could be derived  from the statement about convex hypersurfaces and Alexandrov's embedding theorems.
+Another proof follows from a much stronger result discussed in the next subsection.
 
 \subsection{Metric-measure-curvature} \label{subsec:curv}
 Motivated by Example \ref{smoothscal} one can naively hope that the second Taylor coefficient at $0$ of the
@@ -313,13 +312,10 @@ Nina Lebedeva and the third named author have found in \cite{LP} a ``scalar curv
 There is a hope, supported by our proof of \tref{intsurface}, that a better understanding of this ``stable curvature measure'' will
 lead to some control of the mm-boundary and mm-curvature discussed here.
 \end{rem}
-
-\subsection{Idea of the proof of \tref{thmmain}}
-Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
-Given $r>$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$.
-The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$, and its coefficients are the called the Killing--Lipschitz curvatures of $M$.
-They are given by integrals over some intrinsically defined curvature terms;
-these coefficients can be localized and considered as measures on $M$.
+\subsection{Relation to the Killing-Lipschitz curvatures} Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
+Given $r>0$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$.
+The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$. The coefficients of $w(r)$,  called the Killing--Lipschitz curvatures of $M$, are given as integrals of some intrinsically defined curvature terms.
+Moreover, these coefficients can be localized and considered as measures on $M$.
 We refer to \cite{Alesker} for a short account of the theory, connection of the theory with
 \cite{LP} and further hypothetical relations with the theory of Alexandrov spaces.
 
@@ -327,17 +323,18 @@ To make the formal similarity with our approach to mm-boundary and mm-curvature 
 (at least for a smooth $n$-dimensional manifold $M$) the number $\int _M \mathcal H^n (B(x,r))\, \cdot d\mathcal H^n (x)$ can be interpreted as the $\mathcal H^{2\cdot n}$-measures
 of the distance tubes $B(\Delta,{\frac r {\sqrt 2} })$ around the diagonal $\Delta $ in the Cartesian product $M\times M$.
 
-The natural interpretation of the tangent bundle of $M$ as the normal bundle of the diagonal $\Delta$ in $M\times M$ gives a connection between
-the measure theoretical properties of the tubes around $M$ and the dynamical properties of the geodesic flow.
+ \subsection{Idea of the proof of \tref{thmmain}}
+The interpretation of the tangent bundle of $M$ as the normal bundle of the diagonal $\Delta$ in $M\times M$ gives a connection between
+the measure theoretical properties of the tubes around $\Delta$ and the dynamical properties of the geodesic flow.
 
-We clarify this abstract statements by explaining the main idea of our proof of \tref{thmmain} in the case of a complete smooth Riemannian manifold $X=M$.
+We clarify this abstract statement by explaining the main idea of our proof of \tref{thmmain} in the case of a complete smooth Riemannian manifold $X=M$.
 In this case the existence of geodesics is trivial.
 Thus, we just sketch a new proof of the classical fact that the geodesic flow $\phi$ preserves the Liouville measure $\mathcal M$ on $TM$.
 This proof is sufficiently stable to be transferred to the singular situation,
 
 Denote by $\pi\: TM\to M$ the tangent bundle of $M$.
 Let $\phi_t\: TM\to TM$ be the geodesic flow for time $t$.
-Define the map $E\:TM\to M\times M$ by
+ Define $E\:TM\to M\times M$ by
 \[E(v)=(\pi(v), \pi (\phi _1 (v)).\]
 By construction, $E(-\phi_1(v))= J(E(v))$,
 where $J$ is the involution of $M\times M$ which switches the coordinates.
@@ -366,10 +363,10 @@ The estimates of the mm-boundary and mm-curvature are quite involved even in qui
 The following examples are not needed in the sequel and we omit the somewhat tedious computations. Examples \ref{ex:cone}, \ref{ex:secondlast} and \ref{ex:last} should be compared with
 \cite{Bernig-CAT} and \cite{Bernig-Alex} revealing further natural connections to the theory of Lipschitz--Killing curvature on singular subsets of the Eucldiean space.
 
-\begin{ex} Let $X$ be an $n$-dimensional \emph{Lipschitz manifold}; that is, an $n$-dimensional manifold equipped with intrinsic metric such that any point admits a neighborhood which is bi-Lipschitz to an open set in a Euclidean space.
-Let us equip $X$ with the measure $\mu=\mathcal H^n$.
-Then $\lim _{r\to 0} \mathcal{V}_r =0$. Moreover, $\mathcal H^n$ is the only measure with this property.
-\end{ex}
+%\begin{ex} Let $X$ be an $n$-dimensional \emph{Lipschitz manifold}; that is, an $n$-dimensional manifold equipped with intrinsic metric such that any point admits a neighborhood which is bi-Lipschitz to an open set in a Euclidean space.
+%Let us equip $X$ with the measure $\mu=\mathcal H^n$.
+%Then $\lim _{r\to 0} \mathcal{V}_r =0$. Moreover, $\mathcal H^n$ is the only measure with this property.
+%\end{ex}
 
 \begin{ex}
 Let $X$ be a Riemannian manifold with a Lipschitz continuous metric.
@@ -403,7 +400,7 @@ Then $X$ has finite mm-curvature.
 After preliminaries collected in Section \ref{sec:prelim}, we prove \tref{thmmain} in Section \ref{sec:Liou} along the lines sketched above.
 In Sections \ref{sec:surface}, \ref{sec:hyper} and \ref{sec:Alex} we prove the remaining theorems \ref{intsurface}, \ref{hypersurface} and \ref{alexandrovthm} respectively.
 The proofs of these theorems all rely on a decomposition of the space into a regular and a singular part, with a quantitative estimate of the size of the singular part.
-Finally, on the regular part we estimate the mm-curvature and mm-boundary via the other measures on these spaces.
+Finally, on the regular part we estimate the mm-curvature and mm-boundary  by comparing it to other natural measures on these spaces.
 
 In the case of surfaces, this comparison measure is the classical curvature measure, in the case of convex hypersurfaces, this comparison measure is the mean curvature.
 Finally, in the case of a general Alexandrov space, the comparison is given by the derivative of the metric tensor expressed in DC-coordinates, \cite{Per-DC}.
