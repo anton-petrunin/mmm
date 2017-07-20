@@ -1,4 +1,4 @@
-\documentclass[12pt,leqno,intlimits]{amsart}
+           \documentclass[12pt,leqno,intlimits]{amsart}
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{color}
@@ -121,9 +121,9 @@ The following question in the theory of Alexandrov spaces was formulated in a sl
 \end{itemize}
 
 We address this question and obtain an affirmative answer in several cases.
-{\color {green} The main new tool is the investigation of  the Taylor expansion of the average volume growth.
+ The main new tool is the investigation of  the Taylor expansion of the average volume growth.
 The central results relate the first coefficient of this expansion to  the geodesic flow and show how to control
-the Taylor expansion. This tool  might be interesting in its own right, beyond the realm of Alexandrov geometry}.
+the Taylor expansion. This tool  might be interesting in its own right, beyond the realm of Alexandrov geometry.
 
 In particular, we prove the existence of such infinite geodesics in the most classical examples of non-smooth Alexandrov spaces:
 
@@ -135,27 +135,26 @@ Moreover, the geodesic flow is defined almost everywhere and preserves the Liouv
 \end{thm}
 
 Apparently, the existence of a \emph{single} infinite geodesic has not been known, even in the two-dimesional case \cite{Zam-quest}.
-Our result might appear
-%a bit
-{\color {green}  surprising},
+Our result might appear somewhat
+ surprising
 since on \emph{most} convex surfaces \emph{most points in the sense of Baire categories} are not inner points of any geodesic;
 see \cite{Zam-inv}.
 
 \subsection{Metric-measure-boundary}
-{\color {green} On a smooth manifold with boundary the geodesic flow is not defined for all times. The amount of geodesics terminating at the boundary in a given time depends on the the size of this boundary,  due to Sanatlo's integral  formula.
+On a smooth manifold with boundary the geodesic flow is not defined for all times. The amount of geodesics terminating at the boundary in a given time depends on the the size of this boundary,  due to Sanatlo's integral  formula.
 
- We are going to} capture the size of the boundary by estimating the average volumes of small balls and their deviations from the corresponding volumes in the Euclidean space.
+ We are going to capture the size of the boundary by estimating the average volumes of small balls and their deviations from the corresponding volumes in the Euclidean space.
 
 Let $(X,d)$ be a locally compact separable metric space,
 $\mu$ be a Radon measure on $X$ which takes finite values on the bounded subsets.
 %and $n$ be a natural number.%???Maybe we should say that X is proper???
 %(The definition will be applied in the case when $n$ is the Hausdorff dimension of $(X,d)$.)
-{\color{green} For $x\in X$ and $r>0$
+{For $x\in X$ and $r>0$
 denote by $B(x,r)$ the open metric ball of radius $r$ around $x$. Consider the  volume growth function}  $b_r\:X\to [0,\infty )$,
 \begin{equation}
 b_r(x):=\mu (B(x,r)).
 \end{equation}
-{\color  {green} For a natural number $n>0$,  let $\omega _n$ be the volume of the $n$-dimensional unit Euclidean ball. The  deviation function
+{ For a natural number $n>0$,  let $\omega _n$ be the volume of the $n$-dimensional unit Euclidean ball. The  deviation function
 $$v_r (x)=1 - \frac {b_r (x)} { \omega _n{\cdot}r^n} $$
 measures in a very rough sense the deviation of the metric measure space $(X,d,\mu)$ from $\R^n$.  Moreover, one can expect the behaviour of $v_r$ at the origin $r=0$ to reflect some curvature-like properties of the space $X$, as in the following fundamental example.
 
@@ -167,20 +166,21 @@ Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v
 \end{ex}
 
 In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient;
-{\color{red} in particular we assume that $v_r$ converges to zero in some integral sense.}
+in particular we assume that $v_r$ converges to zero in some integral sense.
 %The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$. 
 In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is ``sufficiently small'' in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
  
 \begin{ex}      \label{ex:rect}
-Let $X$ be  a countably $n$-rectifiable set, \footnote{Please make a reference to {Ambrosio Kirchheim}}
- and assume that $\mathcal H^n$ is a Radon measure and   non-zero on open subsets of $X$.
- Then for $\mu =\mathcal H^n$ the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property. 
+Let $X$ be  a countably $n$-rectifiable {\color{red} metric space},
+ and assume that {\color{red}$\mu$ is a Radon measure which is } non-zero on open subsets of $X$.
+ Then for $\mu =\mathcal H^n$ the functions $v_r$ converge $\mathcal H^n$-almost everywhere to $0$. Moreover, $\mu=\mathcal H^n$  is the only measure  with this property~\cite{AmbKirk}[Theorem 5.4].
+  \footnote{That's the correct reference, right? Vitya}
  \end{ex}
  
  Therefore, in the sequel, the number $n$ will always be the Hausdorff dimension of $X$ and $\mu$ will be the $n$-dimensional Hausdorff measure.
 
 
-As seen in Example \ref{ex:rect} and well-known from many important classes of spaces, most points in the space are rather regular.
+As seen in Example \ref{ex:rect} and is well-known from many important classes of spaces, most points in {\color{red} reasonably nice} spaces are rather regular.
 It is  conceivable, that by averaging  the deviation functions $v_r$ we will smooth out the ``wildest singularities''.
 The obtained objects will experience  better behaviour at $r=0$ and tell us more about the  regularity of the space. 
  
@@ -192,7 +192,7 @@ The obtained objects will experience  better behaviour at $r=0$ and tell us more
 %\end{ex}
 
 
-Thus instead of looking on the point-wise behaviour of $v_r$ at $r=0$ we 
+Thus, instead of looking on the point-wise behaviour of $v_r$ at $r=0$ we 
  define the \emph{deviation measure} $\mathcal{V}_r$ of $X$ as a signed Radon measure \begin{equation} \label{eq:first}
 \mathcal{V}_r = v_r \cdot \mu \, ,
 \end{equation}
@@ -210,12 +210,12 @@ that is, if for any compact subset $K\subset X$ the values $\nu (K), \nu \in \ma
 %The map $r\mapsto \mathcal{V}_r \in \mathrm M(X)$ measures the deviation of $X$ from $\R^n$.
 %The Taylor coefficients of $\mathcal{V}_r$ at $0$ (if they are defined) can be interpreted as integral curvatures, in analogy with the following exam
 
- {\color {green}
+
 The next example, fundamental for this paper,  can be obtained by computations in local coordinates.
 % and together with Example \ref{smoothscal} is the 
 %motivating example for this paper.  
 Since it is formally not needed in the sequel, we omit
-the details, however the proof is contained between the lines in the proof of \tref{alexandrovthm} in Section \ref{sec:Alex} below.}
+the details, however {\color{red} a rigorous  proof can be extracted from the proof }of \tref{alexandrovthm} in Section \ref{sec:Alex} below.
  
 
 \begin{ex} \label{mainex}
@@ -824,7 +824,7 @@ version of a theorem of Mario Bonk and Urs Lang, \cite{Bonk-Lang}, which relate 
 There exists some $\delta _0>0$ with the following property.
 
 Let $X$ be a surface with bounded integral curvature and let $\Omega\in \mathrm M(X)$ be its curvature measure.
-Assume $X$ is homeomorphic to the plane and $| \Omega|(X) < \delta _0$.
+Assume $X$ is homeomorphic to a plane and $| \Omega|(X) < \delta _0$.
 Then for any point $x\in X$, and $r>0$ such that
 $\bar B (x,{r})$ is compact we have
 $$\left|1- \frac {b_r(x)} {\pi{\cdot}r^2} \right| \leq 3 \cdot |\Omega |( B (x,{r})).$$
@@ -841,7 +841,7 @@ the metric on $X$ by polyhedral metrics \cite[Theorem 8.4.3, Theorem 8.1.9]{Resh
 the curvature measure $\hat \Omega$ of $\hat X$ satisfies $|\hat \Omega | (\hat X) < 3 \cdot \delta$.
 
 Once the claim is proven,
-\cite{Bonk-Lang} provides us an bi-Lipschitz map $f\:\hat X\to \R^2$ with the constant $L\leq 1+\frac {3{\cdot}\delta} {2{\cdot}\pi -3{\cdot}\delta}$.
+\cite{Bonk-Lang} provides us a bi-Lipschitz map $f\:\hat X\to \R^2$ with the constant $L\leq 1+\frac {3{\cdot}\delta} {2{\cdot}\pi -3{\cdot}\delta}$.
 Since $\delta$ is small, it will remain to apply \eqref{eq:bilip} to finish the proof of the lemma.
 
 
@@ -1692,6 +1692,12 @@ Vanishing of the mm-boundary should then imply that the geodesic flow is defined
 L.~Ambrosio and J.~Bertrand.
 \newblock {DC} {C}alculus.
 \newblock arXiv:1505.04817, 2015.
+
+
+\bibitem[AK00]{AmbKirk}
+L.~ Ambrosio and B.~Kirchheim.
+\newblock Rectifiable sets in metric and {B}anach spaces.
+\newblock {\em Math. Ann.}, 318(3):527--555, 2000.
 
 \bibitem[Ale16]{Alesker}
 S.~Alesker.
