@@ -160,14 +160,10 @@ measures in a very rough sense the deviation of the metric measure space $(X,d,\
 
 \begin{ex} \label{smoothscal}
 Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v_r (x)= \frac 1 {6\cdot(n+2)}\cdot scal \cdot r^2$ up to terms of higher order in $r$.  Here $scal$ denotes the scalar curvature of $X$.
-%equivalently,
-%\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6 \cdot(n+2)}\cdot r^{n+2}\]
-%for any measurable set $A\subset X$
 \end{ex}
 
 In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient;
 in particular we assume that $v_r$ converges to zero in some integral sense.
-%The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$.
 In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is ``sufficiently small'' in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
 
 \begin{ex}      \label{ex:rect}
@@ -378,11 +374,12 @@ If $X$ is a manifold with two-sided bounded curvature in the sense of Alexandrov
 \end{ex}
 
 \begin{ex} \label{ex:cone}
+{\color{red}
 Let $X$ be the flat cone over the circle $S_{\rho}$ of length $\rho$.
-Then $X$ has finite mm-curvature. The mm-curvature is a Dirac measure of mass $m(\rho)$ concentrated in the origin.
-If $\alpha =2{\cdot}\pi-\rho$ denotes the curvature of the vertex of $X$ then the classical curvature measure is the Dirac measure of total mass
-$\frac \alpha 6$. On the other hand $m(\rho)= \frac \alpha 6 + f(\alpha)$, where
-$f(\alpha)$ is a non-zero function the form $f(\alpha)= O(\alpha ^3)$.
+The curvature at the tip of the cone is $\alpha=2{\cdot}\pi-\rho$.
+The mm-curvature is a Dirac measure of mass $m(\alpha)$ concentrated in the tip.
+Straightforward calculations show that $m(\alpha)=\frac \alpha 6+ f(\alpha)$, where $f(\alpha)= O(\alpha^2)$ is a non-zero function.
+}
 \end{ex}
 
 \begin{ex} \label{ex:secondlast}
