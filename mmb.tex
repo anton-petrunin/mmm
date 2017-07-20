@@ -160,10 +160,14 @@ measures in a very rough sense the deviation of the metric measure space $(X,d,\
 
 \begin{ex} \label{smoothscal}
 Let $X^n$ be a smooth Riemannian manifold with Riemannian volume $\mu$. Then, $v_r (x)= \frac 1 {6\cdot(n+2)}\cdot scal \cdot r^2$ up to terms of higher order in $r$.  Here $scal$ denotes the scalar curvature of $X$.
+%equivalently,
+%\[\int_A b_r\cdot d\mu=\omega_n\cdot \mu A\cdot r^n+\frac{(scal\cdot \mu)A}{6 \cdot(n+2)}\cdot r^{n+2}\]
+%for any measurable set $A\subset X$
 \end{ex}
 
 In this paper we are interested in the order of vanishing of $v_r$ at $r=0$  and the first non-vanishing coefficient;
 in particular we assume that $v_r$ converges to zero in some integral sense.
+%The question can only be meaningful under  some minimal regularity assumptions on the metric measure space $(X,d,\mu)$.
 In most interesting metric spaces $(X,d)$, at least in the cases investigated here, the only reasonable choice of the measure $\mu$ for which $v_r$ is ``sufficiently small'' in $r$ is the $n$-dimensional Hausdorff measure $\mathcal H^n$:
 
 \begin{ex}      \label{ex:rect}
@@ -379,6 +383,7 @@ Let $X$ be the flat cone over the circle $S_{\rho}$ of length $\rho$.
 The curvature at the tip of the cone is $\alpha=2{\cdot}\pi-\rho$.
 The mm-curvature is a Dirac measure of mass $m(\alpha)$ concentrated in the tip.
 Straightforward calculations show that $m(\alpha)=\frac \alpha 6+ f(\alpha)$, where $f(\alpha)= O(\alpha^2)$ is a non-zero function.
+% $f(\alpha)= O(\alpha ^3)$.
 }
 \end{ex}
 
@@ -434,14 +439,18 @@ We refer to \cite{Federer} and \cite{Evans} for basics on measure theory.
 
 Let $X$ be a locally compact separable metric space.
 A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
-Any Radon measure belong to the space $\mathrm M(X)$ dual to the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
+ Any Radon measure defines an element of  $\mathrm M(X)$ the dual space to the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
 All elements in $\mathrm M(X)$ are called \emph{signed Radon measures}.
-{\color{red}
-For any signed Radon measure $\mu$ there exist unique Radon measures $\mu^{\pm}$ defined by
-\[\mu^\pm(A)=\pm\sup\set{\pm\mu(B)}{B\subset A}.\]
-Clearly $\mu =\mu ^+- \mu ^-$.
-}
-In such a situation, we will denote by $|\mu |$ the Radon measure $\mu ^+ +\mu ^-$ and call it the \emph{total variation} of $\mu$.
+{\color{red} Any  $\mu \in M(X)$ can be uniquely written as $\mu_+-\mu_-$, where $\mu_\pm$ are a Radon measures. The  measure $|\mu|=\mu_+-\mu_-$ is called \emph{the total variation} of $\mu$.}
+
+%Any  $\mu \in M(X)$ can be uniquely written as $f\cdot |\mu|$, where $|\mu|$ is a Radon measure, called \emph{the 
+%total variation} of $\mu$, and $f\in L^1 (X,\mu)$ takes only the values $\pm 1$.   }
+
+
+
+
+
+
 
 
 A family $\mathcal F$ of signed Radon measures on $X$ is \emph{uniformly bounded} if for any compact subset $K\subset X$ there exist a constant $C(K)>0$ such that $|\mu| (K) \leq C(K)$ for any $\mu \in \mathcal F$.
@@ -477,8 +486,7 @@ of the cone $T_xX$ is denoted by $0=0_x$.
 Elements of $T_xX$ are called \emph{tangent vectors} at $x$, despite that $T_xX$ is not a vector space in general.
 For $v\in T_xX$ the \emph{norm} $|v|$ of $v$ is the distance of $v$ from the origin $0_x$.
 
-Geodesics in $X$ do not branch
-and, moreover, any two geodesics with the identical starting vectors coincide.
+Geodesics in $X$ do not branch,  moreover, any two geodesics with  identical starting vectors coincide.
 For $x\in X$ the \emph{exponential map} $\exp_x$ is defined as follows.
 Let $D_x$ denote the set of all vectors $v\in T_xX$ for which there exists an (always unique) \emph{minimizing geodesic} $\gamma_v\:[0,1] \to X$ with starting direction $v$. The exponential map is defined on $D_x$ as
 $$\exp _x (v)= \gamma _v(1).$$
@@ -532,7 +540,7 @@ We extend $\mathcal M$ to a measure on $TX$ by setting $\mathcal M(TX\setminus T
 By the definition, a subset $A\subset TX$ is $\mathcal M$-measurable if and only if there exists a Borel subset $A'\subset A\cap TX_{reg}$ such that
 for $\mathcal H^n$-almost all $x\in X$ the intersection $(A\setminus A') \cap T_xX$ has $\mathcal H^n$-measure zero in $T_xX$.
 
-For any $\lambda>0$, we have $\mathcal M(\lambda\cdot A)=\lambda^n\cdot\mathcal MA$ for any measurable set $A\subset TX$.
+For any $\lambda>0$, we have $\mathcal M(\lambda\cdot A)=\lambda^n\cdot\mathcal M (A)$ for any measurable set $A\subset TX$.
 The involution $I\:TX_{reg}\to TX_{reg}$, defined by $I(v)=-v$,
 preserves $\mathcal M$
 since it preserves the Lebesgue measure in each tangent space.
@@ -549,7 +557,8 @@ the value $\phi _t(v)$ will not be defined. For $0<t<a$ we set $\phi _t(v)$ to b
 If the geodesic $\gamma _v\:[0,a)\to X$ extends to an (again uniquely defined, maximal) geodesic $\gamma_v\:(b,a) \to X$ for some $b<0$
 then we define $\phi _t(v)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
 
-The set of all pairs $(v,t)\in TX\times\R$ such that $\phi_t(v)$ will be defined is denoted by $\mathcal F$.
+We denote by $\mathcal F$ the set of all pairs  $(v,t)\in TX\times\R$  for which $\phi_t(v)$ is defined.      
+
 
 For $\lambda >0$, for $t,s\in \R$ and $v\in T_x X$ we have
 $$\phi _t(\lambda \cdot v) =\lambda \cdot \phi _{\lambda \cdot t} (v)
@@ -567,48 +576,43 @@ More precisely, consider the set
 that is, the set of all vectors $v\in TX$ for which $\exp _{\pi(v)} (v)$ is defined.
 Note that $\lambda\cdot D\subset D$ for any $0\leq \lambda \leq 1$.
 Moreover, for all $v\in D$ and all $0\leq \lambda <1$
-the geodesic flow $\phi_1(\lambda\cdot v)$ is defined (or, equivalently $(\lambda\cdot v,1)\in \mathcal F$) and
+the geodesic flow $\phi_1(\lambda\cdot v)$ is defined (equivalently $(\lambda\cdot v,1)\in \mathcal F$) and
 \[\pi(\phi_1 (\lambda\cdot  v))= \exp _{\pi (v)} (\lambda\cdot  v).\]
 
 
 Thus, for $\mathcal M$-almost all $v\in D$ we have the following
 \begin{itemize}
 \item $v\in TX_{reg}$;
-\item $\phi _1(v) \in TX_{reg}$ is defined, or, equivalently $(v,1)\in \mathcal F$;
+\item $\phi _1(v) \in TX_{reg}$ is defined,  hence $(v,1)\in \mathcal F$;
 \item $w=-\phi_1 (v)\in D$ and
 \begin{equation} \label{eq:symm}
 (\pi (w), \exp (w))=(\exp (v), \pi (v)) \in X\times X.
 \end{equation}
 \end{itemize}
 
-{\color{red}
 
 \subsection{Measurability} \label{subsec:measur}
-
-\begin{lem}\label{lem:measurability}
-The set $\mathcal F\subset TX\times \R$ is
-is measurable with respect to the product of the Liouville's measure $\mathcal M$ on $TX$ and the Lebesgue measure on $\R$.
+In order to use measure theoretic arguments we will need the following lemma, see also Subsection \ref{subsec:quasi}.  
+\begin{lem}\label{lem:measurability}                                                                        
+The set $\mathcal F\subset TX\times \R$ is measurable with respect to the product of the Liouville's measure $\mathcal M$ on $TX$ and the Lebesgue measure on $\R$.
 Moreover the map $\phi \:\mathcal F \to TX$ is measurable.
 \end{lem}
 
 \begin{proof}
 Fix $(v,\tau)\in \mathcal F$ and set $\gamma(\tau\cdot t)=\phi_t(v)$, $t\in[0,1]$.
 Note that there exists some $k>0$ such that the restriction of $\gamma$ to any subinterval of length $\frac 1 k$ is a (minimizing) geodesic.
-In this case the geodesic $\gamma$ will be called $k$-geodesic and
-we will write $(v,\tau)\in \mathcal F_k$.
+ We will call such $\gamma$ a  $k$-geodesic and  write $(v,\tau)\in \mathcal F_k$.
 
-Note that any converging sequence of $k$-geodesics is a $k$-geodesic.
+
+{\color{red} The limit of }any converging sequence of $k$-geodesics is a $k$-geodesic.
 Hence $\mathcal F_k'=\mathcal F_k\cap (TX_{reg} \times \R)$ is a closed set in $TX_{reg} \times \R$.
-It follows that $\mathcal F\cap (TX_{reg} \times \R)$ is an F-sigma set in $TX_{reg} \times \R$ --- it is a countable union of closed subsets $\mathcal F_k'$.
-
-Moreover the restriction $\phi\: \mathcal F_k' \to TX_{reg}$ is continuous and therefore
+ Therefore, $\mathcal F\cap (TX_{reg} \times \R)$  is a countable union of closed subsets $\mathcal F_k'$, hence measurable.
+Moreover, the restriction $\phi\: \mathcal F_k' \to TX_{reg}$ is continuous and, therefore,
 $\phi \:\mathcal F\cap (TX_{reg} \times \R) \to TX_{reg}$ is a Borel-measurable map.
 
 Since $\mathcal M(X\backslash X_{reg})=0$ the statement follows.
 \end{proof}
 
-See also Subsection \ref{subsec:quasi}.
-}
 
 \subsection{Liouville property}
 Denote by $\mathcal G$ the set of all vectors $v\in TX $ such that $\phi _t(v)$ is defined for all $t\in \R$.
@@ -629,25 +633,21 @@ An Alexandrov space $X$ \emph{does not} have the Liouville property if and only 
 $\varepsilon$ and a sequence of positive numbers $r_m \to 0$ with the following property.
 For every $m$, there exists a Borel subset $A_m\subset T^{r_ m} K$ such that
 \begin{equation} \label{eq:m}
-\varepsilon \cdot r_m^{n +1} \leq \mathcal M (A_m) -\mathcal M (\phi _1 (A_m)),
+\varepsilon \cdot r_m^{n +1} \leq \mathcal M (A_m) -\mathcal M (\phi _1 (A_m)).
 \end{equation}
-here $\phi_1 (A_m)$ the set of all $\phi _1(v), v\in A_m$, for which
+ Here $\phi_1 (A_m)$ is the set of all $\phi _1(v), v\in A_m$, for which
 $\phi _1(v)$ is defined.
 \end{lem}
 
 \begin{proof}
 If at least one $r_m$ with the above property exists, then $X$ does not have the Liouville property by definition.
 
-{\color{red}
 
 Assume that $X$ does not have the Liouville property.
 Then, by homogeneity of the geodesic flow, $\phi _1$ is either undefined  on a subset of $TX$ with positive measure
 or it does not preserve the measure $\mathcal M$.
-In both cases we can find a compact subset $K_1\subset X_{reg}$ and a Borel subset $A\subset T^1 K_1$ such that
-\[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\]
-for some $\varepsilon >0$.
-
-}
+In both cases we can find a compact subset $K_1\subset X_{reg}$, a Borel subset $A\subset T^1 K_1$  and $\varepsilon >0$ such that
+\[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\] 
 
 Since
 \begin{align*}
@@ -657,13 +657,13 @@ Since
 \end{align*}
 we deduce
 \begin{align*}
-(\tfrac 1 2)^n \cdot \varepsilon &\leq \mathcal M \big(\tfrac 1 2\cdot A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot A ) \big) +
+\varepsilon &\leq \mathcal M \big(\tfrac 1 2\cdot A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot A ) \big) +
 \\
 &\quad+\mathcal M \big(\phi_1 (\tfrac 1 2\cdot A )\big)
 - \mathcal M\big (\phi_1 \big (\phi _1 (\tfrac 1 2\cdot A )\big) \big).
 \end{align*}
 Thus, taking either $A_{\frac 1 2} := \frac 1 2 \cdot A$ or $A_{\frac 1 2} := \phi_1 (\frac 1 2 \cdot A)$ we infer
-$$\varepsilon \cdot \Big(\frac 1 2 \Big )^{n+1} < \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big).$$
+$$ \frac 1 2\cdot  \varepsilon   < \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big).$$
 The set $A_{\frac 1 2}$ constructed above is contained in $T^{\frac 1 2} K_{\frac 1 2}$, where $K _{\frac 1 2} =B (K_1,{\frac 1 2})$.
 
 Iterating the above procedure we obtain, for $r_m =\frac 1 {2^m}$, a subset $A_{r_m} \subset T^{r_m} K_m$ where $K_m =B (K_{m-1},{r_m})$ and such that \eqref{eq:m} holds true.
@@ -689,7 +689,7 @@ Taking both equations together, we see that the signed measure $\mathcal{V}_r$ e
 \mathcal{V}_r (K) = \frac 1 {\omega_n \cdot r^n}\cdot \Big(\mathcal M (T^r K)- \mathcal H^{2\cdot n} (U^r (K)) \Big).
 \end{equation}
 
-The following statement is a reformulating of \tref{thmmain}.
+The following statement is a reformulation of \tref{thmmain}.
 
 \begin{thm} \label{reform}
 If an Alexandrov space $X$ has vanishing  mm-boundary then it has the Liouville property.
@@ -762,7 +762,7 @@ Coming back to our subsets $A_m\subset T^{r_m} K$, we have
 \begin{align*}
 \varepsilon \cdot r_m^ {n+1} &\leq \mathcal M ( A_m) - \mathcal M( \phi _1 (A_m)) \leq
 \\
-&\leq\mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap D^r)).
+&\leq\mathcal M ( A_m) - \mathcal M( \phi _1 (A_m\cap D^{r_m})).
 \end{align*}
 Setting $S_m=A_m\cap D^{r_m}$ we estimate the right hand side as the sum of the following three terms:
 \begin{align*}
@@ -812,22 +812,21 @@ We will not assume that $X$ is complete.
 We will derive \tref{intsurface} as a consequence of the following weak local
 version of a theorem of Mario Bonk and Urs Lang, \cite{Bonk-Lang}, which relate the curvature measure to the volume of balls.
 
-{\color{red}
 
 \begin{lem} \label{lem:bl}
 There exists some $\delta _0>0$ with the following property.
 
-Let $X$ be a surface with bounded integral curvature and let $\Omega\in \mathrm M(X)$ be its curvature measure.
+ Let $X$ be a surface with bounded integral curvature and let $\Omega\in \mathrm M(X)$ be its curvature measure.
 Assume $X$ is homeomorphic to a plane and $| \Omega|(X) < \delta _0$.
 Then for any point $x\in X$, and $r>0$ such that
 $\bar B (x,{r})$ is compact we have
 $$\left|1- \frac {b_r(x)} {\pi{\cdot}r^2} \right| \leq 3 \cdot |\Omega |( B (x,{r})).$$
 \end{lem}
 
-}
+
 
 \begin{proof}
-{\color{red}
+
 Set $\delta = |\Omega |( B (x,{r}))$. By continuity, it is sufficient to prove that $|1- \frac {b_s(x)} {\pi{\cdot}s^2}| \leq 3{\cdot}\delta $ for any $s<r$. Using approximations of
 the metric on $X$ by polyhedral metrics \cite[Theorem 8.4.3, Theorem 8.1.9]{Reshetnyak-GeomIV}, we assume from now on that $X$ is polyhedral and homeomorphic to $\R^2$.
 
@@ -836,17 +835,17 @@ the curvature measure $\hat \Omega$ of $\hat X$ satisfies $|\hat \Omega | (\hat 
 
 Once the claim is proven,
 \cite{Bonk-Lang} provides us a bi-Lipschitz map $f\:\hat X\to \R^2$ with the constant $L\leq 1+\frac {3{\cdot}\delta} {2{\cdot}\pi -3{\cdot}\delta}$.
-Since $\delta$ is small, it will remain to apply \eqref{eq:bilip} to finish the proof of the lemma.
+Since $\delta$ is small,  an application of \eqref{eq:bilip}  finishes the proof of the lemma.
 
 
-
+{\color{red} It remains to prove the Claim.}
 Take some $r>t>s$ and consider the compact metric ball $\bar B (x,t) \subset B (x,r)$.
 We may assume that the boundary $S_t$ of
 $\bar B (x,t)$ does not contain singular points of $X$.
 By \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2{\cdot}\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$.
 Since $X$ is homeomorphic to a plane this implies that $\bar B (x,t)$ is homeomorphic to a closed disk $\bar D^2$ in $\R^2$.
 
-}
+
 
 We find a polygonal Jordan curve $\Gamma$ in $B(x,t)$ approximating $S_t$ such that the negative part of the geodesic curvature of $\Gamma$ is smaller than $2{\cdot}\delta$. Consider the closed Jordan domain $Y$ bounded by $\Gamma$, which can be assumed to contain $B(x,s)$.
 Now we glue to $Y$ along any edge of $\Gamma$ a flat half-strip.
@@ -858,13 +857,10 @@ All of the singularities of $\hat X$ are contained in $B(x,s) \cup \{ V_1,\dots,
 $\hat \Omega$ of $\hat X$ satisfies
 $$\hat \Omega (V_i) = \min \{ 0, \alpha _i \}.$$
 We deduce,
-\begin{align*}
-|\hat \Omega | ( \hat X) &= |\Omega (B (x,s))| + |\hat \Omega | ( \Gamma ) \leq
-\\
-&\leq \delta + |\kappa ^-| (\Gamma ) <
-\\
-&< 3{\cdot}\delta.
-\end{align*}
+%\begin{align*}
+$$|\hat \Omega | ( \hat X) = |\Omega (B (x,s))| + |\hat \Omega | ( \Gamma ) \leq \delta + |\kappa ^-| (\Gamma ) < 3{\cdot}\delta.$$
+
+%%\end{align*}
 
 
 This finishes the proof of the claim and of \lref{lem:bl}.
@@ -883,18 +879,14 @@ The statement of \tref{intsurface1} is local, so we need to prove it only in a s
 Thus we may (and will) assume that there is a point $x_0\in X$
 such that $| \Omega| (X \setminus \{ x_0 \}) < \delta _0$ and that $X$ is homeomorphic to a plane.
 
-Let $A\subset X$ be a compact subset. Choose some $\varepsilon >0$ such that the closure of $B (A,{2{\cdot}\varepsilon})$ in $X$ is compact and such that,
-for any $0<2{\cdot}r<\varepsilon$ the inequality $\mathcal H^2 (B(x_0,{2{\cdot}r})) < \tfrac 1 {\varepsilon}\cdot r^2$ holds true; see also \cite[Lemma 8.1.1]{Reshetnyak-GeomIV}.
+Let $A\subset X$ be  compact. Choose some $\varepsilon >0$ such that the closure of $B (A,{2{\cdot}\varepsilon})$ in $X$ is compact and such that,
+for any $0<2{\cdot}r<\varepsilon$ the inequality $\mathcal H^2 (B(x_0,{3{\cdot}r})) < \tfrac 1 {\varepsilon}\cdot r^2$ holds true;  see \cite[Lemma 8.1.1]{Reshetnyak-GeomIV}.
 
 Let $r<\varepsilon$ be arbitrary.
 For any $x\in B (x_0,{2{\cdot}r})$ we have
-\begin{align*}
-b_r (x) &=\mathcal H^2 (B (x,r)) \leq
-\\
-&\leq \mathcal H^2 (B (x_0,{3{\cdot}r})) \leq
-\\
-&\leq \tfrac 1 {\varepsilon}\cdot r^2.
-\end{align*}
+%\begin{align*}
+$$  b_r (x) =\mathcal H^2 (B (x,r)) \leq \mathcal H^2 (B (x_0,{3{\cdot}r})) \leq\tfrac 1 {\varepsilon}\cdot r^2. $$
+%\end{align*}
 
 
 For any $x\notin B (x_0,{r})$ we have $| \Omega |(B(x,r )) < \delta _0$. Thus, by Lemma~\ref{lem:bl}, $$|1-\frac {b_r(x)} {\pi{\cdot}r^2} |
@@ -924,7 +916,7 @@ For any $x$ contained in the domain of integration of the last integral, we have
 We deduce $|\mathcal{V}_r| (A\setminus B (x_0,{2{\cdot}r})) \leq 6 {\cdot}\pi {\cdot}\delta _0 {\cdot} r^2$.
 
 Thus, for some constant $C=C(\varepsilon)$ and all $r<\varepsilon$, we obtain
-$$|\mathcal{V}_r|(A) \leq C\cdot r^2.$$
+$$|\mathcal{V}_r|(A)  = |\mathcal{V}_r|  (A\setminus B (x_0,{2{\cdot}r})) + |\mathcal{V}_r| (A\cap B (x_0,{2{\cdot}r}))    \leq C\cdot r^2.$$
 This finishes the proof of the theorem.
 \end{proof}
 
