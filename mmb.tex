@@ -378,11 +378,12 @@ If $X$ is a manifold with two-sided bounded curvature in the sense of Alexandrov
 \end{ex}
 
 \begin{ex} \label{ex:cone}
-{\color{red}
-Let $X$ be the flat cone over the circle $S_{\rho}$ of length $\rho$.
-The curvature at the tip of the cone is $\alpha=2{\cdot}\pi-\rho$.
-The mm-curvature is a Dirac measure of mass $m(\alpha)$ concentrated in the tip.
-Straightforward calculations show that $m(\alpha)=\frac \alpha 6+ f(\alpha)$, where $f(\alpha)= O(\alpha^2)$ is a non-zero function.
+{\color{green}
+Let $X$ be the Euclidean  cone over the circle $S_{\rho}$ of length $\rho$.
+The curvature measure and the mm-curvature are Dirac measures 
+concentrated   at the tip of the cone.  The mass of the curvature measure is $\alpha =2\pi-\rho$.
+From example \ref{smoothscal} one would expect the mass of the mm-curvature to be $m(\alpha) = \frac {\alpha} {12}$.
+However, straightforward calculations show  $m(\alpha)=\frac \alpha {12}+ f(\alpha)$, where $f(\alpha)= O(\alpha^2)$ is a non-zero function.
 % $f(\alpha)= O(\alpha ^3)$.
 }
 \end{ex}
@@ -441,9 +442,10 @@ Let $X$ be a locally compact separable metric space.
 A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
  Any Radon measure defines an element of  $\mathrm M(X)$ the dual space to the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
 All elements in $\mathrm M(X)$ are called \emph{signed Radon measures}.
-{\color{red} Any  $\mu \in M(X)$ can be uniquely written as $\mu_+-\mu_-$, where $\mu_\pm$ are a Radon measures. The  measure $|\mu|=\mu_+-\mu_-$ is called \emph{the total variation} of $\mu$.}
+ Any  $\mu \in M(X)$ can be uniquely written as $\mu_+-\mu_-$, where $\mu_\pm$ are a Radon measures  concentrated on disjoint subsets.
+  The  measure $|\mu|=\mu_+ +\mu_-$ is called \emph{the total variation} of $\mu$.
 
-%Any  $\mu \in M(X)$ can be uniquely written as $f\cdot |\mu|$, where $|\mu|$ is a Radon measure, called \emph{the 
+%Any  $\mu \in M(X)$ can be uniquely written as $f\cdot |\mu|$, where $|\mu|$ is a Radon measure, called \emph{the
 %total variation} of $\mu$, and $f\in L^1 (X,\mu)$ takes only the values $\pm 1$.   }
 
 
@@ -557,7 +559,7 @@ the value $\phi _t(v)$ will not be defined. For $0<t<a$ we set $\phi _t(v)$ to b
 If the geodesic $\gamma _v\:[0,a)\to X$ extends to an (again uniquely defined, maximal) geodesic $\gamma_v\:(b,a) \to X$ for some $b<0$
 then we define $\phi _t(v)$ for $b<t<0$ to be $\gamma_v ^+ (t) $ as above.
 
-We denote by $\mathcal F$ the set of all pairs  $(v,t)\in TX\times\R$  for which $\phi_t(v)$ is defined.      
+We denote by $\mathcal F$ the set of all pairs  $(v,t)\in TX\times\R$  for which $\phi_t(v)$ is defined.
 
 
 For $\lambda >0$, for $t,s\in \R$ and $v\in T_x X$ we have
@@ -592,8 +594,8 @@ Thus, for $\mathcal M$-almost all $v\in D$ we have the following
 
 
 \subsection{Measurability} \label{subsec:measur}
-In order to use measure theoretic arguments we will need the following lemma, see also Subsection \ref{subsec:quasi}.  
-\begin{lem}\label{lem:measurability}                                                                        
+In order to use measure theoretic arguments we will need the following lemma, see also Subsection \ref{subsec:quasi}.
+\begin{lem}\label{lem:measurability}
 The set $\mathcal F\subset TX\times \R$ is measurable with respect to the product of the Liouville's measure $\mathcal M$ on $TX$ and the Lebesgue measure on $\R$.
 Moreover the map $\phi \:\mathcal F \to TX$ is measurable.
 \end{lem}
@@ -604,7 +606,7 @@ Note that there exists some $k>0$ such that the restriction of $\gamma$ to any s
  We will call such $\gamma$ a  $k$-geodesic and  write $(v,\tau)\in \mathcal F_k$.
 
 
-{\color{red} The limit of }any converging sequence of $k$-geodesics is a $k$-geodesic.
+ The limit of any converging sequence of $k$-geodesics is a $k$-geodesic.
 Hence $\mathcal F_k'=\mathcal F_k\cap (TX_{reg} \times \R)$ is a closed set in $TX_{reg} \times \R$.
  Therefore, $\mathcal F\cap (TX_{reg} \times \R)$  is a countable union of closed subsets $\mathcal F_k'$, hence measurable.
 Moreover, the restriction $\phi\: \mathcal F_k' \to TX_{reg}$ is continuous and, therefore,
@@ -647,7 +649,7 @@ Assume that $X$ does not have the Liouville property.
 Then, by homogeneity of the geodesic flow, $\phi _1$ is either undefined  on a subset of $TX$ with positive measure
 or it does not preserve the measure $\mathcal M$.
 In both cases we can find a compact subset $K_1\subset X_{reg}$, a Borel subset $A\subset T^1 K_1$  and $\varepsilon >0$ such that
-\[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\] 
+\[\varepsilon < \mathcal M (A) - \mathcal M(\phi_1 (A)).\]
 
 Since
 \begin{align*}
@@ -838,8 +840,7 @@ Once the claim is proven,
 Since $\delta$ is small,  an application of \eqref{eq:bilip}  finishes the proof of the lemma.
 
 
-{\color{red} It remains to prove the Claim.}
-Take some $r>t>s$ and consider the compact metric ball $\bar B (x,t) \subset B (x,r)$.
+ It remains to prove the Claim, {\color {green} certainly well-known to experts}. Take some $r>t>s$ and consider the compact metric ball $\bar B (x,t) \subset B (x,r)$.
 We may assume that the boundary $S_t$ of
 $\bar B (x,t)$ does not contain singular points of $X$.
 By \cite[Theorem 9.1, Theorem 9.3] {Reshetnyak-GeomIV}, the boundary $S_t$ is a (piecewise smooth) Jordan curve, once $\delta _0< 2{\cdot}\pi$, and the negative part $\kappa ^-$ of the geodesic curvature $\kappa$ of $S_t$ satisfies $|\kappa ^-| (S_t) \leq \delta$.
@@ -1572,21 +1573,24 @@ we infer the same inequality for $K$ instead of $V$, finishing the proof.
 
 \section{Questions and Comments} \label{sec:final}
 \subsection{Manifolds}
-The notions of mm-boundary and mm-curvature are very easy to define but difficult to control even in simple situations.
-For instance, the examples mentioned in the introduction require some amount of computations and estimates. On the other hand, constructing examples in which the mm-boundary is not locally finite also seems to be highly non-trivial. The first question in this direction is:
+The notions of mm-boundary and mm-curvature are very easy to define but difficult to {\color{green} control.
+For instance, the examples mentioned in the introduction require some amount of computations and estimates. On the other hand,
+interesting   examples  seem to be difficult to construct as well}. The first question in this direction is:
 
 \begin{quest}
-Construct a compact manifold with a continuous Riemannian metric
+Construct a {\color{green} closed}  manifold with a continuous Riemannian metric
 that does not have finite mm-boundary.
 \end{quest}
 
 The following problem is motivated by our approach to \tref{alexandrovthm} in Sections \ref{sec-BV-estimate}, \ref{sec:Alex}.
 
-
 \begin{quest} \label{qe:min}
 Let $X$ be an almost Riemannian space. Can the minimal metric derivative measure be non-zero?
 \end{quest}
 
+{\color{green} In the language of $DC$-calculus as discussed in \cite{AB15}, this question can be reformulated as follows.  Given a compact subset $K$
+on any $DC_0$-Riemanian manifold and any $\epsilon >0$, can one cover $K$ by charts  such that the total mass of the derivative of the metric tensor
+in these coordinates is bounded by $\epsilon$? }
 Note that the minimal metric derivative measure must vanish if the metric can be locally defined by a Riemannian
 tensor of class $W^{1,1}$, since the metric derivative measure is absolutely singular with respect to the Hausdorff measure by \lref{lem:minderiv}.
 
