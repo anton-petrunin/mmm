@@ -312,9 +312,9 @@ Nina Lebedeva and the third named author have found in \cite{LP} a ``scalar curv
 There is a hope, supported by our proof of \tref{intsurface}, that a better understanding of this ``stable curvature measure'' will
 lead to some control of the mm-boundary and mm-curvature discussed here.
 \end{rem}
-\subsection{Relation to the Killing-Lipschitz curvatures} Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
+\subsection{Relation to the Lipschitz--Killing curvatures} Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
 Given $r>0$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$.
-The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$. The coefficients of $w(r)$,  called the Killing--Lipschitz curvatures of $M$, are given as integrals of some intrinsically defined curvature terms.
+The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$. The coefficients of $w(r)$,  called the  Lipschitz--Killing curvatures of $M$, are given as integrals of some intrinsically defined curvature terms.
 Moreover, these coefficients can be localized and considered as measures on $M$.
 We refer to \cite{Alesker} for a short account of the theory, connection of the theory with
 \cite{LP} and further hypothetical relations with the theory of Alexandrov spaces.
@@ -568,7 +568,7 @@ $$\phi _t(\lambda \cdot v) =\lambda \cdot \phi _{\lambda \cdot t} (v)
 \phi _{t+s} (v) =\phi _t ( \phi _s (v)),$$
 whenever the right hand side is defined.
 
-The partial flow $\phi$ preserves the norm of tangent vectors. Since inner point of geodesics starting in $X_{reg}$ are contained in $X_{reg}$, the set $TX_{reg}$ is invariant under the flow $\phi$.
+The partial flow $\phi$ preserves the norm of tangent vectors. Since inner points of geodesics starting in $X_{reg}$ are contained in $X_{reg}$, the set $TX_{reg}$ is invariant under the flow $\phi$.
 %On $TX_{reg}$ we have
 %$I\circ \phi_t = \phi _{-t} \circ I$, whenever both sides are defined.
 
@@ -726,9 +726,9 @@ Due to \eqref{eq:compare}, the vanishing  of the mm-boundary of $X$ implies
 $$\lim _{r\to 0} \frac 1 {r^{n+1} }\cdot |\mathcal M(T^{r} Y) -\mathcal H^{2\cdot n} (U^r)| =0.$$
 Thus, up to terms of higher order, the map $E$ does not increase the measure of subsets, but the total mass of the image
 coincide with the total mass of the target.
-Thеrefore, $E$ is measure preserving up to terms of higher order.
+Therefore, $E$ is measure preserving up to terms of higher order.
 % \footnote{Is this explanation helpful? \color{red} too long IMO. I shortened it a bit, Vitya}
-More precisely, combining the last two inequalities we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
+More precisely, combining the last two formulas we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
 we have
 \begin{equation} \label{eq:almostall}
 \begin{aligned}
@@ -1002,6 +1002,8 @@ By convexity, it is sufficient to find some $C=C(n)>0$ with
 \end{equation}
 see also \cite[Theorem 6.7]{Evans}.
 
+First note that $f(z)\ge 0$ for all $z$ since  $f(0)=|\nabla f(0)| =0$ and $f$ is convex.
+
 In order to verify \eqref{eq:vitya}, we can multiply the function $f$ by a constant and assume that
 $f$ takes its maximum on the closed ball $\bar B (0,3)$ at the point $y_0$ and $f(y_0)=1$.
 Convexity of $f$ implies that $|y_0|=3$.
@@ -1231,7 +1233,7 @@ of such $DC_0$-Riemannnian manifolds in the language of \cite{AB15} and \cite{Pe
 \item Any minimizing geodesic $\gamma$ in $X$ can be approximated by curves $\gamma _i$ in $R$, such that the lengths of $\gamma _i$ converge to the length of $\gamma$.
 \item For any $x\in X$, there is a neighborhood $U$ of $x$, called a \emph{regular chart}, and a bi-Lipschitz map
 $\phi\:U\to O$ onto an open subset $O\subset \R^n$, with the bi-Lipschitz constant less than $(1+\frac 1 C)$.
-\item There a continuous Riemannian tensor $g_{ij} $ on $\phi (U\cap R)$ such that $g_{ij}$ is a function of bounded variation on $O$
+\item There is a continuous Riemannian tensor $g_{ij} $ on $\phi (U\cap R)$ such that $g_{ij}$ is a function of bounded variation on $O$
 for each $1\leq i,j \leq n$.
 \item The length of any curve $\gamma \subset R$ can be computed as the length of $\phi (\gamma )$ via this Riemannian tensor $g$.
 % \item The metric on $X$ can be reconstructed from the restriction to $R$. \footnote{I do not now how to express this in a good way.}.
@@ -1344,12 +1346,13 @@ Strainers and strainer maps are basic tools for Alexandrov spaces; see also \cit
 
 Let us list main properties of the subsets of strained points.
 We fix a natural number $n$.
-There exist a positive number $A=A(n)$ such that for all $0<r,\delta \leq \frac 1 {A^2}$ and all $n$-dimensional Alexandrov space $X$ of curvature $\geq -1$ the following holds true.
+ {\color{red} Then for all sufficiently large $A$ and any $0<r,\delta \leq \frac 1 {A^2}$  
+  the following properties hold true for all $n$-dimensional Alexandrov spaces $X$ of curvature $\geq -1$:}
 \begin{enumerate}
 
 \item The set $X_{r,\delta}$ of points in $X$ which have an $Ar$-long $(n,\delta)$-strainer is open in $X$. For $s<r$, we have $X_{r,\delta} \subset X_{s,\delta}$, \cite[9.7]{BGP}.
 
-\item Assume a sequence $(X_i ^n,x_i)$ of Alexandrov spaces of curvature $\geq -1$ converges to an $n$-dimensional Alexandrov space $(X,x)$ in the pointed Gromov--Hausdroff topology.
+\item Assume a sequence $(X_i ^n,x_i)$ of Alexandrov spaces of curvature $\geq -1$ converges to an $n$-dimensional Alexandrov space $(X,x)$ in the pointed Gromov--Hausdorff topology.
 If $x\in X_{r,\delta}$ then, for all large $i$, the point $x_i$ has an $Ar$-long $(n, \delta)$-strainer in $X_i$.
 
 \item Rescaling $X$ with a constant $\lambda \geq 1$ sends the subset $X_{r,\delta}$ to a subset of $(\lambda X )_{\lambda r, \delta} $ of the rescaled Alexandrov space $\lambda X$.
