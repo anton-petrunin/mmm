@@ -312,7 +312,9 @@ Nina Lebedeva and the third named author have found in \cite{LP} a ``scalar curv
 There is a hope, supported by our proof of \tref{intsurface}, that a better understanding of this ``stable curvature measure'' will
 lead to some control of the mm-boundary and mm-curvature discussed here.
 \end{rem}
-\subsection{Relation to the Lipschitz--Killing curvatures} Let $M$ be compact convex body or compact smooth submanifold in $\R^n$.
+\subsection{Relation to the Lipschitz--Killing curvatures} Let $M$ be 
+%compact convex body or 
+a compact smooth submanifold in $\R^n$.
 Given $r>0$, consider the volume $w(r)=\mathcal H^n (B(M,r))$ of the distance tube $B(M,r)$ around $M$.
 The function $r\mapsto w(r)$ is a polynomial, at least for small positive $r$. The coefficients of $w(r)$,  called the  Lipschitz--Killing curvatures of $M$, are given as integrals of some intrinsically defined curvature terms.
 Moreover, these coefficients can be localized and considered as measures on $M$.
@@ -380,7 +382,7 @@ If $X$ is a manifold with two-sided bounded curvature in the sense of Alexandrov
 \begin{ex} \label{ex:cone}
 
 Let $X$ be the Euclidean  cone over the circle $S_{\rho}$ of length $\rho$.
-The curvature measure and the mm-curvature are Dirac measures 
+The curvature measure and the mm-curvature are Dirac measures
 concentrated   at the tip of the cone.  The mass of the curvature measure is $\alpha =2\pi-\rho$.
 From example \ref{smoothscal} one would expect the mass of the mm-curvature to be $m(\alpha) = \frac {\alpha} {12}$.
 However, a straightforward calculation shows that $m(\alpha)=\frac \alpha {12}+ f(\alpha)$, where $f(\alpha)= O(\alpha^2)$ is a non-zero function.
@@ -396,7 +398,8 @@ Then $X$ has a finite mm-boundary $\nu$ with the support on the $(n-1)$-skeleton
 
 \begin{ex} \label{ex:last}
 Assume that $X$ as in the last example is a pseudo-manifold.
-Then $X$ has finite mm-curvature.
+Then $X$ has finite mm-curvature. If all simplices are flat then the mm-curvature is concentrated 
+ on  the $(n-2)$-skeleton.
 \end{ex}
 
 \subsection{Structure of the paper}
@@ -413,7 +416,7 @@ The analytical comparison result needed for Alexandrov spaces is established in 
 
 In the final Section \ref{sec:final} we collect a number of comments and open questions which naturally arose during the work on this paper.
 
-\subsection{Acknowledgments} The authors are grateful for helpful conversations and comments to Semyon Alesker, Andreas Bernig, Aaron Naber, Koichi Nagano, Richard Bamler.
+\subsection{Acknowledgments} The authors are grateful for helpful conversations and comments to Semyon Alesker, Andreas Bernig, Ivan Izmestiev, Aaron Naber, Koichi Nagano, Richard Bamler.
 
 The first author was supported in part by a Discovery grant from NSERC and by a Simons Fellowship from the Simons foundation (award 390117).
 The second author was supported in part by the DFG grants SFB TRR 191 and SPP 2026.
@@ -439,7 +442,7 @@ Note that a geodesic is a curve of constant velocity.
 We refer to \cite{Federer} and \cite{Evans} for basics on measure theory.
 
 Let $X$ be a locally compact separable metric space.
-A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure.
+A \emph{Radon measure} on $X$ is a measure on $X$ for which all compact subsets are measurable and have finite measure. 
  Any Radon measure defines an element of  $\mathrm M(X)$ the dual space to the topological vector space $\mathcal C_c (X)$ of compactly supported continuous functions on $X$.
 All elements in $\mathrm M(X)$ are called \emph{signed Radon measures}.
  Any  $\mu \in M(X)$ can be uniquely written as $\mu_+-\mu_-$, where $\mu_\pm$ are a Radon measures  concentrated on disjoint subsets.
@@ -724,9 +727,9 @@ $\mathcal H^{2\cdot n} =\mathcal H^n \otimes \mathcal H^n $ on $X\times X$ we ob
 \end{equation}
 Due to \eqref{eq:compare}, the vanishing  of the mm-boundary of $X$ implies
 $$\lim _{r\to 0} \frac 1 {r^{n+1} }\cdot |\mathcal M(T^{r} Y) -\mathcal H^{2\cdot n} (U^r)| =0.$$
-Thus, up to terms of higher order, the map $E$ does not increase the measure of subsets, but the total mass of the image
+Thus, up to terms of  order higher than $r^{n+1}$, the map $E$ does not increase the measure of subsets, but the total mass of the image
 coincide with the total mass of the target.
-Therefore, $E$ is measure preserving up to terms of higher order.
+Therefore, $E$ is measure preserving  up to terms of  order higher than $r^{n+1}$ on all subsets of $T^r Y$.
 % \footnote{Is this explanation helpful? \color{red} too long IMO. I shortened it a bit, Vitya}
 More precisely, combining the last two formulas we obtain for every $\delta >0$ the existence of some $s>0$ with the following property. For all $0<r<s$ and all measurable subsets $S\subset D^r$
 we have
@@ -1044,7 +1047,7 @@ Let $Y\subset X$ be the set of smooth points of $X$.
 The complement $X\setminus Y$ is a countable union of subsets with finite $(n-1)$-dimensional Hausdorff measure (see \cite{zajicek} and \cite[Theorem 1.4]{Schneider}) therefore $\nu (X\setminus Y) =0$. Therefore, it is sufficient to prove $\nu (A)=0$
 for any compact subset $A\subset Y$.
 
-Fix a compact subset $A\subset Y$ and 
+Fix a compact subset $A\subset Y$ and
 let  $\delta>0$ be an arbitrary sufficiently small number. Consider a positive $1>t>0$ provided by \lref{lem:compsm}. Let $U$ be the open set  $B (A,t)$.
 %Making $t$ smaller, if needed, we may assume that $\mathcal K(B(A,{7{\cdot}t}))$ is bounded by a
 %fixed constant $C_1$ independent of $\delta$.
@@ -1346,8 +1349,8 @@ Strainers and strainer maps are basic tools for Alexandrov spaces; see also \cit
 
 Let us list main properties of the subsets of strained points.
 We fix a natural number $n$.
- {\color{red} Then for all sufficiently large $A$ and any $0<r,\delta \leq \frac 1 {A^2}$  
-  the following properties hold true for all $n$-dimensional Alexandrov spaces $X$ of curvature $\geq -1$:}
+  Then for all sufficiently large $A$ and any $0<r,\delta \leq \frac 1 {A^2}$
+  the following properties hold true for all $n$-dimensional Alexandrov spaces $X$ of curvature $\geq -1$:
 \begin{enumerate}
 
 \item The set $X_{r,\delta}$ of points in $X$ which have an $Ar$-long $(n,\delta)$-strainer is open in $X$. For $s<r$, we have $X_{r,\delta} \subset X_{s,\delta}$, \cite[9.7]{BGP}.
@@ -1639,7 +1642,7 @@ Due to the observation after Problem \ref{qe:min}, the vanishing of mm-boundary 
 \begin{quest}
 Let $X$ be an Alexandrov space. Can one introduce coordinates on a neighborhood of the set of regular points, such that the metric is locally given by a Riemannian tensor of class $W^{1,1}$?
 \end{quest}
-In the two-dimensional case, the answer to this question is ``yes'' by the work of Reshetnyak~\cite{Reshetnyak-GeomIV},  see also \cite{AB16}. 
+In the two-dimensional case, the answer to this question is ``yes'' by the work of Reshetnyak~\cite{Reshetnyak-GeomIV},  see also \cite{AB16}.
 
 
 Due to \tref{thmmain}, an affirmative answer to the following question should be expected. A partial answer to it has been announced by Jerome Bertrand.
