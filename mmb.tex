@@ -663,13 +663,13 @@ Since
 \end{align*}
 we deduce
 \begin{align*}
-\varepsilon &\leq \mathcal M \big(\tfrac 1 2\cdot A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot A ) \big) +
+\frac{\varepsilon}{2^n} &\leq \mathcal M \big(\tfrac 1 2\cdot A \big) - \mathcal M \big( \phi_1 (\tfrac 1 2\cdot A ) \big) +
 \\
 &\quad+\mathcal M \big(\phi_1 (\tfrac 1 2\cdot A )\big)
 - \mathcal M\big (\phi_1 \big (\phi _1 (\tfrac 1 2\cdot A )\big) \big).
 \end{align*}
 Thus, taking either $A_{\frac 1 2} := \frac 1 2 \cdot A$ or $A_{\frac 1 2} := \phi_1 (\frac 1 2 \cdot A)$ we infer
-$$ \frac 1 2\cdot  \varepsilon   < \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big).$$
+$$ \frac { \varepsilon } {2^{n+1}}  < \mathcal M \big(A _{\frac 1 2} \big) - \mathcal M \big( \phi_1 (A _{\frac 1 2}) \big).$$
 The set $A_{\frac 1 2}$ constructed above is contained in $T^{\frac 1 2} K_{\frac 1 2}$, where $K _{\frac 1 2} =B (K_1,{\frac 1 2})$.
 
 Iterating the above procedure we obtain, for $r_m =\frac 1 {2^m}$, a subset $A_{r_m} \subset T^{r_m} K_m$ where $K_m =B (K_{m-1},{r_m})$ and such that \eqref{eq:m} holds true.
@@ -810,7 +810,7 @@ Finally, as an application of \tref{thmmain} and \tref{alexandrovthm} we see tha
 \subsection{Preparations}
 We assume that the reader is familiar with the theory of surfaces with bounded integral curvature; see \cite{AZ} and \cite{Reshetnyak-GeomIV}.
 
-Let $X$ be a surfaces with bounded integral curvature;
+Let $X$ be a surface with bounded integral curvature;
 it is a locally geodesic metric space, homeomorphic to a two-dimensional surface.
 It has Hausdorff dimension $2$ and the Hausdorff measure $\mathcal H^2$ is a Radon measure on $X$. There is another signed Radon measure on $X$, the so called \emph{curvature measure} which will be denoted $\Omega$, \cite[Section 8]{Reshetnyak-GeomIV}.
 We will not assume that $X$ is complete.
